@@ -72,7 +72,11 @@
 			$result              = mysqli_query($db, $sql);
 			$sql                 = "SELECT `data` FROM `formula` WHERE `type` = " . $_SESSION["FormulaType"];
 			$result              = mysqli_query($db, $sql);
-			$rows['data']        = mysqli_fetch_all($result, MYSQLI_ASSOC);
+      $formulas = array();
+
+      while ($item = mysqli_fetch_assoc($result)) $formulas[] = $item['data'];
+      $rows['data'] = $formulas;
+			// $rows['data']        = mysqli_fetch_all($result, MYSQLI_ASSOC);
 			$_SESSION["formula"] = json_encode($rows['data']);
 			echo json_encode($rows);
 		}
@@ -81,4 +85,3 @@
 	//   }
 	//   session_destroy();
 ?>
-
