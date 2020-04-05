@@ -2,7 +2,8 @@
   session_start();
   if( isset($_SESSION["ID"])  )
   {
-    require 'connection.php';
+    // require 'connection.php';
+    include dirname(__DIR__) .'/database/connection.php';
     $sessionID = session_id();
     $sql = " SELECT `token` FROM `users` WHERE `token` = '$sessionID' AND `type` >= '90' AND `status` = '0' AND `id` = ".$_SESSION['ID'];
     $result = mysqli_query($db,$sql);
