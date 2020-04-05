@@ -11,7 +11,7 @@
 	$result = mysqli_query($db, $sql);
 	$data   = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	if (!$data) {
-		echo '<script type="text/javascript">';
+		echo 'uscript type="text/javascript">';
 		echo 'alert("ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง");';
 		echo 'window.history.back();';
 		echo '</script>';

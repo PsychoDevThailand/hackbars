@@ -3,12 +3,13 @@ $(document).ready(function(){
 
       e.preventDefault(); // avoid to execute the actual submit of the form.
 
-      var form = $("#regisform");
+      var form = $("#regisform").serialize();
+      form += "&regPhone=" + $("#phone").val();
 
       $.ajax({
              type: "POST",
              url: "database/register.php",
-             data: form.serialize(), // serializes the form's elements.
+             data: form, // serializes the form's elements.
              success: function(data)
              {
                if(data == "success")
@@ -18,6 +19,9 @@ $(document).ready(function(){
                     'คุณสามารถเข้าสู่ระบบด้วยแอคเค้านี้ได้ทันที',
                     'success'
                   );
+                  $('#form-phone').show();
+                  $('#form-otp').hide();
+                  $('#form-user').hide();
                   $('#regisform').trigger("reset");
                   $('#RegisModal').modal('toggle');
                } else {

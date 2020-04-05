@@ -143,43 +143,91 @@
       <!-- Modal content-->
       <div class="modal-content text-white">
 
-        <h4 class="modal-title text-center">Register</h4>
+        <h4 class="modal-title text-center">สมัครสมาชิก</h4>
         <div class="modal-body">
           <div class="container">
 
-            <form id="regisform" method="post">
-
-			  <div class="form-group">
-                <label>Username</label>
-                <input type="text" class="form-control" placeholder="ภาษาอังกฤษ หรือ ตัวเลข หรือ _ 6 - 32 ตัวอักษร" name="regUser" maxlength="32" minlength="6" pattern="^[a-zA-Z0-9_]+$" autocomplete="off" required>
-              </div>
-
-              <div class="form-group">
-                <label>รหัสผ่าน</label>
-                <input type="password" class="form-control" placeholder="รหัสผ่านสำหรับเข้าใช้งาน" name="regPass" maxlength="32" minlength="6" pattern="^[a-zA-Z0-9_.-]+$" autocomplete="off" required>
-              </div>
-
-              <div class="form-group">
-                <label>รหัสผ่านอีกครั้ง</label>
-                <input type="password" class="form-control" placeholder="ใส่รหัสผ่านอีกครั้ง" name="regRepass" maxlength="32" minlength="6" pattern="^[a-zA-Z0-9_.-]+$" autocomplete="off" required>
-              </div>
+            <div id="form-phone">
+              <form>
+                <div class="form-group">
+                  <label>กรุณากรอกเบอร์โทรศัพท์ของท่าน</label>
+                  <input id="phone" type="text" maxlength="10" class="form-control" placeholder="ตัวอย่าง 0990001111" />
+                  <p class="form-text text-danger">* ท่านจะได้รับรหัสยืนยัน 4 หลัก ทางข้อความ SMS</p>
+                </div>
+              </form>
 
               <div class="row text-center">
                 <div class="col text-right">
                   <div class="form-group">
-                    <input type="submit" class="btn btn-outline-success" value="Submit">
+                    <button class="btn btn-outline-success" onclick="checkPhone()">ตกลง</button>
                   </div>
                 </div>
                 <div class="col text-left">
                   <div class="form-group">
-                    <button class="btn btn-outline-danger" data-toggle="modal" data-dismiss="modal">
-                      Close
-                    </button>
+                    <button class="btn btn-outline-danger" data-toggle="modal" data-dismiss="modal">ปิด</button>
                   </div>
                 </div>
               </div>
-              <input type="hidden" name="action" value="Register">
-            </form>
+            </div>
+
+            <div id="form-otp">
+              <form>
+                <div class="form-group">
+                  <label>กรุณากรอก OTP</label>
+                  <input id="otp" type="text" maxlength="4" class="form-control" placeholder="ตัวอย่าง 1234" />
+                </div>
+              </form>
+
+              <div class="row text-center">
+                <div class="col text-right">
+                  <div class="form-group">
+                    <button class="btn btn-outline-success" onclick="findOTP()">ตกลง</button>
+                  </div>
+                </div>
+                <div class="col text-left">
+                  <div class="form-group">
+                    <button class="btn btn-outline-danger" data-toggle="modal" data-dismiss="modal">ปิด</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div id="form-user">
+              <form id="regisform" method="post">
+
+  			        <div class="form-group">
+                  <label>Username</label>
+                  <input type="text" class="form-control" placeholder="ภาษาอังกฤษ หรือ ตัวเลข หรือ _ 6 - 32 ตัวอักษร" name="regUser" maxlength="32" minlength="6" pattern="^[a-zA-Z0-9_]+$" autocomplete="off" required>
+                </div>
+
+                <div class="form-group">
+                  <label>รหัสผ่าน</label>
+                  <input type="password" class="form-control" placeholder="รหัสผ่านสำหรับเข้าใช้งาน" name="regPass" maxlength="32" minlength="6" pattern="^[a-zA-Z0-9_.-]+$" autocomplete="off" required>
+                </div>
+
+                <div class="form-group">
+                  <label>รหัสผ่านอีกครั้ง</label>
+                  <input type="password" class="form-control" placeholder="ใส่รหัสผ่านอีกครั้ง" name="regRepass" maxlength="32" minlength="6" pattern="^[a-zA-Z0-9_.-]+$" autocomplete="off" required>
+                </div>
+
+                <div class="row text-center">
+                  <div class="col text-right">
+                    <div class="form-group">
+                      <input type="submit" class="btn btn-outline-success" value="Submit">
+                    </div>
+                  </div>
+                  <div class="col text-left">
+                    <div class="form-group">
+                      <button class="btn btn-outline-danger" data-toggle="modal" data-dismiss="modal">
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <input type="hidden" name="action" value="Register">
+              </form>
+            </div>
 
           </div>
 
@@ -206,9 +254,9 @@
             <div class="col-sm-4 p-0 text-center" style="font-family: 'Helvet';font-size: 20px;color:white;letter-spacing: 1px;text-shadow: 3px 5px 5px #000">USERNAME : &nbsp;</div>
             <div class="col-sm-8 p-0">
               <input type="text" id="txtUsername" class="form-control text-center" placeholder="Username" maxlength="16" minlength="4" autocomplete="off" required>
-			  
-			  
-			  
+
+
+
             </div>
           </div>
 
@@ -224,7 +272,7 @@
             <div class="col-sm-8 p-0">
               <input type="text" id="input_code" class="form-control-sm text-center" placeholder="Security Code" autocomplete="off" required>
             </div>
-          </div> 
+          </div>
           <table align="center">
             <tr>
               <td id="secCode" style="font-family: 'Helvet';font-size: 30px;color:white;letter-spacing: 4px;text-shadow: 3px 5px 5px #000;"></td>
@@ -233,25 +281,25 @@
           </table>
 		  -->
 
-			
+
           <div class="row mt-3">
             <div class="col text-right pl-0">
               <a href="#" onclick="do_login()"><img class="btnimg" src="./resource/images/new/asset/login/btn_login.png"></a>
             </div>
-			<!-- 
+			<!--
 			<div class="col text-left pr-0">
               <a href="http://line.me/ti/p/~<?php echo $contact; ?>"><img class="btnimg" src="./resource/images/new/asset/login/btn_register.png"></a>
             </div>
 			-->
-			
+
             <div class="col text-left pr-0">
               <a href="#" data-toggle="modal" data-target="#RegisModal"><img class="btnimg" src="./resource/images/new/asset/login/btn_register.png"></a>
             </div>
           </div>
-		  
-		  
-		  
-		  
+
+
+
+
         </form>
 
       </div>
@@ -267,14 +315,19 @@
         </a>
       </div>
 
+
+
     </div>
   </div>
 </body>
 
 </html>
+<script type="text/javascript" src="./js/phone.js"></script>
 <script type="text/javascript">
 var sec_code = [];
 $( document ).ready(function() {
+  $("#form-otp").hide();
+  $("#form-user").hide();
   var gen_code = [];
   for (var i = 0; i < 4; i++) {
     gen_code[i] = Math.floor(Math.random() * 9)
@@ -306,8 +359,8 @@ $( document ).ready(function() {
       var format = /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
       var username = $("#txtUsername").val();
       var password = $("#txtPassword").val();
-	  
-	  
+
+
       if (username != "" && password != "") {
         // $("#loading_spinner").css({"display":"block"});
         $.ajax({

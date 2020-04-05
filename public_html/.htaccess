@@ -1,5 +1,5 @@
 RewriteEngine on
-CheckSpelling on
+#CheckSpelling on
 
 RewriteRule ^login$ login.php [QSA]
 RewriteRule ^home$ home.php [QSA]
