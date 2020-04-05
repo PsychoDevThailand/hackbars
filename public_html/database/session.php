@@ -1,7 +1,7 @@
 <?php
 session_start();
 if ((isset($_SESSION['ID'])) && (isset($_SESSION['Session']))) {
-    require 'connection.php';
+    include dirname(__DIR__) . '/database/connection.php';
     $u_id      = $_SESSION['ID'];
     $sessionID = $_SESSION["Session"];
     $sql       = " SELECT * FROM `users` WHERE `token` = '$sessionID' AND `id` = '$u_id' AND `type` = '1' AND `status` = '0'";
