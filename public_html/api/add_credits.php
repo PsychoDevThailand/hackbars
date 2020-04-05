@@ -31,4 +31,5 @@
   echo json_encode(
     array("message" => "Update credit Success!")
   );
+  mysqli_close($db);
 ?>

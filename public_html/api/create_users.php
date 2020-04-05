@@ -59,4 +59,5 @@
       array("message" => "Create Failed! " . mysqli_error($db))
     );
   }
+  mysqli_close($db);
 ?>
