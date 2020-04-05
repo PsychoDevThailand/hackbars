@@ -40,7 +40,7 @@ if ($row != 0) {
     exit();
 }
 $sql    = "  INSERT INTO `users`(`uname`, `pass`, `type`, `status`,`credit`, `fortype`, `fname`, `lname`, `phone`,`email`, `line`)
-              VALUES ('$user','$pass','1','0','0','1','$fname','$lname','$phone','$mail','$line') ";
+              VALUES ('$user','$pass','1','0','20','1','$fname','$lname','$phone','$mail','$line') ";
 $result = mysqli_query($db, $sql);
 if ($result) {
     echo "success";
