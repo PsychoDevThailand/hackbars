@@ -62,8 +62,18 @@
 //edit: removed ";" from last "}" because of javascript error
 </script>
   <style>
+    /* body,h1,h2,h3,h4,h5,p,a,button,input {
+      font-family: 'Helvet';
+      margin: 0px;
+      letter-spacing: 0.5px;
+    }
+    h5,label, p,a,button,input {
+      font-size: 19px !important;
+    } */
     .center-box {
       padding: 5% 12% 7% 9%;
+      /* border: 0.5px solid #fff; */
+      border-radius: 3px;
       background-image:url('resource/images/new/asset/Login/Frame_Login.png');
       background-size:100% 100%;
     }
@@ -245,65 +255,31 @@
         <img class="logoimg" src="resource/images/new/asset/Login/logosa.png" width="400px">
       </div>
 
-
-      <div class="container text-center center-box">
-        <div class="logheader" style="letter-spacing: 1px;text-shadow: 5px 5px 10px #000">LOGIN / ระบบล๊อคอิน</div>
+      <br>
+      <div class="container text-center center-box" >
+        <div class="logheader" style="letter-spacing: 1px;text-shadow: 5px 5px 10px #000">เข้าสู่ระบบ</div>
 
         <form id="loginform" method="post">
-          <div class="row mb-3 pr-1">
-            <div class="col-sm-4 p-0 text-center" style="font-family: 'Helvet';font-size: 20px;color:white;letter-spacing: 1px;text-shadow: 3px 5px 5px #000">USERNAME : &nbsp;</div>
-            <div class="col-sm-8 p-0">
-              <input type="text" id="txtUsername" class="form-control text-center" placeholder="Username" maxlength="16" minlength="4" autocomplete="off" required>
-
-
-
-            </div>
+          <div class="form-group col-md-12">
+            <input type="text" id="txtUsername" class="form-control text-center" placeholder="ชื่อผู้ใช้" maxlength="16" minlength="4" autocomplete="off" required>
           </div>
-
-          <div class="row mb-3 pr-1">
-            <div class="col-sm-4 p-0 text-center" style="font-family: 'Helvet';font-size: 20px;color:white;letter-spacing: 1px;text-shadow: 3px 5px 5px #000">รหัสผ่าน : &nbsp;</div>
-            <div class="col-sm-8 p-0">
-              <input type="password" id="txtPassword" class="form-control text-center" placeholder="รหัสผ่าน" name="pass" autocomplete="off" required>
-            </div>
+          <div class="form-group col-md-12">
+            <input type="password" id="txtPassword" class="form-control text-center" placeholder="รหัสผ่าน" name="pass" autocomplete="off" required>
           </div>
-
-          <!-- <div class="row mb-1 pr-1">
-            <div id="secCode" class="col-sm-4 p-0 text-right" style="font-family: 'Helvet';font-size: 30px;color:white;letter-spacing: 4px;text-shadow: 3px 5px 5px #000"> </div>
-            <div class="col-sm-8 p-0">
-              <input type="text" id="input_code" class="form-control-sm text-center" placeholder="Security Code" autocomplete="off" required>
-            </div>
-          </div>
-          <table align="center">
-            <tr>
-              <td id="secCode" style="font-family: 'Helvet';font-size: 30px;color:white;letter-spacing: 4px;text-shadow: 3px 5px 5px #000;"></td>
-              <td><input type="text" id="input_code" class="form-control-sm text-center" placeholder="ใส่ตัวเลขด้านซ้าย 4 หลัก" autocomplete="off" required></td>
-            </tr>
-          </table>
-		  -->
-
 
           <div class="row mt-3">
             <div class="col text-right pl-0">
-              <a href="#" onclick="do_login()"><img class="btnimg" src="./resource/images/new/asset/login/btn_login.png"></a>
+                <a onclick="do_login()" class="btn btn-primary" style="color: #fff; font-size: 14px; width: 105px;">เข้าสู่ระบบ</a>
             </div>
-			<!--
-			<div class="col text-left pr-0">
-              <a href="http://line.me/ti/p/~<?php echo $contact; ?>"><img class="btnimg" src="./resource/images/new/asset/login/btn_register.png"></a>
-            </div>
-			-->
 
             <div class="col text-left pr-0">
-              <a href="#" data-toggle="modal" data-target="#RegisModal"><img class="btnimg" src="./resource/images/new/asset/login/btn_register.png"></a>
+                <a data-toggle="modal" data-target="#RegisModal"  style="color: #fff; font-size: 14px;" class="btn btn-success" >สมัครสมาชิก</a>
             </div>
           </div>
-
-
-
-
         </form>
 
       </div>
-
+      <br>
 
       <div class="container-fluid" style="margin-top: -15px">
         <div style="font-family: 'Helvet';font-size: 24px;color:white;margin-bottom: -15px">ติดต่อเราได้ที่ไลน์</div>
