@@ -15,13 +15,20 @@ if ($_GET['id'] <= 6){
 $Room = "C";
 
 } else {
-	
+
 $Room = "A";
 }
 
 $asset_path = "asset/".$_SESSION['FormulaType'];
 $v = '1.0.6';
 ?>
+
+<?php
+  $file = fopen("contact.txt", "r") or die("Unable to open file!");
+  $contact = fgets($file);
+  fclose($file);
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 

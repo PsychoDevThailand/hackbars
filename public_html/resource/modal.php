@@ -159,38 +159,42 @@
   <!-- Refill Modal -->
   <div id="RefillModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
-
+      <div class="modal-content" style="border: 0px solid #000; background: #fff;">
       <!-- Modal content-->
-      <div class="modal-content text-white">
+      <div class=" text-white">
 
         <?php if ($_SESSION['Join']): ?>
-          <h4 class="modal-title text-center">Redeem Code Join mm88get</h4>
-        <?php else: ?>
-          <h4 class="modal-title text-center">Redeem Code Not Join mm88get</h4>
-        <?php endif ?>
-        <div class="modal-body">
-          <div class="container">
-
-            <div class="row" style="padding-top: 2%">
-              <div class="col">
-                <span>Code</span>
-                <input id="usercode" type="text" class="form-control" placeholder="Your Serial Code Here!">
-                <p>*The code will be obtained from the moderator.<br>Must have an access code can see the data.</p>
-              </div>
-            </div>
-
-            <div class="container" style=" position: relative;text-align: center;color: white;">
-              <a href="#" id="subcode" onclick="sendcode()"><img src="./resource/images/button_yes.png" style="width:30%;">
-                <div style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">Submit</div>
+          <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading text-info text-info">วิธีรับเครดิตฟรี</h4>
+            <hr>
+            <p> พิเศษสำหรับลูกค้า MM88GET เพียงท่านฝากเงินสำหรับเล่นเกมกับ MM88GET ก็สามารถรับเครดิตใช้งานสูตรฟรี! ทันที</p>
+            <p>*พิเศษสำหรับเติมครั้งแรกรับเครดิตสูตรบาคาร่า 2 เท่าของยอดที่เติมสำหรับเล่น* ไปเติมเงิน คลิ๊ก!
+              <a target='_blank' href="http://line.me/ti/p/@getv3">
+                <span style="font-family: 'Helvet';font-size: 34px; color: #000;">
+                  <img src="resource/images/new/i_line.png" height="30" style="padding-bottom: 1%;">
+                  Line : <?php echo $contact; ?>
+                </span>
               </a>
-            </div>
-			<hr/>
-
+            </p>
+            <p class='text-danger'><strong>*หมายเหตุ* เครดิตของสูตรบาคาร่าจะเข้าภายใน 5 นาทีหลังจากได้รับเครดิต MM88GET</strong></p>
           </div>
-
-        </div>
+        <?php else: ?>
+          <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading text-info">วิธีรับเครดิตฟรี</h4>
+            <hr>
+            <p>เครดิตหมดใช่หรือไม่ ? พิเศษหากท่านต้องการเครดิตสำหรับสูตรบาคาร่า เพียงท่านสมัครเล่นเกมกับเรา MM88GET เพียงเติมเงินครั้งแรก เติมเท่าไหร่ได้รับเครดิตสำหรับสูตรบาคาร่า 2 เท่า ของยอดเติมทันที (เฉพาะครั้งแรก) สมัครเลย คลิ๊ก!
+              <a target='_blank' href="http://line.me/ti/p/~<?php echo $contact; ?>">
+                <span style="font-family: 'Helvet';font-size: 34px; color: #000;">
+                  <img src="resource/images/new/i_line.png" height="30" style="padding-bottom: 1%;">
+                  Line : <?php echo $contact; ?>
+                </span>
+              </a>
+            </p>
+            <p class='text-danger'><strong>*หมายเหตุ* เครดิตของสูตรบาคาร่าจะเข้าภายใน 5 นาทีหลังจากได้รับเครดิต MM88GET</strong></p>
+          </div>
+        <?php endif ?>
       </div>
-
+    </div>
     </div>
   </div>
   <!-- TopUP Modal -->

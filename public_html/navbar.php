@@ -5,7 +5,7 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarCollapse">
-    <?php 
+    <?php
       $user = isset($_SESSION['Username']) ? $_SESSION['Username'] : '';
       $u_id  = $user;
       if ($u_id == '') {
@@ -32,11 +32,7 @@
       <a href="#" data-toggle="modal" data-target="#RefillModal" style="margin-right: 1em;">
         <img src="resource/images/new/re_Credit.png" style="height:32px;margin-top: 5px">
       </a>
-      <?php if($config["enable"] != "flase" && $config["bank_ennable"] != "flase") { ?>
-	  <a href="#" data-toggle="modal" data-target="#SelectTopUPModal" style="margin-right: 1em;">
-        <img src="resource/images/topup_Credit.png" style="height:32px;margin-top: 5px">
-      </a>
-	  <?php } ?>
+
       <a href="#" data-toggle="modal" data-target="#OutModal" style="margin-right: 1em;">
         <img src="resource/images/new/Icon_Logout.png" style="height:32px;margin-top: 5px">
       </a>
@@ -57,19 +53,19 @@
           <a href="#" data-toggle="modal" data-target="#OutModal" style="margin-right: 1em;margin-top: 5px;">
             <img src="resource/images/new/Icon_Logout.png" style="height:32px;margin-top: 5px">
           </a>
-        </div>          
+        </div>
         <div class="text-center">
           <a href="#" data-toggle="modal" data-target="#RefillModal">
             <img src="resource/images/new/re_Credit.png" style="height:32px;">
           </a>
         </div>
-        <?php if($config["enable"] != "flase" && $config["bank_ennable"] != "flase") { ?>
+        <!-- <?php if($config["enable"] != "flase" && $config["bank_ennable"] != "flase") { ?>
 		<div class="text-center">
           <a href="#" data-toggle="modal" data-target="#SelectTopUPModal">
             <img src="resource/images/topup_Credit.png" style="height:32px;">
           </a>
         </div>
-        <?php } ?>
+        <?php } ?> -->
       </div>
 
       <div class="text-center">

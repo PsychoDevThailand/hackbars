@@ -18,11 +18,7 @@
       <a href="#" data-toggle="modal" data-target="#RefillModal" style="margin-right: 1em;">
         <img src="resource/images/new/re_Credit.png" style="height:32px;margin-top: 5px">
       </a>
-      <?php if($config["enable"] != "flase" && $config["bank_ennable"] != "flase") { ?>
-	   <a href="#" data-toggle="modal" data-target="#SelectTopUPModal" style="margin-right: 1em;">
-        <img src="resource/images/topup_Credit.png" style="height:32px;margin-top: 5px">
-      </a>
-      <?php } ?>
+
       <a href="#" data-toggle="modal" data-target="#OutModal" style="margin-right: 1em;">
         <img src="resource/images/new/Icon_Logout.png" style="height:32px;margin-top: 5px">
       </a>
@@ -40,7 +36,7 @@
             <span id="navCredit2" style="display: inline-block;vertical-align: middle;font-size: 120%; letter-spacing: 2px;height: 32px;border-radius: 5px;padding:1px;margin-top: 5px">
               <img src="resource/images/new/credit.png" style="height:30px;">&nbsp; <?=number_format($udata['credit'])?> &nbsp; </span>
           </a>
-		  
+
           <a href="#" data-toggle="modal" data-target="#OutModal" style="margin-right: 1em;margin-top: 5px;">
             <img src="resource/images/new/Icon_Logout.png" style="height:32px;margin-top: 5px">
           </a>
@@ -51,13 +47,6 @@
             <img src="resource/images/new/re_Credit.png" style="height:32px;">
           </a>
         </div>
-        <?php if($config["enable"] != "flase" && $config["bank_ennable"] != "flase") { ?>
-<div class="text-center">
-          <a href="#" data-toggle="modal" data-target="#SelectTopUPModal">
-            <img src="resource/images/topup_Credit.png" style="height:32px;">
-          </a>
-        </div>
-        <?php } ?>
       </div>
 	<br>
     </ul>

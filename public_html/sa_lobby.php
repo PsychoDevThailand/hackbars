@@ -6,6 +6,12 @@ if($_SESSION['Credit'] <= 0) {
   $asset_path = "asset/".$_SESSION['FormulaType'];
   $v = '1.1.0';
 ?>
+
+<?php
+  $file = fopen("contact.txt", "r") or die("Unable to open file!");
+  $contact = fgets($file);
+  fclose($file);
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -32,7 +38,7 @@ if($_SESSION['Credit'] <= 0) {
     <?php echo 'var x = \''.$_SESSION['formula'].'\''?>;
   </script>
   <?php endif; ?>
-  
+
   <style type="text/css">
     .sidenav {
       background-image: none;
@@ -126,7 +132,7 @@ if($_SESSION['Credit'] <= 0) {
       <div class="container" style="padding: 1%">
 <?php
        $room = "C";
-       $J = "0";    
+       $J = "0";
 for ($i=0; $i < 22 ; $i++) {
 
 
@@ -135,7 +141,7 @@ for ($i=0; $i < 22 ; $i++) {
         echo '<div class="row">';
     }
 	if (($i) == 22);{
-  
+
     if ($i == 6){
 
       $room = "A";
@@ -143,8 +149,8 @@ for ($i=0; $i < 22 ; $i++) {
     }
   }
    // echo $room . $J;
-    
-    $J++ 
+
+    $J++
 ?>
 
 
