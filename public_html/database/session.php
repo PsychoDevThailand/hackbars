@@ -12,6 +12,7 @@ if ((isset($_SESSION['ID'])) && (isset($_SESSION['Session']))) {
         $_SESSION["FormulaType"] = $data['fortype'];
         $_SESSION["Session"]     = $data['token'];
         $_SESSION["Credit"]      = $data['credit'];
+        $_SESSION["Join"] = $data['join_mm88get'];
         mysqli_close($db);
     } else {
         session_destroy();

@@ -9,15 +9,17 @@
   </style>
 </head>
 <?php
-  require "database/connection.php";
+  include dirname(__DIR__) . '/database/connection.php';
+  // include dirname(__DIR__) . '/database/session.php';
+  // require "database/connection.php";
   $u_id = $_SESSION['ID'];
   $sql=" SELECT * FROM users WHERE id = '$u_id'";
   $result = mysqli_query($db, $sql);
   $data = mysqli_fetch_array($result, MYSQLI_ASSOC);
-  
+
   $twsql="SELECT * FROM tw_settings";
   $twresult = mysqli_query($db, $twsql);
-  
+
   $config = array();
   $twsql  = "SELECT * FROM tw_settings";
   $result = mysqli_query($db, $twsql);
@@ -27,7 +29,7 @@
     $config[$row["name"]] = $row["value"];
   }
 
-  
+
 ?>
 
 <body>
@@ -161,7 +163,11 @@
       <!-- Modal content-->
       <div class="modal-content text-white">
 
-        <h4 class="modal-title text-center">Redeem Code</h4>
+        <?php if ($_SESSION['Join']): ?>
+          <h4 class="modal-title text-center">Redeem Code Join mm88get</h4>
+        <?php else: ?>
+          <h4 class="modal-title text-center">Redeem Code Not Join mm88get</h4>
+        <?php endif ?>
         <div class="modal-body">
           <div class="container">
 
@@ -198,8 +204,8 @@
         <div class="modal-body">
           <div class="container">
             <div class="card-body fadeIn animated">
-                       
-                       
+
+
             <div class="row" style="padding-top: 2%">
               <div class="col">
                 <span>โอนเงินมาที่เบอร์ : </span>
@@ -361,7 +367,7 @@
       });
     }
   }
-  
+
   function sentwallet() {
     var truewallet = $('#truewallet').val();
     if (truewallet.length != 14) {

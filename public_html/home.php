@@ -143,6 +143,18 @@ $asset_path = "asset/".$_SESSION['FormulaType'];
         </div>
       </div>
 
+      <?php
+        if ($_SESSION['Join']):
+      ?>
+        <p>
+          Join
+        </p>
+      <?php else: ?>
+        <p>
+          Not Join
+        </p>
+      <?php endif ?>
+
 
 
     </div>
