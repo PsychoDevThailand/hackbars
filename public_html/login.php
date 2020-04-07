@@ -72,9 +72,9 @@
     } */
     .center-box {
       padding: 5% 12% 7% 9%;
-      /* border: 0.5px solid #fff; */
+      border: 1px solid #0186f4;
       border-radius: 3px;
-      background-image:url('resource/images/new/asset/Login/Frame_Login.png');
+      /* background-image:url('resource/images/new/asset/Login/Frame_Login.png'); */
       background-size:100% 100%;
     }
     .modal-content {
@@ -108,7 +108,7 @@
       color: white;
       font-weight: bold;
       font-size: 32px;
-      margin-bottom: 1em;
+      /* margin-bottom: 1em; */
     }
 
     .btnimg {
@@ -269,11 +269,11 @@
 
           <div class="row mt-3">
             <div class="col text-right pl-0">
-                <a onclick="do_login()" class="btn btn-primary" style="color: #fff; font-size: 14px; width: 105px;">เข้าสู่ระบบ</a>
+                <a onclick="do_login()" class="btn btn-primary" style="color: #fff; font-size: 14px;">เข้าสู่ระบบ</a>
             </div>
 
             <div class="col text-left pr-0">
-                <a data-toggle="modal" data-target="#RegisModal"  style="color: #fff; font-size: 14px;" class="btn btn-success" >สมัครสมาชิก</a>
+                <a data-toggle="modal" data-target="#RegisModal"  style="color: #fff; font-size: 14px;" class="btn btn-success" >สมัครฟรี! </a>
             </div>
           </div>
         </form>
@@ -281,18 +281,22 @@
       </div>
       <br>
 
-      <div class="container-fluid" style="margin-top: -15px">
-        <div style="font-family: 'Helvet';font-size: 24px;color:white;margin-bottom: -15px">ติดต่อเราได้ที่ไลน์</div>
-        <a href="http://line.me/ti/p/~<?php echo $contact; ?>">
-          <span style="font-family: 'Helvet';font-size: 34px;">
-            <img src="resource/images/new/i_line.png" height="30" style="padding-bottom: 1%;">
-            Line : <?php echo $contact; ?>
-          </span>
-        </a>
+
+      <div class="alert alert-light" role="alert">
+        <h4 class="alert-heading text-info">
+          <a href="http://line.me/ti/p/~<?php echo $contact; ?>">
+            <span style="font-family: 'Helvet';font-size: 26px;" class='text-info'>
+              <img src="resource/images/new/i_line.png" height="30" style="padding-bottom: 1%;">
+              Line : <?php echo $contact; ?>
+            </span>
+          </a>
+        </h4>
+        <hr>
+        <p>
+          สำหรับลูกค้าเว็บ MM88GET สามารถนำยูสเซอร์และเบอร์โทรเข้าสู่ระบบได้ทันที หรือ สมัคร MM88GET คลิก!
+          <a style="color: #ffc107" target='_blank' href="https://mm88get.com/users/sign_up?ref=webrichbac">https://mm88get.com</a>
+        </p>
       </div>
-
-
-
     </div>
   </div>
 </body>
