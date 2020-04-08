@@ -29,15 +29,28 @@
         document.getElementById(winid).innerHTML = winhtml;
       }
     }
-    if (slot.length == x[0].data.length - 1) slot = slot.substring(1, x[0].data.length - 1);
-    slot += s;
-    for (let i = 0; i < x.length; i++) {
-      if (slot == x[i].data.substring(0, x[i].data.length - 1)) {
-        active++;
-        predict = x[i].data.charAt(x[i].data.length - 1);
-        break;
+    if (x[0].data) {
+      if (slot.length == x[0].data.length - 1) slot = slot.substring(1, x[0].data.length - 1);
+      slot += s;
+      for (let i = 0; i < x.length; i++) {
+        if (slot == x[i].data.substring(0, x[i].data.length - 1)) {
+          active++;
+          predict = x[i].data.charAt(x[i].data.length - 1);
+          break;
+        }
+        predict = "";
       }
-      predict = "";
+    } else {
+      if (slot.length == x[0].length - 1) slot = slot.substring(1, x[0].length - 1);
+      slot += s;
+      for (let i = 0; i < x.length; i++) {
+        if (slot == x[i].substring(0, x[i].length - 1)) {
+          active++;
+          predict = x[i].charAt(x[i].length - 1);
+          break;
+        }
+        predict = "";
+      }
     }
   }
 
@@ -52,7 +65,6 @@
         stack = 1;
         predict = "";
         for (let i = 0; i < 72; i++) {
-
           if (res[i] == 'B') {
             chkresult('b');
           } else if (res[i] == 'P') {
@@ -87,7 +99,7 @@
     });
   }
   setInterval(showdata, 3000);
-  
+
   function idleTimer() {
  var t;
     //window.onload = resetTimer;
@@ -106,15 +118,14 @@
    }
 
    function resetTimer() {
-	  console.log('reset time');
         clearTimeout(t);
         t = setTimeout(logout, 1500000);  // time is in milliseconds (1000 is 1 second)
         t= setTimeout(reload, 300000);  // time is in milliseconds (1000 is 1 second)
     }
 	}
-	
-	
-     idleTimer(); 
+
+
+     idleTimer();
 	 console.log('start');
 
 });

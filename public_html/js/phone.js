@@ -41,7 +41,6 @@ function checkPhone() {
 }
 
 function findOTP() {
-  console.log('check OTP');
   var phone = $("#phone").val();
   var otp = $("#otp").val();
 

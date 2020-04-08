@@ -93,18 +93,35 @@ $(document).ready(function() {
       axisX++;
       // console.log("Win : " + win + " Active : " + active + " Stack : " + stack);
     }
-    if (slot.length == x[0].data.length - 1) slot = slot.substring(1, x[0].data.length - 1);
-    slot += s;
-    for (let i = 0; i < x.length; i++) {
-      if (slot == x[i].data.substring(0, x[i].data.length - 1)) {
-        // console.log(slot);
-        document.getElementById('nextPre').innerHTML = "ตาถัดไป(ไม้ที่ " + stack + "/3)";
-        active++;
-        predict = x[i].data.charAt(x[i].data.length - 1);
-        return true;
+    if (x[0].data) {
+      if (slot.length == x[0].data.length - 1) slot = slot.substring(1, x[0].data.length - 1);
+      slot += s;
+      for (let i = 0; i < x.length; i++) {
+        if (slot == x[i].data.substring(0, x[i].data.length - 1)) {
+          // console.log(slot);
+          document.getElementById('nextPre').innerHTML = "ตาถัดไป(ไม้ที่ " + stack + "/3)";
+          active++;
+          predict = x[i].data.charAt(x[i].data.length - 1);
+          return true;
+        }
+        predict = "";
       }
-      predict = "";
+    } else {
+      if (slot.length == x[0].length - 1) slot = slot.substring(1, x[0].length - 1);
+      slot += s;
+      for (let i = 0; i < x.length; i++) {
+        if (slot == x[i].substring(0, x[i].length - 1)) {
+          // console.log(slot);
+          document.getElementById('nextPre').innerHTML = "ตาถัดไป(ไม้ที่ " + stack + "/3)";
+          active++;
+          predict = x[i].charAt(x[i].length - 1);
+          return true;
+        }
+        predict = "";
+      }
+
     }
+
     return false;
   }
 
@@ -280,5 +297,5 @@ $(document).ready(function() {
     });
   }
   setInterval(sendWS, 3000);
-  
+
 });
