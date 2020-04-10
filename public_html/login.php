@@ -276,6 +276,13 @@
                 <a data-toggle="modal" data-target="#RegisModal"  style="color: #fff; font-size: 14px;" class="btn btn-success" >สมัครฟรี! </a>
             </div>
           </div>
+
+          <div class="row mt-3">
+            <div class="col text-center pl-0">
+                <a onclick="do_guest()" class="btn btn-primary" style="color: #fff; font-size: 14px;">ทดลองสูตรฟรี</a>
+            </div>
+
+          </div>
         </form>
 
       </div>
@@ -332,6 +339,10 @@ $( document ).ready(function() {
       }
     }
     return true;
+  }
+
+  function do_guest() {
+    window.location.href = 'gateway';
   }
 
   function do_login() {
