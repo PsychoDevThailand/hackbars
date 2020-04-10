@@ -8,7 +8,7 @@
 	}
 	$sql_update = "UPDATE `guests` SET `credit` = `credit` - 1 WHERE id = '$u_id'";
 	$result_update   = mysqli_query($db, $sql_update);
-	$sql      = "SELECT `credit` FROM `guest` WHERE `id` = '$u_id'";
+	$sql      = "SELECT `credit` FROM `guests` WHERE `id` = '$u_id'";
 	$result   = mysqli_query($db, $sql);
 	$rowcount = mysqli_num_rows($result);
 	if ($rowcount == 1) {
