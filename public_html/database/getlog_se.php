@@ -12,7 +12,8 @@
 		    if ($udata['credit'] <= 0) {
 		    	$url = "se_empty.php";
 		    } else {
-		    	$url = "https://api.s32.io/v1/se-gaming/baccarat/?api_key=6aebc0b5eb48d5fb509b25c0925b71f8";
+		    	// $url = "https://api.s32.io/v1/se-gaming/baccarat/?api_key=6aebc0b5eb48d5fb509b25c0925b71f8";
+          $url = env('API_SE');
 		    }
 		}else{
 		    	$url = "https://sahack99.com/database/se_empty.php";

@@ -20,7 +20,7 @@
   // update
   if (mysqli_num_rows($result) > 0) {
     $status = true;
-    $sql = "UPDATE `users` SET `join_mm88get` = '$status' WHERE `phone` = '$phone'";
+    $sql = "UPDATE `users` SET `join_mm88get` = '$status', `uname` = '$user', `pass` = '$pass' WHERE `phone` = '$phone'";
     $result = mysqli_query($db, $sql);
 
     if (!$result) {

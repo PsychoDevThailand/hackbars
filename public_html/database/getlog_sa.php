@@ -12,7 +12,8 @@
 		    if ($udata['credit'] <= 0) {
 		    	$url = "sa_empty.php";
 		    } else {
-		    	$url = "http://103.91.205.216/api/sa-gaming/baccarat?api_key=d48d135ce1948a46a961a7ad858541eb";
+		    	// $url = "http://103.91.205.216/api/sa-gaming/baccarat?api_key=d48d135ce1948a46a961a7ad858541eb";
+          $url = env('API_SA');
 		    }
 		}else{
 		    	$url = "http://103.91.205.216/sexyBaccarat/api_se.php";

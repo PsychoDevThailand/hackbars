@@ -277,12 +277,13 @@
             </div>
           </div>
 
-          <div class="row mt-3">
+          <!-- Guest  -->
+          <!-- <div class="row mt-3">
             <div class="col text-center pl-0">
                 <a onclick="do_guest()" class="btn btn-primary" style="color: #fff; font-size: 14px;">ทดลองสูตรฟรี</a>
             </div>
 
-          </div>
+          </div> -->
         </form>
 
       </div>
