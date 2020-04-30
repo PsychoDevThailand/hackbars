@@ -1,5 +1,7 @@
 <?php
 require 'database/session.php';
+require 'database/api_sa_status.php';
+require 'database/api_se_status.php';
 $asset_path = "asset/".$_SESSION['FormulaType'];
 ?>
 
@@ -125,17 +127,34 @@ $asset_path = "asset/".$_SESSION['FormulaType'];
 
       <div class="container">
         <div class="row">
+
+          <?php if ($_SESSION['API_SA']): ?>
           <div class="col-12 col-sm-6 game_colum">
             <a <?php if ($_SESSION['Credit'] > 0): ?>
-			href="salobby"
-			<?php else : ?>
-             href="#" onclick="Swal.fire({ type: 'error',title: 'คุณมี Credit ไม่พอใช้บริการนี้',text: 'กรุณาเติมเงินก่อนเข้าใช้งานต่อไปค่ะ'})"
+			        href="salobby"
+			         <?php else : ?>
+              href="#" onclick="Swal.fire({ type: 'error',title: 'คุณมี Credit ไม่พอใช้บริการนี้',text: 'กรุณาเติมเงินก่อนเข้าใช้งานต่อไปค่ะ'})"
             <?php endif;  ?>>
+
               <div class="game_div">
                 <img src="resource/images/cas/Game-sa.png" style="width: 100%;">
               </div>
             </a>
           </div>
+        <?php else: ?>
+          <div class="col-12 col-sm-6 game_colum">
+            <a
+              href="#" onclick="Swal.fire({ type: 'error',title: 'ระบบปิดปรับปรุง',text: 'ขออภัยระบบปิดปรับปรุง'})"
+            >
+              <div class="game_div">
+                <img src="resource/images/cas/Game-sa.png" style="width: 100%;">
+              </div>
+            </a>
+          </div>
+        <?php endif; ?>
+
+
+        <?php if ($_SESSION['API_SE']):?>
           <div class="col-12 col-sm-6 game_colum">
             <a <?php if ($_SESSION['Credit'] > 0): ?>
 			href="selobby"
@@ -147,6 +166,19 @@ $asset_path = "asset/".$_SESSION['FormulaType'];
               </div>
             </a>
           </div>
+        <?php else: ?>
+          <div class="col-12 col-sm-6 game_colum">
+            <a
+              href="#" onclick="Swal.fire({ type: 'error',title: 'ระบบปิดปรับปรุง',text: 'ขออภัยระบบปิดปรับปรุง'})"
+             >
+              <div class="game_div">
+                <img src="resource/images/cas/Game-se.png" style="width: 100%;">
+              </div>
+            </a>
+          </div>
+        <?php endif; ?>
+
+
         </div>
 
         <br>
