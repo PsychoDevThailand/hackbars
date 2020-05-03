@@ -178,6 +178,14 @@ $asset_path = "asset/".$_SESSION['FormulaType'];
           </div>
         <?php endif; ?>
 
+        <div class="col-12 col-sm-6 game_colum">
+          <a href="vivolobby">
+            <div class="game_div">
+              <img src="resource/images/cas/Game-vivo.png" style="width: 100%;">
+            </div>
+          </a>
+        </div>
+
 
         </div>
 
