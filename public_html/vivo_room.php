@@ -242,7 +242,7 @@ $v = '1.0.4';
                   <h1 style="margin-bottom: -8px;font-size:32px"><img height="60" src="resource/images/new/VIVOgaming.png"> <?php echo str_pad(intval($_GET['id']), 3, '0', STR_PAD_LEFT); ?></h1>
                 </div>
                 <div class="col text-right" style="padding:0">
-                  <a href="selobby">
+                  <a href="vivolobby">
                     <img class=" mt-2 mr-3" src="resource/images/new/Exit_btn.png" height="40">
                   </a>
                 </div>
@@ -289,7 +289,7 @@ $v = '1.0.4';
                   <table id="rtable" align="center" style="border-collapse: separate; border-spacing: 2px;">
                     <?php for ($i=0; $i < 6 ; $i++) { ?>
                     <tr>
-                      <?php for ($j=0; $j < 12; $j++) { ?>
+                      <?php for ($j=0; $j < 22; $j++) { ?>
                       <td style="vertical-align: middle;background-color: #c09a5e;width: 28px;height: 28px;">
                         <img src="" style="height: 24px;width: 24px;">
                       </td>
@@ -440,7 +440,7 @@ $v = '1.0.4';
       </div>
     </div>
   </main>
-  <!-- <script type="text/javascript">
+  <script type="text/javascript">
     window.onload = function() {
         document.addEventListener("contextmenu", function(e){
             e.preventDefault();
@@ -462,8 +462,8 @@ $v = '1.0.4';
             return false;
         }
     };
-    </script> -->
-<!-- <script type="text/javascript">
+    </script>
+<script type="text/javascript">
         let div = document.createElement('div');
         let loop = setInterval(() => {
             console.log(div);
@@ -475,7 +475,7 @@ $v = '1.0.4';
                 window.location = "./database/logout.php";
             }
         });
-    </script> -->
+    </script>
 </body>
 
 </html>

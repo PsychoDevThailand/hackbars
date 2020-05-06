@@ -171,7 +171,7 @@ $(document).ready(function() {
       col = -1;
       count = 0;
       predict = "";
-      waittime = 10;
+      waittime = 25;
       g_line = 26;
       axisY = g_line;
       axisX = 1;

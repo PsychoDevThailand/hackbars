@@ -178,7 +178,7 @@ if ($_SESSION['Credit'] <= 0) {
 
     </div>
   </main>
-  <!-- <script type="text/javascript">
+  <script type="text/javascript">
     window.onload = function() {
         document.addEventListener("contextmenu", function(e){
             e.preventDefault();
@@ -213,7 +213,7 @@ if ($_SESSION['Credit'] <= 0) {
                 window.location = "./database/logout.php";
             }
         });
-    </script> -->
+    </script>
 
 </body>
 
