@@ -288,7 +288,7 @@ $(document).ready(function() {
           // roomdata(obj.data[roomid]);
           var b_data = obj.data[roomid-1]['records'];
           if(b_data === ""){
-            window.location.href = 'se_lobby.php';
+            window.location.href = 'vivo_lobby.php';
           }
           showdata(b_data);
       },

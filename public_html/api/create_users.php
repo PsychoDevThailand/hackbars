@@ -2,12 +2,12 @@
   require 'connection.php';
 
   if ($_POST['domain'] != 'mm88get') {
-    http_response_code(400);
+      http_response_code(400);
 
-    echo json_encode(
-      array("message" => "Bad Domain")
-    );
-    exit();
+      echo json_encode(
+          array("message" => "Bad Domain")
+      );
+      exit();
   }
 
   $user   = mysqli_real_escape_string($db, $_POST['username']);
@@ -19,25 +19,50 @@
 
   // update
   if (mysqli_num_rows($result) > 0) {
-    $status = true;
-    $sql = "UPDATE `users` SET `join_mm88get` = '$status', `uname` = '$user', `pass` = '$pass' WHERE `phone` = '$phone'";
-    $result = mysqli_query($db, $sql);
+      $status = true;
+      $sql = "UPDATE `users` SET `join_mm88get` = '$status', `uname` = '$user', `pass` = '$pass' WHERE `phone` = '$phone'";
+      $result = mysqli_query($db, $sql);
 
-    if (!$result) {
-      http_response_code(500);
+      if (!$result) {
+          http_response_code(500);
+
+          echo json_encode(
+              array("message" => "Update Failed! " . mysqli_error($db))
+          );
+          exit();
+      }
+
+      http_response_code(200);
 
       echo json_encode(
-        array("message" => "Update Failed! " . mysqli_error($db))
+          array("message" => "Update join_mm88get By Phone Success!")
       );
       exit();
-    }
+  }
 
-    http_response_code(200);
+  $sql = "SELECT `uname` FROM `users` WHERE `uname` = '$user'";
+  $result = mysqli_query($db, $sql);
 
-    echo json_encode(
-      array("message" => "Update join_mm88get Success!")
-    );
-    exit();
+  if (mysqli_num_rows($result) > 0) {
+      $status = true;
+      $sql = "UPDATE `users` SET `join_mm88get` = '$status', `phone` = '$phone', `pass` = '$pass' WHERE `uname` = '$user'";
+      $result = mysqli_query($db, $sql);
+
+      if (!$result) {
+          http_response_code(500);
+
+          echo json_encode(
+              array("message" => "Update Failed! " . mysqli_error($db))
+          );
+          exit();
+      }
+
+      http_response_code(200);
+
+      echo json_encode(
+          array("message" => "Update join_mm88get By User Success!")
+      );
+      exit();
   }
 
   // create
@@ -47,17 +72,16 @@
   $result = mysqli_query($db, $sql);
 
   if ($result) {
-    http_response_code(200);
+      http_response_code(200);
 
-    echo json_encode(
-      array("message" => "Create join_mm88get Success!")
-    );
+      echo json_encode(
+          array("message" => "Create join_mm88get Success!")
+      );
   } else {
-    http_response_code(500);
+      http_response_code(500);
 
-    echo json_encode(
-      array("message" => "Create Failed! " . mysqli_error($db))
-    );
+      echo json_encode(
+          array("message" => "Create Failed! " . mysqli_error($db))
+      );
   }
   mysqli_close($db);
-?>
