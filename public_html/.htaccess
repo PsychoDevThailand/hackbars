@@ -14,5 +14,5 @@ RewriteRule ^formula$ database/chgformula.php [QSA]
 RewriteRule ^salobby_guest$ guest/sa_lobby.php [QSA]
 RewriteRule ^saroom_guest$ guest/sa_room.php [QSA]
 RewriteRule ^gateway$ guest/gateway.php [QSA]
-RewriteCond %{HTTPS} off
-RewriteRule (.*) https://%{HTTP_HOST}:443%{REQUEST_URI}
+#RewriteCond %{HTTPS} off
+#RewriteRule (.*) https://%{HTTP_HOST}:443%{REQUEST_URI}

@@ -20,3 +20,4 @@
   } else {
       $_SESSION['API_SE'] = true;
   }
+// https://x-licenses.com/api/sexygame
