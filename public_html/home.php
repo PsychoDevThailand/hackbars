@@ -194,7 +194,7 @@ $asset_path = "asset/".$_SESSION['FormulaType'];
 
         <div class="col-12 col-sm-6 game_colum">
           <a
-            <?php if ($_SESSION['Credit'] > 0): ?>
+            <?php if ($_SESSION['Credit'] >= 20): ?>
               href="database/joker_gateway.php"
             <?php else: ?>
               href="#" onclick="Swal.fire({ type: 'error',title: 'คุณมี Credit ไม่พอใช้บริการนี้',text: 'กรุณาเติมเงินก่อนเข้าใช้งานต่อไปค่ะ'})"
