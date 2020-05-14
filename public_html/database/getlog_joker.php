@@ -1,6 +1,10 @@
 <?php
-  require_once 'connection.php';
+  // require_once 'connection.php';
+  include dirname(__DIR__) . '/autoload.php';
   $url = env('API_JOKER');
+  if (!isset($url)) {
+      $url = 'http://103.233.194.90/api-vivo/api_joker.php';
+  }
   $curl = curl_init();
   curl_setopt_array(
       $curl,
