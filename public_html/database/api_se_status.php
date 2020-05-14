@@ -1,6 +1,9 @@
 <?php
   require_once 'connection.php';
   $url = env('API_SE');
+  if (!isset($url)) {
+      $url = 'http://103.233.194.90/api_se/api_se.php';
+  }
   $curl = curl_init();
   curl_setopt_array($curl, array(
     CURLOPT_URL => $url,

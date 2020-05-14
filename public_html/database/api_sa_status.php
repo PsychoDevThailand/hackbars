@@ -1,6 +1,9 @@
 <?php
   require_once 'connection.php';
   $url = env('API_SA');
+  if (!isset($url)) {
+      $url = 'http://103.91.205.216/api/sa-gaming/baccarat?api_key=b0b701fff3d01c5b515f9293cb4ede4d';
+  }
   $headers['CLIENT-IP'] = env('FAKE_IP');
   $headers['X-FORWARDED-FOR'] = env('FAKE_IP');
   $headers['X-Licenses-ID'] = env('SA_ID');
