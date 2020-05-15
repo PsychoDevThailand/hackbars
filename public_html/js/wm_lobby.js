@@ -8,7 +8,6 @@ $(document).ready(function() {
 			rate = Math.round((win / active) * 100);
 			winid = 'winrate' + room;
 			winhtml = rate + '%';
-			console.log('check result : ', winid);
 			document.getElementById(winid).style.color = '#ffcc00'
 			document.getElementById(winid).innerHTML = winhtml;
 			stack = 1;
@@ -57,7 +56,8 @@ $(document).ready(function() {
 	}
 
 	function roomdata(formula) {
-		for (room = 0; room <= 9; room++) {
+		for (room = 0; room < 22; room++) {
+			if (room == 3 || room == 13) continue;
 			data = formula[room];
 			res = data['records'].split("");
 			if (typeof res[0] !== 'undefined') {
@@ -88,7 +88,7 @@ $(document).ready(function() {
 		// let wstr = '{"sender":"client", "action":"get_baclog"}';
 		// socket.send(wstr);
 		$.ajax({
-			url: './database/getlog_vivo.php',
+			url: './database/getlog_wm.php',
 			type: 'POST',
 			success: function(response) {
 				var obj = JSON.parse(response);

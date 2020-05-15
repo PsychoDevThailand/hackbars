@@ -13,6 +13,7 @@
     // 'API_SE' => 'http://103.91.205.216/api/se-gaming/baccarat?api_key=b0b701fff3d01c5b515f9293cb4ede4d',
     'API_VIVO' => 'http://103.233.194.90/api-vivo/api_vivo.php',
     'API_JOKER' => 'http://103.233.194.90/api-vivo/api_joker.php',
+    'API_WM' => 'http://103.233.194.90/api-vivo/api_wm.php',
     'FAKE_IP' => '103.245.164.63',
     'SA_ID' => 'b6d767d2f8ed5d21a44b0e5886680cb9',
     'SA_KEY' => '0d681bd3105592c89689154afe267aacff55e52c0714b4edbb1a95b25e3726fd',
