@@ -1,7 +1,7 @@
 <?php require 'database/session.php';
-if($_SESSION['Credit'] <= 0) {
-  header('location: lobby.php');
-  exit();
+if ($_SESSION['Credit'] <= 0) {
+    header('location: lobby.php');
+    exit();
 }
 if (!isset($_GET['id'])) {
     header('location: lobby.php');
@@ -11,12 +11,12 @@ if ($_GET['id'] < 1 or $_GET['id'] > 22) {
     header('location: lobby.php');
     exit();
 }
-if ($_GET['id'] <= 6){
-$Room = "C";
-
+if ($_GET['id'] <= 6) {
+    $Room = "C";
+    $RoomId = $_GET['id'];
 } else {
-
-$Room = "A";
+    $Room = "A";
+    $RoomId = $_GET['id'] - 6;
 }
 
 $asset_path = "asset/".$_SESSION['FormulaType'];
@@ -247,7 +247,7 @@ $v = '1.0.6';
             <div class="container frameA" style="background-image: url('resource/images/new/<?php echo $asset_path ?>/FrameD.png'), url('resource/images/new/<?php echo $asset_path ?>/FrameA-2.png');">
               <div class="row">
                 <div class="col-auto pr-0">
-                  <h1 style="margin-bottom: -8px;font-size:32px"><img height="60" src="resource/images/Home_Sagaming.png"> <?php echo $Room . str_pad(intval($_GET['id']), 2, '0', STR_PAD_LEFT); ?></h1>
+                  <h1 style="margin-bottom: -8px;font-size:32px"><img height="60" src="resource/images/Home_Sagaming.png"> <?php echo $Room . str_pad(intval($RoomId), 2, '0', STR_PAD_LEFT); ?></h1>
                 </div>
                 <div class="col text-right" style="padding:0">
                   <a href="salobby">
