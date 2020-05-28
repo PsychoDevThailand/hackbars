@@ -2,7 +2,7 @@
   session_start();
   require 'connection.php';
 
-  $slots = ['gtm', 'joker', 'party', 'spinomenal', 'tomhorn'];
+  $slots = ['gtm', 'joker', 'party', 'spinomenal', 'tomhorn', 'pg'];
 
   if (!isset($_GET['slot'])) {
       header("location: ../home");

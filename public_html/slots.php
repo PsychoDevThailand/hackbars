@@ -196,6 +196,20 @@ $asset_path = "asset/".$_SESSION['FormulaType'];
             </a>
           </div>
 
+          <div class="col-12 col-sm-6 game_colum">
+            <a
+              <?php if ($_SESSION['Credit'] >= 20): ?>
+                href="database/slot_gateway.php?slot=pg"
+              <?php else: ?>
+                href="#" onclick="Swal.fire({ type: 'error',title: 'คุณมี Credit ไม่พอใช้บริการนี้',text: 'กรุณาเติมเงินก่อนเข้าใช้งานต่อไปค่ะ'})"
+              <?php endif; ?>
+            >
+              <div class="game_div">
+                <img src="resource/images/cas/Game-pg.png" style="width: 100%;">
+              </div>
+            </a>
+          </div>
+
         </div>
 
         <br>
