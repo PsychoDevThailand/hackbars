@@ -53,7 +53,7 @@ $udata['credit'] = $_SESSION['Credit'];
   <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
   <script type="text/javascript" src="./js/sidebar.js"></script>
   <script type="text/javascript" src="./js/football.js"></script>
-  <script type="text/javascript" src="./js/home.js"></script>
+  <!-- <script type="text/javascript" src="./js/home.js"></script> -->
 
   <style type="text/css">
     .sidenav {
