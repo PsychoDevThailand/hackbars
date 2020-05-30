@@ -1,0 +1,166 @@
+body {
+    font-family: 'Oswald', 'Work Sans', 'Kanit';
+    margin: 0!important;
+    padding: 0 !important;
+    background-attachment: fixed;
+    background: url(../resource/images/cas/Football-BG.png) 50% 0 #000
+}
+
+media (max-width: 680px)
+.match-list-wrap .match-list-item {
+    overflow: hidden;
+}
+@media (max-width: 768px)
+.match-list-wrap .match-list-item {
+    overflow: hidden;
+}
+
+.main  {
+
+  height: '100%';
+  display: 'flex';
+  max-width: 860px;
+  margin: 0px auto;
+  margin-bottom: 70px;
+  margin-top: 50px;
+}
+
+.match-list-wrap .match-list-item > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.match-list-wrap {
+  background: #000;
+}
+
+.match-list-wrap .match-list-item {
+    margin-top: 1px;
+    padding: 8px 6px;
+    border-bottom: 1px solid #ddd;
+    font-size: 0;
+    box-sizing: border-box;
+}
+
+.match-list-wrap .match-list-item .date {
+    margin-left: 5px;
+    margin-right: 20px;
+    width: 48px;
+    height: 44px;
+    background-color: #000000b0;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.match-list-wrap .match-list-item .date span {
+    padding-top: 8px;
+    font-size: 16px;
+    color: #fbba00;
+    display: block;
+}
+
+.match-list-wrap .match-list-item .time {
+    padding-top: 0px;
+    min-width: 40px;
+    margin-left: 0px;
+    margin-right: 25px;
+    font-size: 14px;
+    color: #fff;
+    font-family: 'Work Sans', 'Kanit';
+}
+
+.match-list-wrap .match-list-item .team-name {
+    padding: 0 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    min-width: 140px;
+    text-align: center;
+}
+
+.match-list-wrap .match-list-item .versus {
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: #fbba00;
+    text-transform: uppercase;
+    min-width: 40px;
+}
+
+.match-list-wrap .match-list-item .logo img {
+    width: 32px;
+    height: 32px;
+    background-color: transparent !important;
+    border: none;
+}
+
+.match-list-wrap .match-list-item .va-view-wrap {
+    float: right;
+}
+
+.match-list-wrap .match-list-item .va-view-wrap a {
+    margin-top: 5px;
+    width: 140px;
+    margin-right: 20px;
+    display: block;
+    box-sizing: border-box;
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    line-height: 32px;
+    font-family: 'Work Sans', 'Kanit';
+    transition: 400ms all;
+    -webkit-transition: 400ms all;
+    text-transform: uppercase;
+    border: 2px solid #fbba00;
+  }
+
+/* .fixture {
+  color: #fff;
+  font-size: 15px;
+  background-color: #000;
+  padding-top: 18px;
+  border-bottom: 1px solid #ddd;
+} */
+.fixture {
+  color: #fff;
+  font-size: 15px;
+  background-color: #000;
+  padding-top: 18px;
+  border-bottom: 1px solid #ddd;
+}
+.fixture-modal {
+  color: #fff;
+  font-size: 15px;
+  /* background-color: #fff; */
+  /* padding-top: 18px; */
+  /* border-bottom: 1px solid #ddd; */
+}
+
+.fixture:hover {
+  background: #7f0505;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: dashed;
+}
+
+.modal-content{
+  margin-top: 200px;
+}
+
+.modal-body {
+  padding-top: 30px;
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+.modal-header {
+  background-color: #000;
+}
