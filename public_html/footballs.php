@@ -42,7 +42,8 @@ $asset_path = "asset/".$_SESSION['FormulaType'];
       right: 0;
       width: 100vw;
       margin-top: -25px;
-      height: 100vh;
+      /* margin-bottom: 100px; */
+      min-height: 100vh;
     }
     .sidenav {
       background-image: none;
@@ -110,6 +111,12 @@ $asset_path = "asset/".$_SESSION['FormulaType'];
         background-image: url('resource/images/new/<?php echo $asset_path ?>/side_bar.png');
       }
     }
+
+    body.football {
+      margin-bottom: 0;
+      bottom: 0;
+      background-color: #000;
+    }
   </style>
   <script>
   sessionStorage.setItem('User', '<?php echo $_SESSION["Username"];?>' );
@@ -122,12 +129,12 @@ $asset_path = "asset/".$_SESSION['FormulaType'];
   </script>
 </head>
 
-<body>
+<body class="football">
   <?php
     include './resource/modal.php';
     include 'navbar2.php';
   ?>
-    <iframe class="responsive-iframe" src="football_index.php" scrolling="no" frameborder=0></iframe>
+  <iframe class="responsive-iframe" src="football_index.php" scrolling="auto" frameborder=0></iframe>
 </body>
 
 </html>
