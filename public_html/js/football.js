@@ -59,14 +59,16 @@ $(document).ready(function() {
               <!-- Modal body -->
               <div class="modal-body">
               <a href='#' data-toggle="modal" data-target="#myModal" class='row fixture-modal' data-value='${data.id}' />
-                <div class="col-4">
+                <div class="col-xs-1">
+                </div>
+                <div class="col-xs-3">
                   <center>
                     <img width="35"src="${data.home_team.logo}">
                     <br>
                     <p style="font-size: 13px; color: ${color_team_home}">${data.home_team.name}</p>
                   </center>
                 </div>
-                <div class="col-4">
+                <div class="col-xs-4">
                   <center>
                     <span style="color: #000; font-size: 13px;">อัตราต่อรอง</span>
                     <br>
@@ -74,12 +76,14 @@ $(document).ready(function() {
                     <br>
                   </center>
                 </div>
-                <div class="col-4">
+                <div class="col-xs-3">
                   <center>
                     <img width="35"src="${data.away_team.logo}">
                     <br>
                     <p style="font-size: 13px; color: ${color_team_away}">${data.away_team.name}</p>
                   </center>
+                </div>
+                <div class="col-xs-1">
                 </div>
               </a>
               </div>
@@ -137,7 +141,9 @@ $(document).ready(function() {
 
 										fixture_html += `
                       <a href='#' data-toggle="modal" data-target="#myModal" class='row fixture' data-value='${fixtures[j].id}' />
-                        <div class="col-5">
+                        <div class="col-xs-1">
+                        </div>
+                        <div class="col-xs-4">
                           <center>
                             <img width="35"src="${fixtures[j].home_team.logo}">
                             <br>
@@ -152,13 +158,15 @@ $(document).ready(function() {
                             <br>
                           </center>
                         </div>
-                        <div class="col-5">
+                        <div class="col-xs-4">
                           <center>
                             <img width="35"src="${fixtures[j].away_team.logo}">
                             <br>
                             <p>${fixtures[j].away_team.name}</p>
                           </center>
                         </div>
+                        <div class="col-xs-1">
+                       </div>
                       </a>
                     `
 									}
