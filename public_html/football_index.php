@@ -26,7 +26,7 @@
       <!-- Latest compiled JavaScript -->
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
-      <script src="js/football.js"></script>
+      <script src="js/football_update.js"></script>
       <script src="https://momentjs.com/downloads/moment.js"></script>
       <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
 
