@@ -136,11 +136,13 @@ $(document).ready(function() {
 
 	var date = getUrlParameter('date') ? new Date(getUrlParameter('date')) : new Date();
 	var new_date = moment(date.setHours(date.getHours() - 8))
+	console.log('date : ', date)
 
 	$.get(`https://api.thaiscore.co/leagues/tded?&date=${moment(new_date).format('L')}&locale=th`,
 		function(data, status) {
 			if (status == 'success') {
 				var leagues = data
+				console.log(leagues)
 
 				$.get(`https://api.thaiscore.co/fixtures/tded?date=${moment(new_date).format('L')}&locale=th`,
 					function(data, status) {
