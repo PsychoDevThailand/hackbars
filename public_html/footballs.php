@@ -134,7 +134,11 @@ $asset_path = "asset/".$_SESSION['FormulaType'];
     include './resource/modal.php';
     include 'navbar2.php';
   ?>
-  <iframe class="responsive-iframe" src="football_index.php" scrolling="auto" frameborder=0></iframe>
+  <?php if (isset($_GET['date'])): ?>
+    <iframe class="responsive-iframe" src="football_index.php<?php echo '?date=' . $_GET['date']; ?>" scrolling="auto" frameborder=0></iframe>
+  <?php else: ?>
+    <iframe class="responsive-iframe" src="football_index.php" scrolling="auto" frameborder=0></iframe>
+  <?php endif; ?>
 </body>
 
 </html>
