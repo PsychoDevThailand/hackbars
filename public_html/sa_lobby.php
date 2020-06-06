@@ -1,7 +1,7 @@
 <?php require 'database/session.php';
-if($_SESSION['Credit'] <= 0) {
-  header('location: lobby.php');
-  exit();
+if ($_SESSION['Credit'] <= 0) {
+    header('location: lobby.php');
+    exit();
 }
   $asset_path = "asset/".$_SESSION['FormulaType'];
   $v = '1.1.0';
@@ -133,22 +133,23 @@ if($_SESSION['Credit'] <= 0) {
 <?php
        $room = "C";
        $J = "0";
-for ($i=0; $i < 22 ; $i++) {
-
-
-
+for ($i=0; $i < 30 ; $i++) {
     if (($i%2) == 0) {
         echo '<div class="row">';
     }
-	if (($i) == 22);{
+    if (($i) == 30);
+    {
 
-    if ($i == 6){
-
-      $room = "A";
-      $J = "0";
+    if ($i == 6) {
+        $room = "P";
+        $J = "0";
+    }
+    if ($i == 14) {
+        $room = "A";
+        $J = '0';
     }
   }
-   // echo $room . $J;
+    // echo $room . $J;
 
     $J++
 ?>
@@ -161,7 +162,7 @@ for ($i=0; $i < 22 ; $i++) {
               href="saroom?id=<?php echo $i+1; ?>"
             <?php else : ?>
               onclick="Swal.fire({ type: 'error',title: 'คุณมี Credit ไม่พอใช้บริการนี้',text: 'กรุณาเติมเงินก่อนเข้าใช้งานต่อไปค่ะ'})"
-            <?php endif;  ?>>
+            <?php endif; ?>>
               <div class="row resroom" style="padding:2%;border-radius:15px;
                       background-image:url('resource/images/new/<?php echo $asset_path; ?>/Frame_Lobby.png');
                       background-size:100% 100%;
@@ -172,7 +173,7 @@ for ($i=0; $i < 22 ; $i++) {
                         background-size: 85% 75%;
                         background-position: center center;
                         padding-right:4% ">
-                  <span class="txtroom">ROOM : <?php echo $room . str_pad($J , 2, '0', STR_PAD_LEFT); ?></span>
+                  <span class="txtroom">ROOM : <?php echo $room . str_pad($J, 2, '0', STR_PAD_LEFT); ?></span>
                 </div>
                 <div class="col-6 col-md-5 text-center" style="background-image: url('resource/images/new/tb_line.png');
                         background-repeat: no-repeat;
@@ -189,8 +190,8 @@ for ($i=0; $i < 22 ; $i++) {
         </div>
 
         <?php if (($i%2) != 0) {
-        echo '</div>';
-    }
+    echo '</div>';
+}
 } ?>
 
       </div>

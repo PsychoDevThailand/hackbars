@@ -7,16 +7,19 @@ if (!isset($_GET['id'])) {
     header('location: lobby.php');
     exit();
 }
-if ($_GET['id'] < 1 or $_GET['id'] > 22) {
+if ($_GET['id'] < 1 or $_GET['id'] > 30) {
     header('location: lobby.php');
     exit();
 }
 if ($_GET['id'] <= 6) {
     $Room = "C";
     $RoomId = $_GET['id'];
+} elseif ($_GET['id'] <=14) {
+    $Room = "P";
+    $RoomId = $_GET['id'] - 6;
 } else {
     $Room = "A";
-    $RoomId = $_GET['id'] - 6;
+    $RoomId = $_GET['id'] - 14;
 }
 
 $asset_path = "asset/".$_SESSION['FormulaType'];

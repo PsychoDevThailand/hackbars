@@ -1,1 +1,89 @@
-html,body{min-height:100%}.bg_body{background-size:cover,cover;background-position:left bottom,center;background-repeat:no-repeat,no-repeat;height:100%;width:100%}.bg_img1{background-image:url(../resource/images/theme/Login/addition/SA.png),url(../resource/images/theme/1/BG.png)}.bg_img2{background-image:url(../resource/images/theme/Login/addition/SA.png),url(../resource/images/theme/china/01_China_BG.png)}.bg_img3{background-image:url(../resource/images/theme/Login/addition/SA.png),url(../resource/images/theme/mayan/01__Mayan_BG.png)}.bg_img4{background-image:url(../resource/images/theme/Login/addition/SA.png),url(../resource/images/theme/music/01_Music_BG.png)}.bg_img5{background-image:url(../resource/images/theme/Login/addition/SA.png),url(../resource/images/theme/neon/01_Neon_BG.png)}.bg_img6{background-image:url(../resource/images/theme/Login/addition/SA.png),url(../resource/images/theme/racing/01_Racing_BG.png)}.bg_img7{background-image:url(../resource/images/theme/Login/addition/SA.png),url(../resource/images/theme/skull/01_Skull_BG.png)}.bg_img8{background-image:url(../resource/images/theme/Login/addition/SA.png),url(../resource/images/theme/space/01_Space_BG.png)}.bg_img9{background-image:url(../resource/images/theme/Login/addition/SA.png),url(../resource/images/theme/winter/01_Winter_BG.png)}.div-center{width:600px;height:700px;position:absolute;left:0;right:0;top:0;bottom:0;margin:auto;max-width:100%;max-height:100%;overflow:hidden;padding:5%;text-align:center}@media only screen and (min-width:700px){.div-center{height:800px}}a:link{color:Khaki;text-decoration:none}a:visited{color:Khaki;text-decoration:none}a:hover{color:Khaki;text-decoration:none}a:active{color:Khaki;text-decoration:none}
+html, body {
+  min-height: 100%
+}
+
+.bg_body {
+  background-size: cover, cover;
+  background-position: left bottom, center;
+  background-repeat: no-repeat, no-repeat;
+  height: 100%;
+  width: 100%
+}
+
+.bg_img1 {
+  background-image: url(../resource/images/theme/Login/addition/SA.png), url(../resource/images/theme/1/BG.png)
+}
+
+.bg_img2 {
+  background-image: url(../resource/images/theme/Login/addition/SA.png), url(../resource/images/theme/china/01_China_BG.png)
+}
+
+.bg_img3 {
+  background-image: url(../resource/images/theme/Login/addition/SA.png), url(../resource/images/theme/mayan/01__Mayan_BG.png)
+}
+
+.bg_img4 {
+  background-image: url(../resource/images/theme/Login/addition/SA.png), url(../resource/images/theme/music/01_Music_BG.png)
+}
+
+.bg_img5 {
+  background-image: url(../resource/images/theme/Login/addition/SA.png), url(../resource/images/theme/neon/01_Neon_BG.png)
+}
+
+.bg_img6 {
+  background-image: url(../resource/images/theme/Login/addition/SA.png), url(../resource/images/theme/racing/01_Racing_BG.png)
+}
+
+.bg_img7 {
+  background-image: url(../resource/images/theme/Login/addition/SA.png), url(../resource/images/theme/skull/01_Skull_BG.png)
+}
+
+.bg_img8 {
+  background-image: url(../resource/images/theme/Login/addition/SA.png), url(../resource/images/theme/space/01_Space_BG.png)
+}
+
+.bg_img9 {
+  background-image: url(../resource/images/theme/Login/addition/SA.png), url(../resource/images/theme/winter/01_Winter_BG.png)
+}
+
+.div-center {
+  width: 600px;
+  height: 700px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  padding: 5%;
+  text-align: center
+}
+
+@media only screen and (min-width:700px) {
+  .div-center {
+    height: 800px
+  }
+}
+
+a:link {
+  color: Khaki;
+  text-decoration: none
+}
+
+a:visited {
+  color: Khaki;
+  text-decoration: none
+}
+
+a:hover {
+  color: Khaki;
+  text-decoration: none
+}
+
+a:active {
+  color: Khaki;
+  text-decoration: none
+}
