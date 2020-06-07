@@ -19,7 +19,7 @@
       <!-- Latest compiled and minified CSS -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
-      <link rel="stylesheet" href="css/football.css">
+      <link rel="stylesheet" href="css/style.css">
       <!-- jQuery library -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -30,7 +30,7 @@
       <!-- Latest compiled JavaScript -->
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
-      <script src="js/football_update.js"></script>
+      <script src="js/script.js"></script>
       <script src="https://momentjs.com/downloads/moment.js"></script>
       <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
 
@@ -47,9 +47,21 @@
         </div>
       </div>
 
+      <div class='row'>
+        <div class='col-md-4'>
+        </div>
+        <div class='col-md-4'>
+        </div>
+        <div class='col-md-4'>
+        </div>
+        <div class='col-md-4'>
+        </div>
+      </div>
+
       <div class="container">
         <center style="font-size: 30px; color: #fdbd00"><span>AI วิเคราะห์ผลบอล</span></center>
         <hr style="border-top: 1px solid #fdbd00;">
+        <div id="date-tab"></div>
         <div id='football' style="margin-top: 30px;">
         </div>
     	</div>
