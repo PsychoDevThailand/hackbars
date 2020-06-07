@@ -2,6 +2,7 @@
   require 'database/session.php';
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,17 +45,6 @@
         <div class="modal-dialog">
           <div class="modal-content" id='myModalContent'>
           </div>
-        </div>
-      </div>
-
-      <div class='row'>
-        <div class='col-md-4'>
-        </div>
-        <div class='col-md-4'>
-        </div>
-        <div class='col-md-4'>
-        </div>
-        <div class='col-md-4'>
         </div>
       </div>
 

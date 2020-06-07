@@ -169,5 +169,10 @@ a:hover {
   color: #fff;
   font-size: 16px;
   border-radius: 0px;
-  border-right: 1px solid #000;
+  border-right: 2px solid #000;
+}
+
+a:focus, a:hover {
+    color: #fff;
+    text-decoration: none;
 }
