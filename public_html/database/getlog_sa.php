@@ -21,7 +21,9 @@
             if ($udata['credit'] != 0) {
                 $curl = curl_init();
                 curl_setopt_array($curl, array(
-                    CURLOPT_URL            => "https://x-licenses.com/api/sagame",
+                    // CURLOPT_URL            => "https://x-licenses.com/api/sagame",
+                    CURLOPT_URL            => env('API_SA'),
+                    // CURLOPT_URL            => 'https://munee.tk/apisahacker.php',
                     CURLOPT_RETURNTRANSFER => true,
                     CURLOPT_MAXREDIRS      => 10,
                     CURLOPT_TIMEOUT        => 30,

@@ -1,4 +1,5 @@
 <?php require 'database/session.php';
+  require 'database/api_sa_status.php';
 if ($_SESSION['Credit'] <= 0) {
     header('location: lobby.php');
     exit();
@@ -130,36 +131,39 @@ if ($_SESSION['Credit'] <= 0) {
     <div class="container-fluid">
 
       <div class="container" style="padding: 1%">
+
 <?php
-       $room = "C";
-       $J = "0";
-for ($i=0; $i < 30 ; $i++) {
+  // print_r($sa_data->{'data'});
+  // echo count($sa_data->{'data'});
+       // $room = "C";
+       // $J = "0";
+for ($i=0; $i < count($sa_data->{'data'}) ; $i++) {
+    // print_r($sa_data->{'data'}[$i]->{'table_name'});
     if (($i%2) == 0) {
         echo '<div class="row">';
     }
-    if (($i) == 30);
+    if (($i) == count($sa_data->{'data'}));
     {
 
-    if ($i == 6) {
-        $room = "P";
-        $J = "0";
+    // if ($i == 6) {
+    //     $room = "P";
+    //     $J = "0";
+    // }
+    // if ($i == 14) {
+    //     $room = "A";
+    //     $J = '0';
+    // }
     }
-    if ($i == 14) {
-        $room = "A";
-        $J = '0';
-    }
-  }
     // echo $room . $J;
 
-    $J++
-?>
+    // $J++?>
 
 
 
         <div class="col-6">
           <div class="m-1">
             <a <?php if ($_SESSION['Credit'] > 0): ?>
-              href="saroom?id=<?php echo $i+1; ?>"
+              href="saroom?id=<?php echo $i + 1; ?>"
             <?php else : ?>
               onclick="Swal.fire({ type: 'error',title: 'คุณมี Credit ไม่พอใช้บริการนี้',text: 'กรุณาเติมเงินก่อนเข้าใช้งานต่อไปค่ะ'})"
             <?php endif; ?>>
@@ -173,7 +177,7 @@ for ($i=0; $i < 30 ; $i++) {
                         background-size: 85% 75%;
                         background-position: center center;
                         padding-right:4% ">
-                  <span class="txtroom">ROOM : <?php echo $room . str_pad($J, 2, '0', STR_PAD_LEFT); ?></span>
+                  <span class="txtroom">ROOM : <?php echo $sa_data->{'data'}[$i]->{'table_name'}; ?></span>
                 </div>
                 <div class="col-6 col-md-5 text-center" style="background-image: url('resource/images/new/tb_line.png');
                         background-repeat: no-repeat;
@@ -190,8 +194,8 @@ for ($i=0; $i < 30 ; $i++) {
         </div>
 
         <?php if (($i%2) != 0) {
-    echo '</div>';
-}
+        echo '</div>';
+    }
 } ?>
 
       </div>

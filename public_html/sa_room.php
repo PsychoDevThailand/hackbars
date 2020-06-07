@@ -1,4 +1,5 @@
 <?php require 'database/session.php';
+  require 'database/api_sa_status.php';
 if ($_SESSION['Credit'] <= 0) {
     header('location: lobby.php');
     exit();
@@ -7,7 +8,7 @@ if (!isset($_GET['id'])) {
     header('location: lobby.php');
     exit();
 }
-if ($_GET['id'] < 1 or $_GET['id'] > 30) {
+if ($_GET['id'] < 1 or $_GET['id'] > count($sa_data->{'data'})) {
     header('location: lobby.php');
     exit();
 }
@@ -250,7 +251,8 @@ $v = '1.0.6';
             <div class="container frameA" style="background-image: url('resource/images/new/<?php echo $asset_path ?>/FrameD.png'), url('resource/images/new/<?php echo $asset_path ?>/FrameA-2.png');">
               <div class="row">
                 <div class="col-auto pr-0">
-                  <h1 style="margin-bottom: -8px;font-size:32px"><img height="60" src="resource/images/Home_Sagaming.png"> <?php echo $Room . str_pad(intval($RoomId), 2, '0', STR_PAD_LEFT); ?></h1>
+                  <!-- <h1 style="margin-bottom: -8px;font-size:32px"><img height="60" src="resource/images/Home_Sagaming.png"> <?php echo $Room . str_pad(intval($RoomId), 2, '0', STR_PAD_LEFT); ?></h1> -->
+                  <h1 style="margin-bottom: -8px;font-size:32px"><img height="60" src="resource/images/Home_Sagaming.png"> <?php echo $sa_data->{'data'}[$_GET['id'] - 1]->{'table_name'}; ?></h1>
                 </div>
                 <div class="col text-right" style="padding:0">
                   <a href="salobby">

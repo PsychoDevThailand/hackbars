@@ -56,7 +56,7 @@ $(document).ready(function() {
 	}
 
 	function roomdata(formula) {
-		for (room = 0; room < 30; room++) {
+		for (room = 0; room < formula.length; room++) {
 			data = formula[room];
 			res = data['records'].split("");
 			if (typeof res[0] !== 'undefined') {

@@ -15,7 +15,8 @@
 
   $curl = curl_init();
   curl_setopt_array($curl, array(
-      CURLOPT_URL            => "https://x-licenses.com/api/sagame",
+      CURLOPT_URL            => env('API_SA'),
+      // CURLOPT_URL            => "https://x-licenses.com/api/sagame",
       CURLOPT_RETURNTRANSFER => true,
       CURLOPT_MAXREDIRS      => 10,
       CURLOPT_TIMEOUT        => 30,
@@ -25,8 +26,8 @@
   ));
   $response = curl_exec($curl);
   curl_close($curl);
-  $data = json_decode($response);
-  if ($data->{'status'} !== '200') {
+  $sa_data = json_decode($response);
+  if ($sa_data->{'status'} !== '200') {
       $_SESSION['API_SA'] = false;
   } else {
       $_SESSION['API_SA'] = true;
