@@ -7,7 +7,7 @@
       header("location: ../home");
   }
 
-  $sql = "UPDATE `users` SET `credit` = `credit` - 20 WHERE uname = '$u_id'";
+  $sql = "UPDATE `users` SET `credit` = `credit` - 20 WHERE uname = '$u_id' AND credit >= 0";
   $result_update = mysqli_query($db, $sql);
   mysqli_close($db);
   header("location: ../jokerlobby");
