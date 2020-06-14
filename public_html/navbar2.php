@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-  <a class="navbar-brand" href="lobby.php"><img src="resource/images/new/Logo_SAhacker.png" style="height: 100%;"></a>
+  <a class="navbar-brand" href="home"><img src="resource/images/new/Logo_SAhacker.png" style="height: 100%;"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>

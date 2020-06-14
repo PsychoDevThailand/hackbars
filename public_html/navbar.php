@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-  <a class="navbar-brand" href="lobby.php"><img src="resource/images/new/Logo_SAhacker.png" style="height: 100%;"></a>
+  <a class="navbar-brand" href="home"><img src="resource/images/new/Logo_SAhacker.png" style="height: 100%;"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -59,7 +59,7 @@
             <img src="resource/images/new/re_Credit.png" style="height:32px;">
           </a>
         </div>
-        <!-- <?php if($config["enable"] != "flase" && $config["bank_ennable"] != "flase") { ?>
+        <!-- <?php if ($config["enable"] != "flase" && $config["bank_ennable"] != "flase") { ?>
 		<div class="text-center">
           <a href="#" data-toggle="modal" data-target="#SelectTopUPModal">
             <img src="resource/images/topup_Credit.png" style="height:32px;">
@@ -75,15 +75,15 @@
       <?php for ($i=0;$i<10;$i++) { ?>
       <li class="nav-item">
         <a class="nav-link" href="database/chgformula.php?type=<?php echo $i+1; ?>" <?php if ($_SESSION['FormulaType']==$i+1) {
-    echo 'style=\'background-image: url("resource/images/new/Button.png");
+        echo 'style=\'background-image: url("resource/images/new/Button.png");
                   background-repeat: no-repeat;
                   background-size: 130px 35px;
                   background-position: center; \' ';
-} ?>>
+    } ?>>
           <div class="row text-center text-white">
             <div class="col" <?php if ($_SESSION['FormulaType']==$i+1) {
-    echo 'style="color: khaki"';
-} ?>>
+        echo 'style="color: khaki"';
+    } ?>>
               <span style="font-family: 'Helvet';font-size: 150%;letter-spacing: 1px;">
                 สูตรที่ <?php echo $i+1; ?> </span>
             </div>

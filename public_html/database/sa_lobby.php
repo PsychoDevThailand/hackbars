@@ -1,7 +1,7 @@
 <?php require 'database/session.php';
-if($_SESSION['Credit'] <= 0) {
-  header('location: lobby.php');
-  exit();
+if ($_SESSION['Credit'] <= 0) {
+    header('location: lobby.php');
+    exit();
 }
   $asset_path = "asset/".$_SESSION['FormulaType'];
 ?>
@@ -12,7 +12,7 @@ if($_SESSION['Credit'] <= 0) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Lobby : Baccarat</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"  crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="./css/common.css">
   <link rel="stylesheet" type="text/css" href="./css/sidebar.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css"  crossorigin="anonymous" />
@@ -118,9 +118,9 @@ if($_SESSION['Credit'] <= 0) {
       <div class="container" style="padding: 1%">
 
         <?php for ($i=0; $i < 16 ; $i++) {
-    if (($i%2) == 0) {
-        echo '<div class="row">';
-    } ?>
+      if (($i%2) == 0) {
+          echo '<div class="row">';
+      } ?>
 
         <div class="col-6">
           <div class="m-1">
@@ -128,7 +128,7 @@ if($_SESSION['Credit'] <= 0) {
               href="sa_room.php?id=<?php echo $i+1; ?>"
             <?php else : ?>
               onclick="Swal.fire({ type: 'error',title: 'คุณมี Credit ไม่พอใช้บริการนี้',text: 'กรุณาเติมเงินก่อนเข้าใช้งานต่อไปค่ะ'})"
-            <?php endif;  ?>>
+            <?php endif; ?>>
               <div class="row resroom" style="padding:2%;border-radius:15px;
                       background-image:url('resource/images/new/<?php echo $asset_path; ?>/Frame_Lobby.png');
                       background-size:100% 100%;
@@ -156,9 +156,9 @@ if($_SESSION['Credit'] <= 0) {
         </div>
 
         <?php if (($i%2) != 0) {
-        echo '</div>';
-    }
-} ?>
+          echo '</div>';
+      }
+  } ?>
 
       </div>
 
