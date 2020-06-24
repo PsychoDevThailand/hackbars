@@ -1,7 +1,5 @@
 <?php
 require 'database/session.php';
-require 'database/api_sa_status.php';
-require 'database/api_se_status.php';
 require 'database/getlog_joker.php';
 $asset_path = "asset/".$_SESSION['FormulaType'];
 ?>
