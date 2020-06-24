@@ -1,6 +1,7 @@
 <?php
 require 'database/session.php';
-require 'database/api_sa_status.php';
+// require 'database/api_sa_status.php';
+$_SESSION['API_SA'] = false;
 require 'database/api_se_status.php';
 $asset_path = "asset/".$_SESSION['FormulaType'];
 ?>
