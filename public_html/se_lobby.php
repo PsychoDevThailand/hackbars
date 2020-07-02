@@ -1,7 +1,7 @@
 <?php require 'database/session.php';
-if($_SESSION['Credit'] <= 0) {
-  header('location: lobby.php');
-  exit();
+if ($_SESSION['Credit'] <= 0) {
+    header('location: lobby.php');
+    exit();
 }
   $asset_path = "asset/".$_SESSION['FormulaType'];
   $v = '1.0.4';
@@ -26,6 +26,13 @@ if($_SESSION['Credit'] <= 0) {
   <link rel="stylesheet" type="text/css" href="./css/common.css">
   <link rel="stylesheet" type="text/css" href="./css/sidebar.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css"  crossorigin="anonymous" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171496124-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-171496124-1');
+  </script>
   <script src="js/jquery-3.4.1.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
@@ -128,16 +135,16 @@ if($_SESSION['Credit'] <= 0) {
       <div class="container" style="padding: 1%">
 
         <?php for ($i=0; $i < 10 ; $i++) {
-    if (($i%2) == 0) {
-        echo '<div class="row">';
-    } ?>
+      if (($i%2) == 0) {
+          echo '<div class="row">';
+      } ?>
 			<div class="col-6">
           <div class="m-1">
             <a <?php if ($_SESSION['Credit'] > 0): ?>
               href="seroom?id=<?php echo $i+1; ?>"
             <?php else : ?>
               onclick="Swal.fire({ type: 'error',title: 'คุณมี Credit ไม่พอใช้บริการนี้',text: 'กรุณาเติมเงินก่อนเข้าใช้งานต่อไปค่ะ'})"
-            <?php endif;  ?>>
+            <?php endif; ?>>
               <div class="row resroom" style="padding:2%;border-radius:15px;
                       background-image:url('resource/images/new/<?php echo $asset_path; ?>/Frame_Lobby.png');
                       background-size:100% 100%;
@@ -170,9 +177,9 @@ if($_SESSION['Credit'] <= 0) {
 		<!-- #################################################################################### -->
 
         <?php if (($i%2) != 0) {
-        echo '</div>';
-    }
-} ?>
+          echo '</div>';
+      }
+  } ?>
 
       </div>
 
