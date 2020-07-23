@@ -1,13 +1,13 @@
 <?php
   require 'connection.php';
 
-  if ($_POST['domain'] != 'mm88get') {
-    http_response_code(400);
+  if ($_POST['domain'] != 'mm88soul') {
+      http_response_code(400);
 
-    echo json_encode(
-      array("message" => "Bad Domain")
-    );
-    exit();
+      echo json_encode(
+          array("message" => "Bad Domain")
+      );
+      exit();
   }
 
   $phone  = mysqli_real_escape_string($db, $_POST['phone']);
@@ -17,19 +17,18 @@
   $result = mysqli_query($db, $sql);
 
   if (!$result) {
-    http_response_code(500);
+      http_response_code(500);
 
-    echo json_encode(
-      array("message" => "Update Failed! " . mysqli_error($db))
-    );
-    exit();
+      echo json_encode(
+          array("message" => "Update Failed! " . mysqli_error($db))
+      );
+      exit();
   }
 
 
   http_response_code(200);
 
   echo json_encode(
-    array("message" => "Update credit Success!")
+      array("message" => "Update credit Success!")
   );
   mysqli_close($db);
-?>

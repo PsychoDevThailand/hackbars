@@ -16,7 +16,7 @@ if ($pass != $repass) {
     echo 'รหัสผ่านสองครั้งไม่ตรงกัน';
     exit();
 }
-if (!(strlen($user) >= 6 AND strlen($user) <= 32)) {
+if (!(strlen($user) >= 6 and strlen($user) <= 32)) {
     echo "Username invalid format";
     exit();
 }
@@ -24,7 +24,7 @@ if (!(preg_match("/^[a-zA-Z0-9_]+$/", $user))) {
     echo "Username invalid format.";
     exit();
 }
-if (!(strlen($pass) >= 6 AND strlen($pass) <= 32)) {
+if (!(strlen($pass) >= 6 and strlen($pass) <= 32)) {
     echo "รหัสผ่านต้องมีความยาว 6-32 ตัวอักษร";
     exit();
 }
@@ -41,7 +41,7 @@ if ($row != 0) {
 }
 
 // check mm88get user
-$url = "https://mm88get.com/api/user?domain=mm88get&phone=" . $phone;
+$url = "https://mm88soul.com/api/user?domain=mm88soul&phone=" . $phone;
 $curl = curl_init();
 curl_setopt_array($curl, array(
     CURLOPT_URL => $url,
@@ -51,8 +51,11 @@ curl_setopt_array($curl, array(
 $response = curl_exec($curl);
 curl_close($curl);
 $data = json_decode($response);
-if ($data->{'success'}) $join_mm88get = 1;
-else $join_mm88get = 0;
+if ($data->{'success'}) {
+    $join_mm88get = 1;
+} else {
+    $join_mm88get = 0;
+}
 
 
 $sql    = "  INSERT INTO `users`(`uname`, `pass`, `type`, `status`,`credit`, `fortype`, `fname`, `lname`, `phone`,`email`, `line`, `join_mm88get`)
@@ -64,4 +67,3 @@ if ($result) {
     echo mysqli_error($result);
 }
 mysqli_close($db);
-?>

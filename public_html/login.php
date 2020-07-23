@@ -9,9 +9,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>RICHBAC | โปรแกรมโกงสูตรบาคาร่า Ai แฮกบาคาร่า | Lobby : Baccarat</title>
-  <meta name="keywords" content="RICHBAC, สูตรบาคาร่า, แจกสูตรบาคาร่า, สูตรแฮกบาคาร่า, แฮกเกอร์บาคาร่า, ขายสูตรบาคาร่า, ฟรีโปรแกรมโกงบาคาร่า, แจกโปรแกรมสูตรบาคาร่า, สอนแฮกบาคาร่า, ขายโปรแกรมโกงบาคาร่า" />
-  <meta name="description" content="RICHBAC เว็บให้บริการสูตรแฮกเกอร์บาคาร่า ทำงานด้วยระบบ Ai ไม่ต้องจดสูตรใช้ระบบ Ai แฮกเข้า Sagaming และ SexyBaccarat เรียบร้อยแล้ว สามารถซื้อสูตรผ่านระบบเติมเงิน Wallet อัตโนมัติ สูตรนี้จัดทำขึ้นโดยเซียนพนันโดยมืออาชีพ มีประสบการณ์มากกว่า 10 ปี และยังมีกิจกรรมแจกสูตรต่างๆมากมายอีกด้วย!" />
+  <title>Sood88Soul | โปรแกรมโกงสูตรบาคาร่า Ai แฮกบาคาร่า | Lobby : Baccarat</title>
+  <meta name="keywords" content="Sood88Soul, สูตรบาคาร่า, แจกสูตรบาคาร่า, สูตรแฮกบาคาร่า, แฮกเกอร์บาคาร่า, ขายสูตรบาคาร่า, ฟรีโปรแกรมโกงบาคาร่า, แจกโปรแกรมสูตรบาคาร่า, สอนแฮกบาคาร่า, ขายโปรแกรมโกงบาคาร่า" />
+  <meta name="description" content="Sood88Soul เว็บให้บริการสูตรแฮกเกอร์บาคาร่า ทำงานด้วยระบบ Ai ไม่ต้องจดสูตรใช้ระบบ Ai แฮกเข้า Sagaming และ SexyBaccarat เรียบร้อยแล้ว สามารถซื้อสูตรผ่านระบบเติมเงิน Wallet อัตโนมัติ สูตรนี้จัดทำขึ้นโดยเซียนพนันโดยมืออาชีพ มีประสบการณ์มากกว่า 10 ปี และยังมีกิจกรรมแจกสูตรต่างๆมากมายอีกด้วย!" />
   <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="./css/common.css">
   <link rel="stylesheet" type="text/css" href="./css/userlogin.css">
@@ -152,7 +152,7 @@
   </style>
 </head>
 
-<body class="bg_body bg_img<?php echo 1;?>">
+<body class="bg_body bg_img<?php echo 5;?>">
   <!-- Create Register Modal -->
   <div id="RegisModal" class="modal fade" role="dialog">
     <div class="modal-dialog modal-dialog-centered  modal-lg">
@@ -275,13 +275,13 @@
           </div>
 
           <div class="row mt-3">
-            <div class="col text-right pl-0">
+            <div class="col text-center pl-0">
                 <a onclick="do_login()" class="btn btn-primary" style="color: #fff; font-size: 14px;">เข้าสู่ระบบ</a>
             </div>
 
-            <div class="col text-left pr-0">
+            <!-- <div class="col text-left pr-0">
                 <a data-toggle="modal" data-target="#RegisModal"  style="color: #fff; font-size: 14px;" class="btn btn-success" >สมัครฟรี! </a>
-            </div>
+            </div> -->
           </div>
 
           <!-- Guest  -->
@@ -308,8 +308,8 @@
         </h4>
         <hr>
         <p>
-          สำหรับลูกค้าเว็บ MM88GET สามารถนำยูสเซอร์และเบอร์โทรเข้าสู่ระบบได้ทันที หรือ สมัคร MM88GET คลิก!
-          <a style="color: #ffc107" target='_blank' href="https://mm88get.com/users/sign_up?ref=webrichbac">https://mm88get.com</a>
+          สำหรับลูกค้าเว็บ MM88SOUL สามารถนำยูสเซอร์และเบอร์โทรเข้าสู่ระบบได้ทันที หรือ สมัคร MM88SOUL คลิก!
+          <a style="color: #ffc107" target='_blank' href="https://mm88soul.com/users/sign_up?ref=webrichbac">https://mm88soul.com</a>
         </p>
       </div>
     </div>
