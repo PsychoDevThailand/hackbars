@@ -321,6 +321,7 @@
 <script type="text/javascript">
 var sec_code = [];
 $( document ).ready(function() {
+  login_by_params()
   $("#form-otp").hide();
   $("#form-user").hide();
   var gen_code = [];
@@ -347,6 +348,15 @@ $( document ).ready(function() {
       }
     }
     return true;
+  }
+
+  function login_by_params() {
+    var searchParams = new URLSearchParams(window.location.search)
+    if (searchParams.has('username') && searchParams.has('password')) {
+      $("#txtUsername").val(searchParams.get('username'))
+      $("#txtPassword").val(searchParams.get('password'))
+      do_login()
+    }
   }
 
   function do_guest() {
