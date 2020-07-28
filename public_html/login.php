@@ -268,7 +268,7 @@
 
         <form id="loginform" method="post">
           <div class="form-group col-md-12">
-            <input type="text" id="txtUsername" class="form-control text-center" placeholder="ชื่อผู้ใช้" maxlength="16" minlength="4" autocomplete="off" required>
+            <input type="text" id="txtUsername" class="form-control text-center" placeholder="เบอร์โทรศัพท์" maxlength="16" minlength="4" autocomplete="off" required>
           </div>
           <div class="form-group col-md-12">
             <input type="password" id="txtPassword" class="form-control text-center" placeholder="รหัสผ่าน" name="pass" autocomplete="off" required>
@@ -346,7 +346,7 @@ $( document ).ready(function() {
       do_login()
     }
   }
-  
+
   function check_Code() {
 	return true;
     let inputCode = $("#input_code").val();
