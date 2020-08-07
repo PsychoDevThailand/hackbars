@@ -24,7 +24,7 @@
   <?php
       require 'database/connection.php';
 
-      $userid = mysqli_real_escape_string($db,$_POST['uid']);
+      $userid = mysqli_real_escape_string($db, $_POST['uid']);
       $sql = " SELECT * FROM `users` WHERE `id` = '$userid' ";
       $result = mysqli_query($db, $sql);
       $data = mysqli_fetch_array($result, MYSQLI_ASSOC);
@@ -52,18 +52,46 @@
 
       <nav>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
-          <a class="nav-item nav-link active" id="edit-tab" data-toggle="tab" href="#edit" role="tab" aria-controls="edit" aria-selected="true">Edit</a>
+          <a class="nav-item nav-link active" id="credit-tab" data-toggle="tab" href="#credit" role="tab" aria-controls="credit" aria-selected="true">Credit</a>
+          <a class="nav-item nav-link" id="edit-tab" data-toggle="tab" href="#edit" role="tab" aria-controls="edit" aria-selected="false">Edit</a>
           <a class="nav-item nav-link" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="false">Login Log</a>
           <a class="nav-item nav-link" id="refill-tab" data-toggle="tab" href="#refill" role="tab" aria-controls="refill" aria-selected="false">Refill Log</a>
-		  <a class="nav-item nav-link" id="Topup-tab" data-toggle="tab" href="#Topup" role="tab" aria-controls="Topup" aria-selected="false">Topup Log</a>
+		      <a class="nav-item nav-link" id="Topup-tab" data-toggle="tab" href="#Topup" role="tab" aria-controls="Topup" aria-selected="false">Topup Log</a>
 
         </div>
       </nav>
 
       <div class="tab-content" id="nav-tabContent">
 
+        <!-- Credit  -->
+        <div class="tab-pane fade show active" id="credit" role="tabpanel" aria-labelledby="credit-tab">
+          <div class="container bg-dark" style="padding: 2%;">
+            <div class="container text-warning" style="width: 80%;">
+              <form action="database/add_credit.php" method="post">
+                <div class="row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label>Credit</label>
+                      <input type="number" class="form-control" name="credit" />
+                    </div>
+                  </div>
+                </div>
+                <input type="hidden" name="u_id" value="<?php echo $data['id']; ?>">
+
+                <div class="row">
+                  <div class="col">
+                    <div class="form-group">
+                      <button type="submit" class="btn btn-primary btn-lg"><i class="fas fa-save fa-lg"></i> ADD CREDIT</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
         <!-- Edit User Tab-->
-        <div class="tab-pane fade show active" id="edit" role="tabpanel" aria-labelledby="edit-tab">
+        <div class="tab-pane fade " id="edit" role="tabpanel" aria-labelledby="edit-tab">
           <div class="container bg-dark" style="padding: 2%;">
 
             <div class="container text-warning" style="width: 80%;">
@@ -219,7 +247,7 @@
           </div>
         </div>
         <!-- End Refill Tab -->
-		
+
 		<!-- Show Topup Tab -->
         <div class="tab-pane fade" id="Topup" role="tabpanel" aria-labelledby="Topup-tab">
           <div class="container bg-dark" style="padding: 2%;">
@@ -234,13 +262,12 @@
               </thead>
               <tbody>
                 <?php
-				$no = 1;
-				    $sql = "SELECT * FROM `tw_log` WHERE uid = '{$userid}'";
-					$result = mysqli_query($db, $sql);
-					$rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
+                $no = 1;
+                    $sql = "SELECT * FROM `tw_log` WHERE uid = '{$userid}'";
+                    $result = mysqli_query($db, $sql);
+                    $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
                     if (count($rows) != 0) {
-                        foreach($rows as $value){
-
+                        foreach ($rows as $value) {
                             ?>
                 <tr>
                   <td><?php echo $no; ?></td>
