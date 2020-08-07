@@ -2,7 +2,7 @@
 
   require '../sms/send_sms.php';
 
-  if ($_POST['domain'] != 'mm88flow') {
+  if ($_POST['domain'] != 'spy777') {
       http_response_code(400);
 
       echo json_encode(

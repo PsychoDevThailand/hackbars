@@ -16,9 +16,9 @@ $asset_path = "asset/".$_SESSION['FormulaType'];
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Lobby : Baccarat</title>
-  <title>Sood88Flow | โปรแกรมโกงสูตรบาคาร่า Ai แฮกบาคาร่า | Lobby : Baccarat</title>
-  <meta name="keywords" content="Sood88Flow, สูตรบาคาร่า, แจกสูตรบาคาร่า, สูตรแฮกบาคาร่า, แฮกเกอร์บาคาร่า, ขายสูตรบาคาร่า, ฟรีโปรแกรมโกงบาคาร่า, แจกโปรแกรมสูตรบาคาร่า, สอนแฮกบาคาร่า, ขายโปรแกรมโกงบาคาร่า" />
-    <meta name="description" content="Sood88Flow เว็บให้บริการสูตรแฮกเกอร์บาคาร่า ทำงานด้วยระบบ Ai ไม่ต้องจดสูตรใช้ระบบ Ai แฮกเข้า Sagaming และ SexyBaccarat เรียบร้อยแล้ว สามารถซื้อสูตรผ่านระบบเติมเงิน Wallet อัตโนมัติ สูตรนี้จัดทำขึ้นโดยเซียนพนันโดยมืออาชีพ มีประสบการณ์มากกว่า 10 ปี และยังมีกิจกรรมแจกสูตรต่างๆมากมายอีกด้วย!" />
+  <title>SoodSpy777 | โปรแกรมโกงสูตรบาคาร่า Ai แฮกบาคาร่า | Lobby : Baccarat</title>
+  <meta name="keywords" content="SoodSpy777, สูตรบาคาร่า, แจกสูตรบาคาร่า, สูตรแฮกบาคาร่า, แฮกเกอร์บาคาร่า, ขายสูตรบาคาร่า, ฟรีโปรแกรมโกงบาคาร่า, แจกโปรแกรมสูตรบาคาร่า, สอนแฮกบาคาร่า, ขายโปรแกรมโกงบาคาร่า" />
+    <meta name="description" content="SoodSpy777 เว็บให้บริการสูตรแฮกเกอร์บาคาร่า ทำงานด้วยระบบ Ai ไม่ต้องจดสูตรใช้ระบบ Ai แฮกเข้า Sagaming และ SexyBaccarat เรียบร้อยแล้ว สามารถซื้อสูตรผ่านระบบเติมเงิน Wallet อัตโนมัติ สูตรนี้จัดทำขึ้นโดยเซียนพนันโดยมืออาชีพ มีประสบการณ์มากกว่า 10 ปี และยังมีกิจกรรมแจกสูตรต่างๆมากมายอีกด้วย!" />
   <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="./css/common.css">
   <link rel="stylesheet" type="text/css" href="./css/sidebar.css">
@@ -226,7 +226,7 @@ $asset_path = "asset/".$_SESSION['FormulaType'];
         <div class="alert alert-light" role="alert">
           <h4 class="alert-heading text-info text-info">วิธีรับเครดิตฟรี</h4>
           <hr>
-          <p> พิเศษสำหรับลูกค้า MM88FLOW เพียงท่านฝากเงินสำหรับเล่นเกมกับ MM88FLOW ก็สามารถรับเครดิตใช้งานสูตรฟรี! ทันที</p>
+          <p> พิเศษสำหรับลูกค้า SPY777 เพียงท่านฝากเงินสำหรับเล่นเกมกับ SPY777 ก็สามารถรับเครดิตใช้งานสูตรฟรี! ทันที</p>
           <p>*พิเศษสำหรับเติมครั้งแรกรับเครดิตสูตรบาคาร่า 2 เท่าของยอดที่เติมสำหรับเล่น* ไปเติมเงิน คลิ๊ก!
             <a target='_blank' href="http://line.me/ti/p/@getv3">
               <span style="font-family: 'Helvet';font-size: 34px; color: #000;">
@@ -235,13 +235,13 @@ $asset_path = "asset/".$_SESSION['FormulaType'];
               </span>
             </a>
           </p>
-          <p class='text-danger'><strong>*หมายเหตุ* เครดิตของสูตรบาคาร่าจะเข้าภายใน 5 นาทีหลังจากได้รับเครดิต MM88FLOW</strong></p>
+          <p class='text-danger'><strong>*หมายเหตุ* เครดิตของสูตรบาคาร่าจะเข้าภายใน 5 นาทีหลังจากได้รับเครดิต SPY777</strong></p>
         </div>
         <?php else: ?>
           <div class="alert alert-light" role="alert">
             <h4 class="alert-heading text-info">วิธีรับเครดิตฟรี</h4>
             <hr>
-            <p>เครดิตหมดใช่หรือไม่ ? พิเศษหากท่านต้องการเครดิตสำหรับสูตรบาคาร่า เพียงท่านสมัครเล่นเกมกับเรา MM88FLOW เพียงเติมเงินครั้งแรก เติมเท่าไหร่ได้รับเครดิตสำหรับสูตรบาคาร่า 2 เท่า ของยอดเติมทันที (เฉพาะครั้งแรก) สมัครเลย คลิ๊ก!
+            <p>เครดิตหมดใช่หรือไม่ ? พิเศษหากท่านต้องการเครดิตสำหรับสูตรบาคาร่า เพียงท่านสมัครเล่นเกมกับเรา SPY777 เพียงเติมเงินครั้งแรก เติมเท่าไหร่ได้รับเครดิตสำหรับสูตรบาคาร่า 2 เท่า ของยอดเติมทันที (เฉพาะครั้งแรก) สมัครเลย คลิ๊ก!
               <a target='_blank' href="http://line.me/ti/p/~<?php echo $contact; ?>">
                 <span style="font-family: 'Helvet';font-size: 34px; color: #000;">
                   <img src="resource/images/new/i_line.png" height="30" style="padding-bottom: 1%;">
@@ -249,7 +249,7 @@ $asset_path = "asset/".$_SESSION['FormulaType'];
                 </span>
               </a>
             </p>
-            <p class='text-danger'><strong>*หมายเหตุ* เครดิตของสูตรบาคาร่าจะเข้าภายใน 5 นาทีหลังจากได้รับเครดิต MM88FLOW</strong></p>
+            <p class='text-danger'><strong>*หมายเหตุ* เครดิตของสูตรบาคาร่าจะเข้าภายใน 5 นาทีหลังจากได้รับเครดิต SPY777</strong></p>
           </div>
         <?php endif ?>
       </div>

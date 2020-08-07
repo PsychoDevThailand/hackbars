@@ -41,7 +41,7 @@ if ($row != 0) {
 }
 
 // check mm88get user
-$url = "https://mm88flow.com/api/user?domain=mm88flow&phone=" . $phone;
+$url = "https://spy777.com/api/user?domain=spy777&phone=" . $phone;
 $curl = curl_init();
 curl_setopt_array($curl, array(
     CURLOPT_URL => $url,
