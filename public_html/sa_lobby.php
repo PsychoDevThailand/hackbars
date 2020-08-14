@@ -184,7 +184,7 @@ for ($i=0; $i < count($sa_data->{'data'}) ; $i++) {
                         background-size: 85% 75%;
                         background-position: center center;
                         padding-right:4% ">
-                  <span class="txtroom">ROOM : <?php echo $sa_data->{'data'}[$i]->{'table_name'}; ?></span>
+                  <span class="txtroom">ROOM : <?php echo $sa_data->{'data'}[$i]->{'room_name'}; ?></span>
                 </div>
                 <div class="col-6 col-md-5 text-center" style="background-image: url('resource/images/new/tb_line.png');
                         background-repeat: no-repeat;
