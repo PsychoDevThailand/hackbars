@@ -10,8 +10,10 @@
       exit();
   }
 
-  $user   = mysqli_real_escape_string($db, $_POST['username']);
-  $pass   = mysqli_real_escape_string($db, $_POST['password']);
+  // $user   = mysqli_real_escape_string($db, $_POST['username']);
+  // $pass   = mysqli_real_escape_string($db, $_POST['password']);
+  $user = $_POST['username'];
+  $pass = $_POST['password'];
   $credit = (int) $_POST['credit'];
 
   $sql = "INSERT INTO `users` (`uname`, `pass`, `type`, `status`, `credit`, `fortype`)
