@@ -1,7 +1,7 @@
 <?php
   require 'connection.php';
 
-  if ($_GET['domain'] != 'mm88soul') {
+  if ($_GET['domain'] != env('DOMAIN')) {
       http_response_code(400);
 
       echo json_encode(

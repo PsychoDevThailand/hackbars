@@ -3,7 +3,7 @@
     'DB_HOST' => 'localhost',
     'DB_USERNAME' => 'root',
     'DB_PASSWORD' => '',
-    'DB_NAME' => 'mm88atm_db',
+    'DB_NAME' => 'mm88soul_db',
     'DB_PORT' => '3306',
     'DOMAIN' => 'mm88atm',
     'SMS_USERNAME' => '0968745703',

@@ -250,22 +250,22 @@ $asset_path = "asset/".$_SESSION['FormulaType'];
         <div class="alert alert-light" role="alert">
           <h4 class="alert-heading text-info text-info">วิธีรับเครดิตฟรี</h4>
           <hr>
-          <p> พิเศษสำหรับลูกค้า MM88SOUL เพียงท่านฝากเงินสำหรับเล่นเกมกับ MM88SOUL ก็สามารถรับเครดิตใช้งานสูตรฟรี! ทันที</p>
+          <p> พิเศษสำหรับลูกค้า <?php echo strtoupper(env('DOMAIN')) ?> เพียงท่านฝากเงินสำหรับเล่นเกมกับ <?php echo strtoupper(env('DOMAIN')) ?> ก็สามารถรับเครดิตใช้งานสูตรฟรี! ทันที</p>
           <p>*พิเศษสำหรับเติมครั้งแรกรับเครดิตสูตรบาคาร่า 2 เท่าของยอดที่เติมสำหรับเล่น* ไปเติมเงิน คลิ๊ก!
-            <a target='_blank' href="http://line.me/ti/p/@getv3">
+            <a target='_blank' href="http://line.me/ti/p/~<?php echo $contact; ?>">
               <span style="font-family: 'Helvet';font-size: 34px; color: #000;">
                 <img src="resource/images/new/i_line.png" height="30" style="padding-bottom: 1%;">
                 Line : <?php echo $contact; ?>
               </span>
             </a>
           </p>
-          <p class='text-danger'><strong>*หมายเหตุ* เครดิตของสูตรบาคาร่าจะเข้าภายใน 5 นาทีหลังจากได้รับเครดิต MM88SOUL</strong></p>
+          <p class='text-danger'><strong>*หมายเหตุ* เครดิตของสูตรบาคาร่าจะเข้าภายใน 5 นาทีหลังจากได้รับเครดิต <?php echo strtoupper(env('DOMAIN')) ?></strong></p>
         </div>
         <?php else: ?>
           <div class="alert alert-light" role="alert">
             <h4 class="alert-heading text-info">วิธีรับเครดิตฟรี</h4>
             <hr>
-            <p>เครดิตหมดใช่หรือไม่ ? พิเศษหากท่านต้องการเครดิตสำหรับสูตรบาคาร่า เพียงท่านสมัครเล่นเกมกับเรา MM88SOUL เพียงเติมเงินครั้งแรก เติมเท่าไหร่ได้รับเครดิตสำหรับสูตรบาคาร่า 2 เท่า ของยอดเติมทันที (เฉพาะครั้งแรก) สมัครเลย คลิ๊ก!
+            <p>เครดิตหมดใช่หรือไม่ ? พิเศษหากท่านต้องการเครดิตสำหรับสูตรบาคาร่า เพียงท่านสมัครเล่นเกมกับเรา <?php echo strtoupper(env('DOMAIN')) ?> เพียงเติมเงินครั้งแรก เติมเท่าไหร่ได้รับเครดิตสำหรับสูตรบาคาร่า 2 เท่า ของยอดเติมทันที (เฉพาะครั้งแรก) สมัครเลย คลิ๊ก!
               <a target='_blank' href="http://line.me/ti/p/~<?php echo $contact; ?>">
                 <span style="font-family: 'Helvet';font-size: 34px; color: #000;">
                   <img src="resource/images/new/i_line.png" height="30" style="padding-bottom: 1%;">
@@ -273,7 +273,7 @@ $asset_path = "asset/".$_SESSION['FormulaType'];
                 </span>
               </a>
             </p>
-            <p class='text-danger'><strong>*หมายเหตุ* เครดิตของสูตรบาคาร่าจะเข้าภายใน 5 นาทีหลังจากได้รับเครดิต MM88SOUL</strong></p>
+            <p class='text-danger'><strong>*หมายเหตุ* เครดิตของสูตรบาคาร่าจะเข้าภายใน 5 นาทีหลังจากได้รับเครดิต <?php echo strtoupper(env('DOMAIN')) ?></strong></p>
           </div>
         <?php endif ?>
       </div>

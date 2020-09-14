@@ -1,7 +1,11 @@
 <?php
+  include_once "./autoload.php";
   $file = fopen("contact.txt", "r") or die("Unable to open file!");
   $contact = fgets($file);
   fclose($file);
+
+  $register_link = "https://".env('DOMAIN') .".com/users/sign_up?ref=webrichbac";
+  $link = "https://".env('DOMAIN').".com";
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -308,8 +312,9 @@
         </h4>
         <hr>
         <p>
-          สำหรับลูกค้าเว็บ MM88SOUL สามารถนำยูสเซอร์และเบอร์โทรเข้าสู่ระบบได้ทันที หรือ สมัคร MM88SOUL คลิก!
-          <a style="color: #ffc107" target='_blank' href="https://mm88soul.com/users/sign_up?ref=webrichbac">https://mm88soul.com</a>
+          สำหรับลูกค้าเว็บ <?php echo strtoupper(env('DOMAIN')) ?> สามารถนำยูสเซอร์และเบอร์โทรเข้าสู่ระบบได้ทันที หรือ สมัคร <?php echo strtoupper(env('DOMAIN')) ?> คลิก!
+          <!-- <a style="color: #ffc107" target='_blank' href="https://mm88soul.com/users/sign_up?ref=webrichbac">https://mm88soul.com</a> -->
+          <a style="color: #ffc107" target='_blank' href="<?php echo $register_link ?>"><?php echo $link ?></a>
         </p>
       </div>
     </div>
