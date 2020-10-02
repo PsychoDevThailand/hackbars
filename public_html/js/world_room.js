@@ -287,7 +287,16 @@ $(document).ready(function() {
 				// console.log(roomid);
 				// handle the response
 				// roomdata(obj.data[roomid]);
-				var b_data = obj.data[roomid - 1]['records'];
+				// var b_data = obj.data[roomid - 1]['records'];
+				console.log('send ws')
+				console.log(roomid)
+				console.log(obj)
+				var b_data = obj.data.find((d) => {
+					return parseInt(d.room_id) === roomid
+				})
+
+				console.log(b_data)
+				b_data = b_data.records
 				if (b_data === "") {
 					window.location.href = 'world_lobby.php';
 				}

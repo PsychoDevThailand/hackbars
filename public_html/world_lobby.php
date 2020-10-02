@@ -170,7 +170,7 @@ for ($i=0; $i < count($world_data->{'data'}) ; $i++) {
         <div class="col-6">
           <div class="m-1">
             <a <?php if ($_SESSION['Credit'] > 0): ?>
-              href="worldroom?id=<?php echo $i + 1; ?>"
+              href="worldroom?id=<?php echo $world_data->{'data'}[$i]->{'room_id'}; ?>"
             <?php else : ?>
               onclick="Swal.fire({ type: 'error',title: 'คุณมี Credit ไม่พอใช้บริการนี้',text: 'กรุณาเติมเงินก่อนเข้าใช้งานต่อไปค่ะ'})"
             <?php endif; ?>>

@@ -23,6 +23,14 @@ if ($_GET['id'] <= 6) {
     $RoomId = $_GET['id'] - 14;
 }
 
+$rooms = $world_data->{'data'};
+$room_name = '';
+foreach ($rooms as $r) {
+    if ($r->{'room_id'} == $_GET['id']) {
+        $room_name = $r->{'room_name'};
+    }
+}
+
 $asset_path = "asset/".$_SESSION['FormulaType'];
 $v = '1.0.6';
 ?>
@@ -259,7 +267,8 @@ $v = '1.0.6';
               <div class="row">
                 <div class="col-auto pr-0">
                   <!-- <h1 style="margin-bottom: -8px;font-size:32px"><img height="60" src="resource/images/Home_Sagaming.png"> <?php echo $Room . str_pad(intval($RoomId), 2, '0', STR_PAD_LEFT); ?></h1> -->
-                  <h1 style="margin-bottom: -8px;font-size:32px"><img height="60" src="resource/images/Home_Sagaming.png"> <?php echo $world_data->{'data'}[$_GET['id'] - 1]->{'room_name'}; ?></h1>
+                  <!-- <h1 style="margin-bottom: -8px;font-size:32px"><img height="60" src="resource/images/Home_Sagaming.png"> <?php echo $world_data->{'data'}[$_GET['id'] - 1]->{'room_name'}; ?></h1> -->
+                  <h1 style="margin-bottom: -8px;font-size:32px"><img height="60" src="resource/images/Home_Sagaming.png"> <?php echo $room_name;  ?></h1>
                 </div>
                 <div class="col text-right" style="padding:0">
                   <a href="worldlobby">
@@ -460,7 +469,7 @@ $v = '1.0.6';
       </div>
     </div>
   </main>
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
     window.onload = function() {
         document.addEventListener("contextmenu", function(e){
             e.preventDefault();
@@ -482,8 +491,8 @@ $v = '1.0.6';
             return false;
         }
     };
-    </script>
-<script type="text/javascript">
+    </script> -->
+<!-- <script type="text/javascript">
         let div = document.createElement('div');
         let loop = setInterval(() => {
             console.log(div);
@@ -495,7 +504,7 @@ $v = '1.0.6';
                 window.location = "./database/logout.php";
             }
         });
-    </script>
+    </script> -->
 
 </body>
 
