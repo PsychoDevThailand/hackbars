@@ -268,7 +268,7 @@ $v = '1.0.6';
                 <div class="col-auto pr-0">
                   <!-- <h1 style="margin-bottom: -8px;font-size:32px"><img height="60" src="resource/images/Home_Sagaming.png"> <?php echo $Room . str_pad(intval($RoomId), 2, '0', STR_PAD_LEFT); ?></h1> -->
                   <!-- <h1 style="margin-bottom: -8px;font-size:32px"><img height="60" src="resource/images/Home_Sagaming.png"> <?php echo $world_data->{'data'}[$_GET['id'] - 1]->{'room_name'}; ?></h1> -->
-                  <h1 style="margin-bottom: -8px;font-size:32px"><img height="60" src="resource/images/Home_Sagaming.png"> <?php echo $room_name;  ?></h1>
+                  <h1 style="margin-bottom: -8px;font-size:32px"><img height="60" src="resource/images/new/Worldcasino.png"> <?php echo $room_name;  ?></h1>
                 </div>
                 <div class="col text-right" style="padding:0">
                   <a href="worldlobby">

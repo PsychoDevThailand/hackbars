@@ -179,7 +179,7 @@ for ($i=0; $i < count($world_data->{'data'}) ; $i++) {
                       background-size:100% 100%;
                       background-color: rgba(0,0,0,0.3)">
                 <div class="col" style="height: 100%;
-                        background-image: url('resource/images/new/SAgaming.png');
+                        background-image: url('resource/images/new/Worldcasino.png');
                         background-repeat: no-repeat;
                         background-size: 85% 75%;
                         background-position: center center;
