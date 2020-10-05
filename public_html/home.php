@@ -233,7 +233,7 @@ $asset_path = "asset/".$_SESSION['FormulaType'];
             <?php endif; ?>
           >
             <div class="game_div">
-              <img src="resource/images/cas/Game-football.png" style="width: 100%;">
+              <img src="resource/images/cas/Game-football.jpg" style="width: 100%;">
             </div>
           </a>
         </div>
