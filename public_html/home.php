@@ -19,9 +19,9 @@ $asset_path = "asset/".$_SESSION['FormulaType'];
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Lobby : Baccarat</title>
-  <title>Sood88Soul | โปรแกรมโกงสูตรบาคาร่า Ai แฮกบาคาร่า | Lobby : Baccarat</title>
-  <meta name="keywords" content="Sood88Soul, สูตรบาคาร่า, แจกสูตรบาคาร่า, สูตรแฮกบาคาร่า, แฮกเกอร์บาคาร่า, ขายสูตรบาคาร่า, ฟรีโปรแกรมโกงบาคาร่า, แจกโปรแกรมสูตรบาคาร่า, สอนแฮกบาคาร่า, ขายโปรแกรมโกงบาคาร่า" />
-    <meta name="description" content="Sood88Soul เว็บให้บริการสูตรแฮกเกอร์บาคาร่า ทำงานด้วยระบบ Ai ไม่ต้องจดสูตรใช้ระบบ Ai แฮกเข้า Sagaming และ SexyBaccarat เรียบร้อยแล้ว สามารถซื้อสูตรผ่านระบบเติมเงิน Wallet อัตโนมัติ สูตรนี้จัดทำขึ้นโดยเซียนพนันโดยมืออาชีพ มีประสบการณ์มากกว่า 10 ปี และยังมีกิจกรรมแจกสูตรต่างๆมากมายอีกด้วย!" />
+  <title><?= "SOOD" ?> | โปรแกรมโกงสูตรบาคาร่า Ai แฮกบาคาร่า | Lobby : Baccarat</title>
+  <meta name="keywords" content="<?= "SOOD" ?>, สูตรบาคาร่า, แจกสูตรบาคาร่า, สูตรแฮกบาคาร่า, แฮกเกอร์บาคาร่า, ขายสูตรบาคาร่า, ฟรีโปรแกรมโกงบาคาร่า, แจกโปรแกรมสูตรบาคาร่า, สอนแฮกบาคาร่า, ขายโปรแกรมโกงบาคาร่า" />
+    <meta name="description" content="<?= "SOOD" ?> เว็บให้บริการสูตรแฮกเกอร์บาคาร่า ทำงานด้วยระบบ Ai ไม่ต้องจดสูตรใช้ระบบ Ai แฮกเข้า Sagaming และ SexyBaccarat เรียบร้อยแล้ว สามารถซื้อสูตรผ่านระบบเติมเงิน Wallet อัตโนมัติ สูตรนี้จัดทำขึ้นโดยเซียนพนันโดยมืออาชีพ มีประสบการณ์มากกว่า 10 ปี และยังมีกิจกรรมแจกสูตรต่างๆมากมายอีกด้วย!" />
   <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="./css/common.css">
   <link rel="stylesheet" type="text/css" href="./css/sidebar.css">
@@ -122,7 +122,8 @@ $asset_path = "asset/".$_SESSION['FormulaType'];
   </script>
 </head>
 
-<body style="background-image: url('resource/images/cas/BG.png');">
+<!-- <body style="background-image: url('resource/images/cas/BG.png');"> -->
+<body class="bg_gredient_<?php echo rand(1, 5);?>">
   <?php
     include './resource/modal.php';
     include 'navbar2.php';
@@ -186,7 +187,7 @@ $asset_path = "asset/".$_SESSION['FormulaType'];
           </div>
         <?php endif; ?>
 
-        <div class="col-12 col-sm-6 game_colum">
+        <!-- <div class="col-12 col-sm-6 game_colum">
           <a
             <?php if ($_SESSION['Credit'] > 0): ?>
               href="vivolobby"
@@ -212,7 +213,7 @@ $asset_path = "asset/".$_SESSION['FormulaType'];
               <img src="resource/images/cas/Game-wm.png" style="width: 100%;">
             </div>
           </a>
-        </div>
+        </div> -->
 
         <div class="col-12 col-sm-6 game_colum">
           <a
