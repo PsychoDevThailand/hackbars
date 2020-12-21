@@ -1,5 +1,7 @@
 <?php
 require 'database/session.php';
+$table_name = $_GET['table'];
+require 'database/getlog_slots.php';
 $asset_path = "asset/".$_SESSION['FormulaType'];
 ?>
 
@@ -23,6 +25,7 @@ $asset_path = "asset/".$_SESSION['FormulaType'];
   <link rel="stylesheet" type="text/css" href="./css/common.css">
   <link rel="stylesheet" type="text/css" href="./css/sidebar.css">
   <link rel="stylesheet" type="text/css" href="./css/userlogin.css">
+  <link rel="stylesheet" type="text/css" href="./css/animate.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css"  crossorigin="anonymous" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171496124-1"></script>
   <script>
@@ -123,36 +126,57 @@ $asset_path = "asset/".$_SESSION['FormulaType'];
   <?php
     include './resource/modal.php';
     include 'navbar2.php';
-    $slots = ['ameba', 'live_22', 'pg_slot', 'askmebet', 'slotxo', 'spade_gaming', 'gamatron'];
   ?>
-
-
 
   <main class="content-wrapper2">
     <div class="container-fluid">
-
       <div class="container">
         <div class="row">
-
-          <?php foreach ($slots as $slot): ?>
-            <div class="col-12 col-sm-6 game_colum p-3">
-              <a
-                <?php if ($_SESSION['Credit'] >= 20): ?>
-                  href="database/slot_gateway.php?slot=<?= $slot ?>"
-                <?php else: ?>
-                  href="#" onclick="Swal.fire({ type: 'error',title: 'คุณมี Credit ไม่พอใช้บริการนี้',text: 'กรุณาเติมเงินก่อนเข้าใช้งานต่อไปค่ะ'})"
-                <?php endif; ?>
-              >
-                <div class="game_div">
-                  <img src="resource/images/slot/slot_<?= $slot ?>.jpg" style="width: 100%;">
-                </div>
-              </a>
-            </div>
-          <?php endforeach ?>
-
+          <div class="col-12 text-center py-2">
+            <h1 style="color: yellow;"><?= $table_name ?></h1>
+            <!-- <img src="resource/images/joker/jokerlogo.png" /> -->
+          </div>
         </div>
-      </div>
 
+        <div class="row">
+          <?php foreach ($slots as $slot) { ?>
+            <div class="col-6 col-sm-3 pt-2">
+              <div class="card" style="background: black;">
+                <?php if ($slot['winrate'] > 80): ?>
+                  <img src="<?php echo $slot["image"]; ?>" class="card-img-top animated infinite pulse delay-2s" style="height: 150px;" />
+                <?php else: ?>
+                  <img src="<?php echo $slot["image"]; ?>" class="card-img-top" style="height: 150px;" />
+                <?php endif; ?>
+                <?php if ($slot['winrate'] > 80): ?>
+                  <div class="card-body text-center animated infinite pulse delay-2s">
+                <?php else: ?>
+                  <div class="card-body text-center">
+                <?php endif; ?>
+                  <h5 class="card-title" style="color: white;"><?php echo $slot["name"]; ?></h5>
+                  <h5 class="card-title" style="color: white;">อัตราชนะ</h5>
+                  <h4 class="card-title" style="color: yellow;"><?php echo $slot["winrate"]; ?>%</h4>
+                  <div class="progress">
+                    <?php if ($slot['winrate'] > 80): ?>
+                      <div class="progress-bar bg-success" role="progressbar" style="width: <?php echo $slot['winrate']; ?>%" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100">
+                        <?php echo $slot["winrate"]; ?>%
+                      </div>
+                    <?php elseif ($slot['winrate'] > 50): ?>
+                      <div class="progress-bar bg-warning" role="progressbar" style="width: <?php echo $slot['winrate']; ?>%" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100">
+                        <?php echo $slot["winrate"]; ?>%
+                      </div>
+                    <?php else: ?>
+                      <div class="progress-bar bg-danger" role="progressbar" style="width: <?php echo $slot['winrate']; ?>%" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100">
+                        <?php echo $slot["winrate"]; ?>%
+                      </div>
+                    <?php endif; ?>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <?php } ?>
+        </div>
+
+      </div>
     </div>
   </main>
 </body>

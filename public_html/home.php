@@ -138,7 +138,7 @@ $asset_path = "asset/".$_SESSION['FormulaType'];
         <div class="row">
 
           <?php if ($_SESSION['API_SA']): ?>
-          <div class="col-12 col-sm-6 game_colum">
+          <div class="col-12 col-sm-6 game_colum p-3">
             <a <?php if ($_SESSION['Credit'] > 0): ?>
 			        href="salobby"
 			         <?php else : ?>
@@ -146,17 +146,17 @@ $asset_path = "asset/".$_SESSION['FormulaType'];
             <?php endif;  ?>>
 
               <div class="game_div">
-                <img src="resource/images/cas/Game-sa.png" style="width: 100%;">
+                <img src="resource/images/cas/casino_sa.jpg" style="width: 100%;">
               </div>
             </a>
           </div>
         <?php else: ?>
-          <div class="col-12 col-sm-6 game_colum">
+          <div class="col-12 col-sm-6 game_colum p-3">
             <a
               href="#" onclick="Swal.fire({ type: 'error',title: 'ระบบปิดปรับปรุง',text: 'ขออภัยระบบปิดปรับปรุง'})"
             >
               <div class="game_div">
-                <img src="resource/images/cas/Game-sa.png" style="width: 100%;">
+                <img src="resource/images/cas/casino_sa.jpg" style="width: 100%;">
               </div>
             </a>
           </div>
@@ -164,28 +164,43 @@ $asset_path = "asset/".$_SESSION['FormulaType'];
 
 
         <?php if ($_SESSION['API_SE']):?>
-          <div class="col-12 col-sm-6 game_colum">
+          <div class="col-12 col-sm-6 game_colum p-3">
             <a <?php if ($_SESSION['Credit'] > 0): ?>
 			href="selobby"
 			<?php else : ?>
              href="#" onclick="Swal.fire({ type: 'error',title: 'คุณมี Credit ไม่พอใช้บริการนี้',text: 'กรุณาเติมเงินก่อนเข้าใช้งานต่อไปค่ะ'})"
             <?php endif;  ?>>
               <div class="game_div">
-                <img src="resource/images/cas/Game-se.png" style="width: 100%;">
+                <img src="resource/images/cas/casino_se.jpg" style="width: 100%;">
               </div>
             </a>
           </div>
         <?php else: ?>
-          <div class="col-12 col-sm-6 game_colum">
+          <div class="col-12 col-sm-6 game_colum p-3">
             <a
               href="#" onclick="Swal.fire({ type: 'error',title: 'ระบบปิดปรับปรุง',text: 'ขออภัยระบบปิดปรับปรุง'})"
              >
               <div class="game_div">
-                <img src="resource/images/cas/Game-se.png" style="width: 100%;">
+                <img src="resource/images/cas/casino_se.jpg" style="width: 100%;">
               </div>
             </a>
           </div>
         <?php endif; ?>
+
+          <div class="col-12 col-sm-6 game_colum p-3">
+            <a <?php if ($_SESSION['Credit'] > 0): ?>
+			href="https://gurubac.com/rooms/1" target="_blank"
+			<?php else : ?>
+             href="#" onclick="Swal.fire({ type: 'error',title: 'คุณมี Credit ไม่พอใช้บริการนี้',text: 'กรุณาเติมเงินก่อนเข้าใช้งานต่อไปค่ะ'})"
+            <?php endif;  ?>>
+              <div class="game_div">
+                <img src="resource/images/cas/casino_pretty.jpg" style="width: 100%;">
+              </div>
+            </a>
+          </div>
+
+          <div class="col-12 col-sm-6 game_colum p-3">
+          </div>
 
         <!-- <div class="col-12 col-sm-6 game_colum">
           <a
@@ -245,38 +260,6 @@ $asset_path = "asset/".$_SESSION['FormulaType'];
         </div>
 
         <br>
-        <?php
-          if ($_SESSION['Join']):
-        ?>
-        <div class="alert alert-light" role="alert">
-          <h4 class="alert-heading text-info text-info">วิธีรับเครดิตฟรี</h4>
-          <hr>
-          <p> พิเศษสำหรับลูกค้า <?php echo strtoupper(env('DOMAIN')) ?> เพียงท่านฝากเงินสำหรับเล่นเกมกับ <?php echo strtoupper(env('DOMAIN')) ?> ก็สามารถรับเครดิตใช้งานสูตรฟรี! ทันที</p>
-          <p>*พิเศษสำหรับเติมครั้งแรกรับเครดิตสูตรบาคาร่า 2 เท่าของยอดที่เติมสำหรับเล่น* ไปเติมเงิน คลิ๊ก!
-            <a target='_blank' href="http://line.me/ti/p/~<?php echo $contact; ?>">
-              <span style="font-family: 'Helvet';font-size: 34px; color: #000;">
-                <img src="resource/images/new/i_line.png" height="30" style="padding-bottom: 1%;">
-                Line : <?php echo $contact; ?>
-              </span>
-            </a>
-          </p>
-          <p class='text-danger'><strong>*หมายเหตุ* เครดิตของสูตรบาคาร่าจะเข้าภายใน 5 นาทีหลังจากได้รับเครดิต <?php echo strtoupper(env('DOMAIN')) ?></strong></p>
-        </div>
-        <?php else: ?>
-          <div class="alert alert-light" role="alert">
-            <h4 class="alert-heading text-info">วิธีรับเครดิตฟรี</h4>
-            <hr>
-            <p>เครดิตหมดใช่หรือไม่ ? พิเศษหากท่านต้องการเครดิตสำหรับสูตรบาคาร่า เพียงท่านสมัครเล่นเกมกับเรา <?php echo strtoupper(env('DOMAIN')) ?> เพียงเติมเงินครั้งแรก เติมเท่าไหร่ได้รับเครดิตสำหรับสูตรบาคาร่า 2 เท่า ของยอดเติมทันที (เฉพาะครั้งแรก) สมัครเลย คลิ๊ก!
-              <a target='_blank' href="http://line.me/ti/p/~<?php echo $contact; ?>">
-                <span style="font-family: 'Helvet';font-size: 34px; color: #000;">
-                  <img src="resource/images/new/i_line.png" height="30" style="padding-bottom: 1%;">
-                  Line : <?php echo $contact; ?>
-                </span>
-              </a>
-            </p>
-            <p class='text-danger'><strong>*หมายเหตุ* เครดิตของสูตรบาคาร่าจะเข้าภายใน 5 นาทีหลังจากได้รับเครดิต <?php echo strtoupper(env('DOMAIN')) ?></strong></p>
-          </div>
-        <?php endif ?>
       </div>
 
     </div>
