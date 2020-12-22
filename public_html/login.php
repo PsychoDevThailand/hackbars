@@ -83,7 +83,8 @@
     } */
     .center-box {
       padding: 5% 12% 7% 9%;
-      border: 1px solid #0186f4;
+      /* border: 1px solid #0186f4; */
+      border: 1px solid #66FF33;
       border-radius: 3px;
       /* background-image:url('resource/images/new/asset/Login/Frame_Login.png'); */
       background-size:100% 100%;
