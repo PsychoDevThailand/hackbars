@@ -10,10 +10,11 @@
       exit();
   }
 
-  $phone  = mysqli_real_escape_string($db, $_POST['phone']);
+  // $phone  = mysqli_real_escape_string($db, $_POST['phone']);
+  $uname  = mysqli_real_escape_string($db, $_POST['username']);
   $credit = (int) $_POST['credit'];
 
-  $sql = "UPDATE `users` SET `credit` = `credit` + '$credit' WHERE `phone` = '$phone'";
+  $sql = "UPDATE `users` SET `credit` = `credit` + '$credit' WHERE `uname` = '$uname'";
   $result = mysqli_query($db, $sql);
 
   if (!$result) {

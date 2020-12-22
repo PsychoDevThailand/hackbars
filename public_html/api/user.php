@@ -10,9 +10,10 @@
       exit();
   }
 
-  $phone = mysqli_real_escape_string($db, $_GET['phone']);
+  // $phone = mysqli_real_escape_string($db, $_GET['phone']);
+  $uname = mysqli_real_escape_string($db, $_GET['username']);
 
-  $sql = "SELECT `uname`, `pass`, `credit` FROM `users` WHERE `phone` = '$phone'";
+  $sql = "SELECT `uname`, `pass`, `credit` FROM `users` WHERE `uname` = '$uname'";
   $result = mysqli_query($db, $sql);
 
   if (!$result) {
