@@ -156,8 +156,8 @@
   </style>
 </head>
 
-<body class="bg_body bg_gredient_<?php echo rand(1, 5);?>">
-<!-- <body class="bg_body" style="background-image: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%);"> -->
+<!-- <body class="bg_body bg_gredient_<?php echo rand(1, 5);?>"> -->
+<body class="bg_body" style="background-image: url('resource/images/amb_bg.jpg');">
   <!-- Create Register Modal -->
   <div id="RegisModal" class="modal fade" role="dialog">
     <div class="modal-dialog modal-dialog-centered  modal-lg">

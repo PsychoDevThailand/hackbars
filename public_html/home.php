@@ -122,8 +122,8 @@ $asset_path = "asset/".$_SESSION['FormulaType'];
   </script>
 </head>
 
-<!-- <body style="background-image: url('resource/images/cas/BG.png');"> -->
-<body class="bg_gredient_<?php echo rand(1, 5);?>">
+<body style="background-image: url('resource/images/amb_bg.jpg');">
+<!-- <body class="bg_gredient_<?php echo rand(1, 5);?>"> -->
   <?php
     include './resource/modal.php';
     include 'navbar2.php';
