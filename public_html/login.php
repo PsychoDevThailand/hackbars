@@ -274,7 +274,7 @@
 
         <form id="loginform" method="post">
           <div class="form-group col-md-12">
-            <input type="text" id="txtUsername" class="form-control text-center" placeholder="username" maxlength="16" minlength="4" autocomplete="off" required>
+            <input type="text" id="txtUsername" class="form-control text-center" placeholder="ยูสเซอร์" maxlength="16" minlength="4" autocomplete="off" required>
           </div>
           <div class="form-group col-md-12">
             <input type="password" id="txtPassword" class="form-control text-center" placeholder="รหัสผ่าน" name="pass" autocomplete="off" required>
