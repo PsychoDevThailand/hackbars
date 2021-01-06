@@ -760,9 +760,7 @@ ALTER TABLE `tw_settings`
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`) USING BTREE,
   ADD UNIQUE KEY `uname` (`uname`) USING BTREE,
-  ADD UNIQUE KEY `phone` (`phone`),
   ADD KEY `id` (`id`),
-  ADD KEY `id_2` (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
