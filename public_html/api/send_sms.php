@@ -2,7 +2,7 @@
 
   require '../sms/send_sms.php';
 
-  if (strpos(env('API_DOMAIN'), $_GET['domain']) === false) {
+  if (strpos(env('API_DOMAIN'), $_POST['domain']) === false) {
       http_response_code(400);
 
       echo json_encode(
