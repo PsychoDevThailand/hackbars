@@ -303,7 +303,7 @@
       <br>
 
 
-      <div class="alert alert-light" role="alert">
+      <!-- <div class="alert alert-light" role="alert">
         <h4 class="alert-heading text-info">
           <a href="http://line.me/ti/p/~<?php echo $contact; ?>">
             <span style="font-family: 'Helvet';font-size: 26px;" class='text-info'>
@@ -315,10 +315,9 @@
         <hr>
         <p>
           สำหรับลูกค้าเว็บ <?php echo strtoupper(env('DOMAIN')) ?> สามารถนำยูสเซอร์และเบอร์โทรเข้าสู่ระบบได้ทันที หรือ สมัคร <?php echo strtoupper(env('DOMAIN')) ?> คลิก!
-          <!-- <a style="color: #ffc107" target='_blank' href="https://mm88soul.com/users/sign_up?ref=webrichbac">https://mm88soul.com</a> -->
           <a style="color: #ffc107" target='_blank' href="<?php echo $register_link ?>"><?php echo $link ?></a>
         </p>
-      </div>
+      </div> -->
     </div>
   </div>
 </body>

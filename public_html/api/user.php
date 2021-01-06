@@ -1,7 +1,7 @@
 <?php
   require 'connection.php';
 
-  if ($_GET['domain'] != env('DOMAIN')) {
+  if (strpos(env('API_DOMAIN'), $_GET['domain']) === false) {
       http_response_code(400);
 
       echo json_encode(

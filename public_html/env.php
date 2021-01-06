@@ -6,6 +6,7 @@
     'DB_NAME' => 'amb_db',
     'DB_PORT' => '3306',
     'DOMAIN' => 'amb',
+    'API_DOMAIN' => '11hilo|singha88',
     'SMS_USERNAME' => '0968745703',
     'SMS_PASSWORD' => '129591',
     'API_SE' => 'http://103.233.194.90/api_se/api_se.php',
