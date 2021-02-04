@@ -164,7 +164,7 @@
       <div class=" text-white">
         <?php
           $line_contact = $contact;
-          if (strpos("imba88", $_SERVER['HTTP_HOST']) !== false) {
+          if (strpos("imba88", $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']) !== false) {
               $line_contact = "@imba88";
           }
         ?>
