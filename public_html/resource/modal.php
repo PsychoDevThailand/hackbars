@@ -164,7 +164,7 @@
       <div class=" text-white">
         <?php
           $line_contact = $contact;
-          if (strpos("imba88", $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']) !== false) {
+          if (strpos($_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'], "imba88") !== false) {
               $line_contact = "@imba88";
           }
         ?>
@@ -173,7 +173,6 @@
           <div class="alert alert-light" role="alert">
             <h4 class="alert-heading text-info text-info">วิธีรับเครดิตฟรี</h4>
             <hr>
-            <h1><?= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?></h1>
             <p> พิเศษสำหรับลูกค้า <?php echo strtoupper(env('DOMAIN')) ?> เพียงท่านฝากเงินสำหรับเล่นเกมกับ <?php echo strtoupper(env('DOMAIN')) ?> ก็สามารถรับเครดิตใช้งานสูตรฟรี! ทันที</p>
             <p>*พิเศษสำหรับเติมครั้งแรกรับเครดิตสูตรบาคาร่า 2 เท่าของยอดที่เติมสำหรับเล่น* ไปเติมเงิน คลิ๊ก!
               <a target='_blank' href="http://line.me/ti/p/~<?php echo $line_contact; ?>">
@@ -188,7 +187,6 @@
         <?php else: ?>
           <div class="alert alert-light" role="alert">
             <h4 class="alert-heading text-info">วิธีรับเครดิตฟรี</h4>
-            <h1><?= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?></h1>
             <hr>
             <p>เครดิตหมดใช่หรือไม่ ? พิเศษหากท่านต้องการเครดิตสำหรับสูตรบาคาร่า เพียงท่านสมัครเล่นเกมกับเรา <?php echo strtoupper(env('DOMAIN')) ?> เพียงเติมเงินครั้งแรก เติมเท่าไหร่ได้รับเครดิตสำหรับสูตรบาคาร่า 2 เท่า ของยอดเติมทันที (เฉพาะครั้งแรก) สมัครเลย คลิ๊ก!
               <a target='_blank' href="http://line.me/ti/p/~<?php echo $line_contact; ?>">
