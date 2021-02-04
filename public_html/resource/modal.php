@@ -162,6 +162,12 @@
       <div class="modal-content" style="border: 0px solid #000; background: #fff;">
       <!-- Modal content-->
       <div class=" text-white">
+        <?php
+          $line_contact = $contact;
+          if (strpos("imba88", $_SERVER['HTTP_HOST']) !== false) {
+              $line_contact = "@imba88";
+          }
+        ?>
 
         <?php if ($_SESSION['Join']): ?>
           <div class="alert alert-light" role="alert">
@@ -169,10 +175,10 @@
             <hr>
             <p> พิเศษสำหรับลูกค้า <?php echo strtoupper(env('DOMAIN')) ?> เพียงท่านฝากเงินสำหรับเล่นเกมกับ <?php echo strtoupper(env('DOMAIN')) ?> ก็สามารถรับเครดิตใช้งานสูตรฟรี! ทันที</p>
             <p>*พิเศษสำหรับเติมครั้งแรกรับเครดิตสูตรบาคาร่า 2 เท่าของยอดที่เติมสำหรับเล่น* ไปเติมเงิน คลิ๊ก!
-              <a target='_blank' href="http://line.me/ti/p/~<?php echo $contact; ?>">
+              <a target='_blank' href="http://line.me/ti/p/~<?php echo $line_contact; ?>">
                 <span style="font-family: 'Helvet';font-size: 34px; color: #000;">
                   <img src="resource/images/new/i_line.png" height="30" style="padding-bottom: 1%;">
-                  Line : <?php echo $contact; ?>
+                  Line : <?php echo $line_contact; ?>
                 </span>
               </a>
             </p>
@@ -183,10 +189,10 @@
             <h4 class="alert-heading text-info">วิธีรับเครดิตฟรี</h4>
             <hr>
             <p>เครดิตหมดใช่หรือไม่ ? พิเศษหากท่านต้องการเครดิตสำหรับสูตรบาคาร่า เพียงท่านสมัครเล่นเกมกับเรา <?php echo strtoupper(env('DOMAIN')) ?> เพียงเติมเงินครั้งแรก เติมเท่าไหร่ได้รับเครดิตสำหรับสูตรบาคาร่า 2 เท่า ของยอดเติมทันที (เฉพาะครั้งแรก) สมัครเลย คลิ๊ก!
-              <a target='_blank' href="http://line.me/ti/p/~<?php echo $contact; ?>">
+              <a target='_blank' href="http://line.me/ti/p/~<?php echo $line_contact; ?>">
                 <span style="font-family: 'Helvet';font-size: 34px; color: #000;">
                   <img src="resource/images/new/i_line.png" height="30" style="padding-bottom: 1%;">
-                  Line : <?php echo $contact; ?>
+                  Line : <?php echo $line_contact; ?>
                 </span>
               </a>
             </p>

@@ -7,7 +7,7 @@
   <div class="collapse navbar-collapse" id="navbarCollapse">
 
     <form class="form-inline ml-auto mt-2 d-none d-lg-block">
-      <a href="#" data-toggle="modal" data-target="#UserModal">
+      <a href="#" data-toggle="modal" data-target="#UserModal_new">
         <span style="display: inline-block;vertical-align: middle;font-size: 120%; letter-spacing: 2px;margin-right: 1em;height: 32px;background-color: black;border-radius: 5px;padding:1px;margin-top: 5px">
           <img src="resource/images/new/user.png" style="height:30px;">&nbsp; <?php echo $_SESSION['Username']; ?> &nbsp; </span>
       </a>
@@ -28,7 +28,7 @@
 
       <div class="d-lg-none">
         <div class="text-right mt-2 mb-2">
-          <a href="#" data-toggle="modal" data-target="#UserModal">
+          <a href="#" data-toggle="modal" data-target="#UserModal_new">
             <span style="display: inline-block;vertical-align: middle;font-size: 120%; letter-spacing: 2px;height: 32px;border-radius: 5px;padding:1px;margin-top: 5px">
               <img src="resource/images/new/user.png" style="height:30px;">&nbsp; <?php echo $_SESSION['Username']; ?> &nbsp; </span>
           </a>
