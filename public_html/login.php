@@ -4,12 +4,11 @@
   $contact = fgets($file);
   fclose($file);
 
-  $register_link = "https://".env('DOMAIN') .".com/users/sign_up?ref=webrichbac";
+  $register_link = "https://".env('DOMAIN') .".com/users/sign_up?ref=SOOD";
   $link = "https://".env('DOMAIN').".com";
 ?>
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,6 +18,13 @@
   <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="./css/common.css">
   <link rel="stylesheet" type="text/css" href="./css/userlogin.css">
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="css/style.css">
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171496124-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -72,257 +78,62 @@
        }
 //edit: removed ";" from last "}" because of javascript error
 </script>
-  <style>
-    /* body,h1,h2,h3,h4,h5,p,a,button,input {
-      font-family: 'Helvet';
-      margin: 0px;
-      letter-spacing: 0.5px;
-    }
-    h5,label, p,a,button,input {
-      font-size: 19px !important;
-    } */
-    .center-box {
-      padding: 5% 12% 7% 9%;
-      /* border: 1px solid #0186f4; */
-      border: 1px solid #66FF33;
-      border-radius: 3px;
-      /* background-image:url('resource/images/new/asset/Login/Frame_Login.png'); */
-      background-size:100% 100%;
-    }
-    .modal-content {
-      background-color: rgba(0, 0, 0, 0.9);
-      border: 1px solid green;
-    }
 
-    .responsive {
-      width: 100%;
-      height: auto;
-    }
-
-    .bgimage1 {
-      width: 350px;
-      position: absolute;
-      bottom: -5%;
-      left: 5%;
-      z-index: -99;
-    }
-
-    .bgimage2 {
-      width: 350px;
-      position: absolute;
-      bottom: -12%;
-      right: 5%;
-      z-index: -99;
-    }
-
-    .logheader {
-      font-family: 'Helvet';
-      color: white;
-      font-weight: bold;
-      font-size: 32px;
-      /* margin-bottom: 1em; */
-    }
-
-    .btnimg {
-      height: 65px;
-    }
-
-    @media only screen and (max-width: 600px) {
-      .center-box {
-        padding: 5% 10% 7% 10%;
-      }
-
-      .bgimage2 {
-        width: 150px;
-      }
-
-      .logoimg {
-        width: 180px;
-      }
-
-      .loginimg {
-        width: 30%;
-      }
-
-      .logheader {
-        margin-bottom: 0;
-      }
-
-      .btnimg {
-        height: 50px;
-      }
-    }
-
-    @media only screen and (max-width: 370px) {}
-  </style>
 </head>
 
-<!-- <body class="bg_body bg_gredient_<?php echo rand(1, 5);?>"> -->
-<body class="bg_body" style="background-image: url('resource/images/amb_bg.jpg');">
-  <!-- Create Register Modal -->
-  <div id="RegisModal" class="modal fade" role="dialog">
-    <div class="modal-dialog modal-dialog-centered  modal-lg">
+<body class="bgLogin">
 
-      <!-- Modal content-->
-      <div class="modal-content text-white">
+<div class="container">
 
-        <h4 class="modal-title text-center">สมัครสมาชิก</h4>
-        <div class="modal-body">
-          <div class="container">
 
-            <div id="form-phone">
-              <form>
-                <div class="form-group">
-                  <label>กรุณากรอกเบอร์โทรศัพท์ของท่าน</label>
-                  <input id="phone" type="text" maxlength="10" class="form-control" placeholder="ตัวอย่าง 0990001111" />
-                  <p class="form-text text-danger">* ท่านจะได้รับรหัสยืนยัน 4 หลัก ทางข้อความ SMS</p>
-                </div>
-              </form>
+	<div class="row">
+		<div class="col text-center topLogo">
+			<img src="images/logo.png" alt="" width="200">
+		</div>
+	</div>
 
-              <div class="row text-center">
-                <div class="col text-right">
-                  <div class="form-group">
-                    <button class="btn btn-outline-success" onclick="checkPhone()">ตกลง</button>
-                  </div>
-                </div>
-                <div class="col text-left">
-                  <div class="form-group">
-                    <button class="btn btn-outline-danger" data-toggle="modal" data-dismiss="modal">ปิด</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+	<div class="row">
+		<div class="col text-center textHeadLogin">
+			<h3>เข้าสู่ระบบสมาชิก</h3>
+			<p>สำหรับลูกค้าเว็บ <?php echo strtoupper(env('DOMAIN')) ?>  สามารถนำยูสเซอร์และเบอร์โทรเข้าสู่ระบบได้ทันที</p>
+		</div>
+	</div>
 
-            <div id="form-otp">
-              <form>
-                <div class="form-group">
-                  <label>กรุณากรอก OTP</label>
-                  <input id="otp" type="text" maxlength="4" class="form-control" placeholder="ตัวอย่าง 1234" />
-                </div>
-              </form>
-
-              <div class="row text-center">
-                <div class="col text-right">
-                  <div class="form-group">
-                    <button class="btn btn-outline-success" onclick="findOTP()">ตกลง</button>
-                  </div>
-                </div>
-                <div class="col text-left">
-                  <div class="form-group">
-                    <button class="btn btn-outline-danger" data-toggle="modal" data-dismiss="modal">ปิด</button>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-            <div id="form-user">
-              <form id="regisform" method="post">
-
-  			        <div class="form-group">
-                  <label>Username</label>
-                  <input type="text" class="form-control" placeholder="ภาษาอังกฤษ หรือ ตัวเลข หรือ _ 6 - 32 ตัวอักษร" name="regUser" maxlength="32" minlength="6" pattern="^[a-zA-Z0-9_]+$" autocomplete="off" required>
-                </div>
-
-                <div class="form-group">
-                  <label>รหัสผ่าน</label>
-                  <input type="password" class="form-control" placeholder="รหัสผ่านสำหรับเข้าใช้งาน" name="regPass" maxlength="32" minlength="6" pattern="^[a-zA-Z0-9_.-]+$" autocomplete="off" required>
-                </div>
-
-                <div class="form-group">
-                  <label>รหัสผ่านอีกครั้ง</label>
-                  <input type="password" class="form-control" placeholder="ใส่รหัสผ่านอีกครั้ง" name="regRepass" maxlength="32" minlength="6" pattern="^[a-zA-Z0-9_.-]+$" autocomplete="off" required>
-                </div>
-
-                <div class="row text-center">
-                  <div class="col text-right">
-                    <div class="form-group">
-                      <input type="submit" class="btn btn-outline-success" value="Submit">
-                    </div>
-                  </div>
-                  <div class="col text-left">
-                    <div class="form-group">
-                      <button class="btn btn-outline-danger" data-toggle="modal" data-dismiss="modal">
-                        Close
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <input type="hidden" name="action" value="Register">
-              </form>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-  <!-- End Register Modal -->
-
-  <div class="container text-center">
-    <div class="div-center">
-
-      <div>
-        <img class="logoimg" src="resource/images/new/asset/Login/logosa.png" width="400px">
-      </div>
-
-      <br>
-      <div class="container text-center center-box" >
-        <div class="logheader" style="letter-spacing: 1px;text-shadow: 5px 5px 10px #000">เข้าสู่ระบบ</div>
-
+	<div class="row">
+		<div class="col-12">
+			<div class="bgFormLogin">
         <form id="loginform" method="post">
-          <div class="form-group col-md-12">
-            <input type="text" id="txtUsername" class="form-control text-center" placeholder="ยูสเซอร์" maxlength="16" minlength="4" autocomplete="off" required>
-          </div>
-          <div class="form-group col-md-12">
-            <input type="password" id="txtPassword" class="form-control text-center" placeholder="รหัสผ่าน" name="pass" autocomplete="off" required>
-          </div>
-
-          <div class="row mt-3">
-            <div class="col text-center pl-0">
-                <a onclick="do_login()" class="btn btn-primary" style="color: #fff; font-size: 14px;">เข้าสู่ระบบ</a>
-            </div>
-
-            <!-- <div class="col text-left pr-0">
-                <a data-toggle="modal" data-target="#RegisModal"  style="color: #fff; font-size: 14px;" class="btn btn-success" >สมัครฟรี! </a>
-            </div> -->
-          </div>
-
-          <!-- Guest  -->
-          <!-- <div class="row mt-3">
-            <div class="col text-center pl-0">
-                <a onclick="do_guest()" class="btn btn-primary" style="color: #fff; font-size: 14px;">ทดลองสูตรฟรี</a>
-            </div>
-
-          </div> -->
+  				<input class="form-control bdGold mb-2" type="text" id="txtUsername" placeholder="ยูสเซอร์" maxlength="16" minlength="4" autocomplete="off" required>
+  				<input class="form-control bdGold mb-2" type="password" id="txtPassword" class="form-control text-center" placeholder="รหัสผ่าน" name="pass" autocomplete="off" required >
+  				<a href="#" onclick="do_login()" class="btn btn-block btn-primary">เข้าสู่ระบบ</a>
+  				<span class="divider1"><img src="images/divider.png" width="250" alt=""></span>
         </form>
+			</div>
+		</div>
+    
+		<div class="col-12 mt-3 text-center">
+			ยังไม่ได้เป็นสมาชิก <a href="<?php echo $register_link ?>" class="linkRegister">สมัครสมาชิกที่นี่</a>
+		</div>
+	</div>
 
-      </div>
-      <br>
+</div>
 
 
-      <!-- <div class="alert alert-light" role="alert">
-        <h4 class="alert-heading text-info">
-          <a href="http://line.me/ti/p/~<?php echo $contact; ?>">
-            <span style="font-family: 'Helvet';font-size: 26px;" class='text-info'>
-              <img src="resource/images/new/i_line.png" height="30" style="padding-bottom: 1%;">
-              Line : <?php echo $contact; ?>
-            </span>
-          </a>
-        </h4>
-        <hr>
-        <p>
-          สำหรับลูกค้าเว็บ <?php echo strtoupper(env('DOMAIN')) ?> สามารถนำยูสเซอร์และเบอร์โทรเข้าสู่ระบบได้ทันที หรือ สมัคร <?php echo strtoupper(env('DOMAIN')) ?> คลิก!
-          <a style="color: #ffc107" target='_blank' href="<?php echo $register_link ?>"><?php echo $link ?></a>
-        </p>
-      </div> -->
-    </div>
-  </div>
+<footer class="mt-4">
+	<p>พบปัญหาการใช้งานหรือสอบถามข้อมูลเพิ่มเติมแอดไลน์</p>
+	<a href="http://line.me/ti/p/~<?php echo $contact; ?>" class="btn lineBtn lineLogin">
+		<img src="images/icon-line-btn.png" alt=""> <?php echo $contact; ?>
+	</a>
+</footer>
+
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="asset/bootstrap/js/bootstrap.min.js"></script>
+
 </body>
-
 </html>
+
 <script type="text/javascript" src="./js/phone.js"></script>
 <script type="text/javascript">
 var sec_code = [];
