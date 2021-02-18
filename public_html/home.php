@@ -187,7 +187,14 @@ $asset_path = "asset/".$_SESSION['FormulaType'];
 
 		<!-- AD5 -->
 		<div class=" col-6 col-md-3">
-			<a href="slots" class="adsBox ads5">
+			<a
+      class="adsBox ads5"
+      <?php if ($_SESSION['Credit'] >= 20): ?>
+        href="database/slot_gateway.php?slot=slotxo"
+      <?php else: ?>
+        href="#" onclick="Swal.fire({ type: 'error',title: 'คุณมี Credit ไม่พอใช้บริการนี้',text: 'กรุณาเติมเงินก่อนเข้าใช้งานต่อไปค่ะ'})"
+      <?php endif; ?>
+      >
 				<span class="divider2 left"><img src="images/divider-2.png" alt=""></span>
 				<span class="divider2 right"><img src="images/divider-2.png" alt=""></span>
 				<div class="textAds">

@@ -1,9 +1,9 @@
 <div class="row">
 		<div class="col">
-			<a href="index.html"><img src="images/logo.png" alt="" class="logotop" width="150"></a>
+			<a href="home"><img src="images/logo.png" alt="" class="logotop" width="150"></a>
 		</div>
 		<div class="col mt-2 text-right">
-			<a href="profile.html">
+			<a href="home">
 				<img src="images/icon-user.png" alt="" width="16">
 				<span class="textUser"><?php echo $_SESSION['Username']; ?> </span>
 			</a>
