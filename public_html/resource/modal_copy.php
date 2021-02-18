@@ -2,17 +2,10 @@
 
 <head>
   <style>
-  /* .modal-content {
+  .modal-content {
     background-color: rgba(0, 0, 0, 0.9);
     border: 1px solid #FFFF00;
-  } */
-    @media (min-width: 576px){
-      .modal-dialog {
-        max-width: 500px;
-        margin: 1.75rem auto;
-      }
-
-    }
+  }
   </style>
 </head>
 <?php
@@ -41,49 +34,6 @@
 
 <body>
 
-  <?php
-    $line_contact = $contact;
-    if (strpos($_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'], "imba88") !== false) {
-        $line_contact = "@imba88";
-    }
-  ?>
-
-  <!-- Add Credit -->
-  <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">วิธีรับเครดิตฟรี</h5>
-          <a href="#" class="close" data-dismiss="modal" aria-label="Close">
-          	<img src="images/icon-close.png" alt="" width="20">
-          </a>
-        </div>
-        <div class="modal-body">
-        	<p>
-        		<img src="images/img-money.png" alt="" class="img-fluid">
-        	</p>
-        	<p class="text-center contentPop">
-        		พิเศษสำหรับลูกค้า <strong> <?php echo strtoupper(env('DOMAIN')) ?> </strong> เพียงท่านฝากเงินสำหรับเล่นเกมกับ <strong> <?php echo strtoupper(env('DOMAIN')) ?> </strong> ก็สามารถรับเครดิตใช้งานสูตรฟรี! ทันที
-        	</p>
-        	<p class="text-center">
-        		*พิเศษสำหรับเติมครั้งแรกรับเครดิตสูตรบาคาร่า 2 เท่าของยอดที่เติมสำหรับเล่น*
-        	</p>
-
-        	<div class="text-center">
-  			<span class="text-white">เติมเลยคลิ๊กแอดไลน์</span>
-  			<a href="http://line.me/ti/p/~<?php echo $line_contact; ?>" class="lineBtn">
-  				<img src="images/icon-line-btn.png" alt=""> <?php echo $line_contact; ?>
-  			</a>
-  		</div>
-
-  		<p class="textPopFooter text-center">
-  			*หมายเหตุ* เครดิตของสูตรบาคาร่าจะเข้าภายใน 5 นาทีหลังจากได้รับเครดิต <?php echo strtoupper(env('DOMAIN')) ?>
-  		</p>
-
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- Logout Modal -->
   <div id="OutModal" class="modal fade" role="dialog">
