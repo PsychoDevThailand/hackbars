@@ -51,7 +51,16 @@
       <div class="container">
         <center style="font-size: 30px; color: #fdbd00"><span>AI วิเคราะห์ผลบอล</span></center>
         <hr style="border-top: 1px solid #fdbd00;">
-        <div id="date-tab"></div>
+        <ul class="list-inline trickList">
+        <li class="list-inline-item bgTrick"><a href="#">12 ธ.ค.</a></li>
+        <li class="list-inline-item bgTrick"><a href="#">13 ธ.ค.</a></li>
+        <li class="list-inline-item bgTrick activeTrick"><a href="#">วันนี้</a></li>
+        <li class="list-inline-item bgTrick"><a href="#">15 ธ.ค.</a></li>
+        <li class="list-inline-item bgTrick"><a href="#">16 ธ.ค.</a></li>
+      </ul>
+        	<ul class="list-inline trickList" id="date-tab">
+
+          </ul>
         <div id='football' style="margin-top: 30px;">
         </div>
     	</div>

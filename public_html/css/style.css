@@ -498,7 +498,7 @@ hr {
 }
 .scorebox img {
 	width: 18px;
-    margin-bottom: 8px;
+    /* margin-bottom: 8px; */
     margin-right: 4px;
 }
 .scorebox span {

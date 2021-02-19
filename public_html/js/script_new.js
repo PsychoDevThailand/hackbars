@@ -54,16 +54,19 @@ $(document).ready(function() {
 
 	for (i = 0; i < dataAll.length; i++) {
 		dateTab += `
-      <a class="btn btn-warning btn-tab" id="btn${i}" data-date="${dataAll[i].date}">
-        <input type="radio" name="options" ${dataAll[i].label == 'วันนี้' ? 'checked' : ''} >${dataAll[i].label}
+		<li class="list-inline-item bgTrick ${dataAll[i].label == 'วันนี้' ? 'activeTrick' : ''} ">
+      <a href="#" id="btn${i}" data-date="${dataAll[i].date}">
+        ${dataAll[i].label}
       </a>
+		</li>
     `
 	}
 	$("#date-tab").html(`
-		<div class="btn-group btn-group-toggle btn-block" data-toggle="buttons">
 		${dateTab}
-		</div>
 		`)
+
+
+
 
 	setTimeout(function() {
 		$('#btn2').click()
@@ -71,10 +74,12 @@ $(document).ready(function() {
 	// console.log($('#btn3').click().click());
 
 
-	$("body").on("click", ".btn", function(event) {
+	$("body").on("click", ".list-inline-item", function(event) {
 		console.log('eeeeee');
 		$("#football").html(loading)
 		var $target = $(event.target)
+		// console.log($(event.target).addClass("activeTrick"));
+		console.log($target.data('date'));
 		var event_date = $target.data('date');
 
 		$.ajaxSetup({
@@ -97,59 +102,132 @@ $(document).ready(function() {
 								var fixtures = data
 								for (i = 0; i < leagues.length; i++) {
 									var leageue_html = `
-                  <div style='margin-bottom: 30px;'>
-                    <center style="font-size: 20px; color: #fdbd00"><img width="35"src="${leagues[i].logo || leagues[i].flag}"> <span>${leagues[i].country} - ${leagues[i].name} </span></center><br>
+										<div class="row">
+											<div class="col-12 mb-4 text-center">
+												<img src="${leagues[i].logo || leagues[i].flag}" alt="" width="70">
+												<h5 class="textGrap">${leagues[i].country} - ${leagues[i].name}</h5>
+											</div>
+										</div>
                   `
 									var fixture_html = ''
 									for (j = 0; j < fixtures.length; j++) {
 										if (fixtures[j].league_id == leagues[i].id && fixtures[j].odd && fixtures[j].predict) {
 											if (fixtures[j]['status_present'] == 'FT') {
-												status = `<center>
-                                  <span style="color: #fdbd00; font-size: 14px;">FT</span>
-                                  <br>
-                                  <span style="font-size: 12px;">${fixtures[j]['goals_home_team']} - ${fixtures[j]['goals_away_team']}</span>
+												status = `
+																<center>
+                                  <span style="color: #fdbd00; font-size: 13px;">FT</span> : 	<span style="font-size: 12px;">${fixtures[j]['goals_home_team']} - ${fixtures[j]['goals_away_team']}</span>
                                   <br>
                                 </center>
                         `
 											} else {
-												status = `<center>
-                                  <span style="color: #fdbd00; font-size: 16px;">VS</span>
-                                  <br>
-                                  <span style="font-size: 14px;"> ${moment(fixtures[j].start_match).format('LT')} </span>
-                                  <br>
-                                </center>
+												status = `
+																<img src="images/icon-time.png" alt=""> <span style="font-size: 13px;">${moment(fixtures[j].start_match).format('LT')}</span>
+
                         `
 											}
+
+											var team = fixtures[j].odd.display.includes("Home") ? 'Home' : 'Away'
+											var plus = fixtures[j].odd.display.includes("+") ? '+' : '-'
+											var resault = ''
+											var data = fixtures[j]
+
+											if (plus == "+") {
+												var odd = fixtures[j].odd.display.split('+')
+											} else {
+												var odd = fixtures[j].odd.display.split('-')
+											}
+
+											var color_team_home = '#545868'
+											var color_team_away = '#545868'
+											var score_team_home = 0 + parseFloat(fixtures[j].goals_home_team)
+											var score_team_away = 0 + parseFloat(fixtures[j].goals_away_team)
+											var predict = true
+
+											if (odd[1] == '0') {
+
+											} else if (team == 'Home' && plus == '-') {
+												var color_team_home = '#f60202'
+												score_team_home -= parseFloat(odd[1])
+											} else if (team == 'Away' && plus == '-') {
+												var color_team_home = '#f60202'
+												score_team_home -= parseFloat(odd[1])
+											} else if (team == 'Home' && plus == '+') {
+												var color_team_away = '#f60202'
+												score_team_away -= parseFloat(odd[1])
+											} else if (team == 'Away' && plus == '+') {
+												var color_team_away = '#f60202'
+												score_team_away -= parseFloat(odd[1])
+											}
+
+											if ((data.predict.winning_percent_home - data.predict.winning_percent_away) >= 35) {
+												var winner = 'home'
+												var predict = score_team_home >= score_team_away
+											} else if ((data.predict.winning_percent_away - data.predict.winning_percent_home) > 34) {
+												var winner = 'away'
+												var predict = score_team_away >= score_team_home
+											} else if ((data.predict.winning_percent_home - data.predict.winning_percent_away) < 35) {
+												var winner = 'away'
+												var predict = score_team_away >= score_team_home
+											} else if ((data.predict.winning_percent_away - data.predict.winning_percent_home) < 34) {
+												var winner = 'home'
+												var predict = score_team_home >= score_team_away
+											}
+
+
+											if (data.status_present == 'FT' && !predict) {
+												reasult = `
+					                    <span class='text-danger' style="font-size: 16px;">
+					                      <i class="fas fa-times"></i> ไม่เข้า
+					                    </span>
+					              `
+												hr = `<hr>`
+											} else if (data.status_present == 'FT' && predict) {
+												reasult = `
+					                    <span class='text-success' style="font-size: 16px;">
+					                      <i class="fas fa-check-circle"></i> เข้าเต็มๆ
+					                    </span>
+					              `
+												hr = `<hr>`
+											} else {
+												reasult = ''
+												hr = ''
+											}
+
+											console.log(odd[1]);
 											fixture_html += `
-                      <a href='#' data-toggle="modal" data-target="#myModal" class='row fixture' data-value='${fixtures[j].id}' />
-                        <div class="col-xs-1">
-                        </div>
-                        <div class="col-xs-4">
-                          <center>
-                            <img width="35"src="${fixtures[j].home_team.logo}">
-                            <br>
-                            <p>${fixtures[j].home_team.name}</p>
-                          </center>
-                        </div>
-                        <div class="col-2">
-                          ${status}
-                        </div>
-                        <div class="col-xs-4">
-                          <center>
-                            <img width="35"src="${fixtures[j].away_team.logo}">
-                            <br>
-                            <p>${fixtures[j].away_team.name}</p>
-                          </center>
-                        </div>
-                        <div class="col-xs-1">
-                       </div>
-                      </a>
+
+											<div class="rowTable row${j % 2 == 0 ? '1': '2'}">
+												<div class="row">
+													<div class="col-4 text-center teambox">
+														<img src="${fixtures[j].home_team.logo}" alt="" height="60">
+														<span style="font-size: 13px; color: ${color_team_home}" >${fixtures[j].home_team.name}</span>
+													</div>
+													<div class="col-4 text-center scorebox">
+														${reasult}
+														${status	}
+														<center>
+															<span style="font-size: 13px;">อัตราต่อรอง</span>
+															<br>
+															<span style="font-size: 13px; color: #f60202"> ${odd[1]} </span>
+															<br>
+														</center>
+														<strong>ทำนายผล</strong>
+														<b class=" text-center colorWin">${data[`${winner}_team`].name}</b>
+
+													</div>
+													<div class="col-4 text-center teambox">
+														<img src="${fixtures[j].away_team.logo}" alt="" height="60">
+														<span style="font-size: 13px; color: ${color_team_away}" >${fixtures[j].away_team.name}</span>
+													</div>
+												</div>
+											</div>
+
                     `
 										}
 									}
 
 									if (fixture_html) {
-										resaults += (leageue_html + fixture_html) + '</div>'
+										resaults += (leageue_html + fixture_html) + '<br>'
 									}
 								}
 
@@ -210,6 +288,7 @@ $(document).ready(function() {
     </div>`
 
 	$('#football').on('click', 'a', function(e) {
+		console.log('dddd');
 		$("#myModalContent").html(loading_black)
 		var fixture_id = $(this).data("value")
 
@@ -248,7 +327,7 @@ $(document).ready(function() {
 							var color_team_away = '#f60202'
 							score_team_away -= parseFloat(odd[1])
 						}
-
+						console.log(odd[1]);
 						if (data.status_present == 'FT' && !predict) {
 							reasult = `
                 <div class="col-12">
