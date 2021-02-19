@@ -21,6 +21,8 @@ $v = '1.0.4';
   $contact = fgets($file);
   fclose($file);
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -31,7 +33,29 @@ $v = '1.0.4';
   <title><?= "SOOD" ?> | โปรแกรมโกงสูตรบาคาร่า Ai แฮกบาคาร่า | Lobby : Room</title>
   <meta name="keywords" content="<?= "SOOD" ?>, สูตรบาคาร่า, แจกสูตรบาคาร่า, สูตรแฮกบาคาร่า, แฮกเกอร์บาคาร่า, ขายสูตรบาคาร่า, ฟรีโปรแกรมโกงบาคาร่า, แจกโปรแกรมสูตรบาคาร่า, สอนแฮกบาคาร่า, ขายโปรแกรมโกงบาคาร่า" />
   <meta name="description" content="<?= "SOOD" ?> เว็บให้บริการสูตรแฮกเกอร์บาคาร่า ทำงานด้วยระบบ Ai ไม่ต้องจดสูตรใช้ระบบ Ai แฮกเข้า Sagaming และ SexyBaccarat เรียบร้อยแล้ว สามารถซื้อสูตรผ่านระบบเติมเงิน Wallet อัตโนมัติ สูตรนี้จัดทำขึ้นโดยเซียนพนันโดยมืออาชีพ มีประสบการณ์มากกว่า 10 ปี และยังมีกิจกรรมแจกสูตรต่างๆมากมายอีกด้วย!" />
-  <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="./css/common.css">
+  <script src="js/jquery-3.4.1.js"  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+  <script src="js/bootstrap.min.js"  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/df-number-format/2.1.6/jquery.number.js"></script>
+  <script type="text/javascript" src="./js/sidebar.js"></script>
+  <script type="text/javascript" src="./js/home.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+  <!-- <script src="js/jquery-3.5.1.min.js"></script> -->
+  <script src="js/popper.min.js"></script>
+
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css"  crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171496124-1"></script>
@@ -40,197 +64,189 @@ $v = '1.0.4';
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'UA-171496124-1');
-  </script>
-  <script src="js/jquery-3.4.1.js"  crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"  crossorigin="anonymous"></script>
-  <script src="js/bootstrap.min.js"  crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/df-number-format/2.1.6/jquery.number.js"></script>
-  <link rel="stylesheet" type="text/css" href="./css/common.css">
-  <link rel="stylesheet" type="text/css" href="./css/sidebar.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
-  <style type="text/css">
-    .sidenav {
-      background-image: none;
-    }
+  </script>>
 
-    txtred {
-      color: red;
-    }
 
-    .fixed_header {
-      width: 100%;
-      table-layout: fixed;
-      border-collapse: collapse;
-    }
+</head>
+<style type="text/css">
+  .sidenav {
+    background-image: none;
+  }
 
-    .fixed_header tbody {
-      display: block;
-      width: 100%;
-      overflow: auto;
-      height: 100px;
-    }
+  txtred {
+    color: red;
+  }
 
-    .fixed_header thead tr {
-      width: 100%;
-      display: block;
-    }
+  .fixed_header {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+  }
 
-    .fixed_header th,
-    .fixed_header td {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-      text-align: center;
-      width: 200px;
-    }
+  .fixed_header tbody {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    height: 100px;
+  }
 
-    .fixed_header thead {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    }
+  .fixed_header thead tr {
+    width: 100%;
+    display: block;
+  }
 
-    inittext {
-      color: Khaki;
-      font-weight: normal;
+  .fixed_header th,
+  .fixed_header td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    width: 200px;
+  }
+
+  .fixed_header thead {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  inittext {
+    color: Khaki;
+    font-weight: normal;
+  }
+
+  #prestat {
+    font-size: large;
+    letter-spacing: 1.5px;
+  }
+
+  #countdown2 {
+    font-size: large;
+    letter-spacing: 2px;
+  }
+
+  #redbar {
+    width: 0%;
+    height: 6px;
+    background-color: red;
+  }
+
+  #blubar {
+    width: 0%;
+    height: 6px;
+    background-color: #0066ff;
+  }
+
+  #grnbar {
+    width: 0%;
+    height: 6px;
+    background-color: lime;
+  }
+
+  img[src=""] {
+    content: url("data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==");
+  }
+
+  .summary {
+    font-family: 'Helvet';
+    font-size: 50px;
+  }
+
+  .foottxt {
+    font-family: 'Helvet';
+    color: white;
+    font-size: large;
+    padding-right: .5em
+  }
+
+  .colhead {
+    font-size: 40px;
+  }
+
+  .infotext {
+    font-family: 'Helvet';
+    font-size: 18px;
+    margin-bottom: -5px;
+  }
+
+  .btnline {
+    position: relative;
+    text-align: center;
+    height: 52px;
+    width: 270px;
+    background-image: url('resource/images/new/Frame_line.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .linetxt {
+    font-family: 'Helvet';
+    font-size: 30px;
+    letter-spacing: 2px
+  }
+
+  .lineheader {
+    font-family: 'RSU';
+    font-size: 27px;
+    letter-spacing: 1px;
+    margin-bottom: -5px;
+    padding-top: 10px
+  }
+
+  @media only screen and (max-width: 400px) {
+    .summary {
+      font-size: 200%;
     }
 
     #prestat {
-      font-size: large;
-      letter-spacing: 1.5px;
+      font-size: small;
+      letter-spacing: normal;
     }
 
     #countdown2 {
-      font-size: large;
-      letter-spacing: 2px;
-    }
-
-    #redbar {
-      width: 0%;
-      height: 6px;
-      background-color: red;
-    }
-
-    #blubar {
-      width: 0%;
-      height: 6px;
-      background-color: #0066ff;
-    }
-
-    #grnbar {
-      width: 0%;
-      height: 6px;
-      background-color: lime;
-    }
-
-    img[src=""] {
-      content: url("data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==");
-    }
-
-    .summary {
-      font-family: 'Helvet';
-      font-size: 50px;
+      letter-spacing: normal;
     }
 
     .foottxt {
-      font-family: 'Helvet';
       color: white;
-      font-size: large;
+      font-size: small;
       padding-right: .5em
     }
 
-    .colhead {
-      font-size: 40px;
-    }
-
     .infotext {
-      font-family: 'Helvet';
-      font-size: 18px;
-      margin-bottom: -5px;
+      font-size: 12px;
+      margin-bottom: -3px;
     }
 
     .btnline {
       position: relative;
       text-align: center;
       height: 52px;
-      width: 270px;
+      width: 240px;
       background-image: url('resource/images/new/Frame_line.png');
       background-repeat: no-repeat;
       background-size: 100% 100%;
     }
 
     .linetxt {
-      font-family: 'Helvet';
       font-size: 30px;
-      letter-spacing: 2px
+      letter-spacing: 1px;
     }
 
     .lineheader {
-      font-family: 'RSU';
-      font-size: 27px;
-      letter-spacing: 1px;
-      margin-bottom: -5px;
-      padding-top: 10px
+      font-size: 22px;
+      letter-spacing: normal;
+      margin-bottom: -3px;
     }
+  }
 
-    @media only screen and (max-width: 400px) {
-      .summary {
-        font-size: 200%;
-      }
-
-      #prestat {
-        font-size: small;
-        letter-spacing: normal;
-      }
-
-      #countdown2 {
-        letter-spacing: normal;
-      }
-
-      .foottxt {
-        color: white;
-        font-size: small;
-        padding-right: .5em
-      }
-
-      .infotext {
-        font-size: 12px;
-        margin-bottom: -3px;
-      }
-
-      .btnline {
-        position: relative;
-        text-align: center;
-        height: 52px;
-        width: 240px;
-        background-image: url('resource/images/new/Frame_line.png');
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-      }
-
-      .linetxt {
-        font-size: 30px;
-        letter-spacing: 1px;
-      }
-
-      .lineheader {
-        font-size: 22px;
-        letter-spacing: normal;
-        margin-bottom: -3px;
-      }
+  @media (min-width: 992px) {
+    .sidenav {
+      background-image: url('resource/images/new/<?php echo $asset_path ?>/side_bar.png');
     }
+  }
 
-    @media (min-width: 992px) {
-      .sidenav {
-        background-image: url('resource/images/new/<?php echo $asset_path ?>/side_bar.png');
-      }
-    }
-
-  </style>
-
-</head>
-
-<body style="background-image: url('resource/images/new/<?php echo $asset_path ?>/BG.png');">
+</style>
+<body>
 
   <script type="text/javascript" src="./js/se_room.js?v=<?=$v ?>"></script>
-
+<div class="container">
   <?php
     include './resource/modal.php';
     include 'navbar.php';
@@ -447,7 +463,8 @@ $v = '1.0.4';
       </div>
     </div>
   </main>
-  <script type="text/javascript">
+</div>
+  <!-- <script type="text/javascript">
     window.onload = function() {
         document.addEventListener("contextmenu", function(e){
             e.preventDefault();
@@ -482,7 +499,8 @@ $v = '1.0.4';
                 window.location = "./database/logout.php";
             }
         });
-    </script>
+    </script> -->
+
 </body>
 
 </html>
