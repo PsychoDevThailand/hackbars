@@ -149,9 +149,9 @@ $v = '1.0.6';
     background-color: lime;
   }
 
-  img[src=""] {
+  /* img[src=""] {
     content: url("data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==");
-  }
+  } */
 
   .summary {
     font-family: 'Helvet';

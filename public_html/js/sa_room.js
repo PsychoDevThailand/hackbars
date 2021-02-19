@@ -147,7 +147,7 @@ $(document).ready(function() {
           }
         });
         let strcredit = $.number(msg);
-        $('#navCredit').html('<img src="resource/images/new/credit.png" style="height:100%;"> &nbsp;' + strcredit + ' &nbsp;');
+        $('#navCredit').html(strcredit + ' &nbsp;');
         $('#showCreditM').html('Credit : ' + strcredit);
         $('#navCredit2').html('<img src="resource/images/new/credit.png" style="height:100%;"> &nbsp;' + strcredit + ' &nbsp;');
       }

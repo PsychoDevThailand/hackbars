@@ -20,11 +20,10 @@
 }
 
 body {
-  background-color: #cccccc;
+  /* background-color: #cccccc;
   background-size: cover;
-  /* background-position:center bottom; */
   background-attachment: fixed;
-  font-family: 'RSU';
+  font-family: 'RSU'; */
 }
 
 .footer {
@@ -46,11 +45,11 @@ body {
   text-decoration: none;
 }
 
-a:link {
+/* a:link {
   color: #FFCC00;
   text-decoration: none;
-}
-
+} */
+/*
 a:visited {
   color: #FFCC00;
   text-decoration: none;
@@ -64,7 +63,7 @@ a:hover {
 a:active {
   color: #fff;
   text-decoration: none;
-}
+} */
 
 ::-webkit-scrollbar {
   width: 5px;

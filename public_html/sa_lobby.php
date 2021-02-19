@@ -118,7 +118,7 @@ if ($_SESSION['Credit'] <= 0) {
                             <div class="col-6">
                               <small>ROOM</small>
                               <h4 class="text-white"> <?php echo $sa_data->{'data'}[$i]->{'room_name'}; ?></h4>
-                              <a href="room.html" class="btnPlay">เข้าเล่น <img src="images/icon-play.png" alt="" class="iconPlay"></a>
+                              <span  class="btnPlay">เข้าเล่น <img src="images/icon-play.png" alt="" class="iconPlay"></span>
                             </div>
                             <div class="col-6 pl-0 text-right">
                               <h5>อัตราการชนะ</h5>
@@ -141,24 +141,6 @@ if ($_SESSION['Credit'] <= 0) {
       </div>
     </div>
   </main>
-
-
-
-  					<div class="col-6 pr-1 mb-2">
-  						<div class="bgRoom">
-  							<div class="row">
-  								<div class="col-6">
-  									<small>ROOM</small>
-  									<h4 class="text-white">E01</h4>
-  									<a href="room.html" class="btnPlay">เข้าเล่น <img src="images/icon-play.png" alt="" class="iconPlay"></a>
-  								</div>
-  								<div class="col-6 pl-0 text-right">
-  									<small>อัตราการชนะ</small>
-  									<h2 class="color1">85%</h2>
-  								</div>
-  							</div>
-  						</div>
-  					</div>
 
 
   <!-- <script type="text/javascript">
