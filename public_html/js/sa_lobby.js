@@ -8,7 +8,7 @@ $(document).ready(function() {
 			rate = Math.round((win / active) * 100);
 			winid = 'winrate' + room;
 			winhtml = rate + '%';
-			document.getElementById(winid).style.color = '#ffcc00'
+			document.getElementById(winid).style.color = '#3eb78b'
 			document.getElementById(winid).innerHTML = winhtml;
 			stack = 1;
 		} else if (predict != "") {
@@ -20,7 +20,7 @@ $(document).ready(function() {
 				} else {
 					rate = Math.round((win / active) * 100);
 					winhtml = rate + '%';
-					document.getElementById(winid).style.color = '#ffcc00';
+					document.getElementById(winid).style.color = '#3eb78b';
 					document.getElementById(winid).innerHTML = winhtml;
 					stack = 1;
 				}

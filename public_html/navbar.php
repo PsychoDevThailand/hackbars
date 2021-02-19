@@ -1,97 +1,59 @@
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-  <a class="navbar-brand" href="home"><img src="resource/images/new/Logo_SAhacker.png" style="height: 100%;"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<div class="row">
+		<div class="col">
+			<a href="home"><img src="images/logo.png" alt="" class="logotop" width="150"></a>
+		</div>
+		<div class="col mt-2 text-right">
+			<a href="home">
+				<img src="images/icon-user.png" alt="" width="16">
+				<span class="textUser"><?php echo $_SESSION['Username']; ?> </span>
+			</a>
+		</div>
+	</div>
 
-  <div class="collapse navbar-collapse" id="navbarCollapse">
-    <?php
-      $user = isset($_SESSION['Username']) ? $_SESSION['Username'] : '';
-      $u_id  = $user;
-      if ($u_id == '') {
-          exit;
-      }
-      $sql      = "SELECT `credit` FROM `users` WHERE `uname` = '$u_id'";
-      $result   = mysqli_query($db, $sql);
-      $rowcount = mysqli_num_rows($result);
-      if ($rowcount == 1) {
-          $udata = mysqli_fetch_array($result, MYSQLI_ASSOC);
-      }
-      mysqli_close($db);
+	<div class="row">
+		<div class="col">
+			<div class="bgWallet">
+				<div class="row">
+					<div class="col-2">
+						<img src="images/icon-wallet.png" alt="" width="43">
+					</div>
+					<div class="col-6">
+						<span>คุณมียอดเครดิตคงเหลือ</span>
 
-    ?>
-    <form class="form-inline ml-auto mt-2 d-none d-lg-block">
-      <a href="#" data-toggle="modal" data-target="#UserModal">
-        <span style="display: inline-block;vertical-align: middle;font-size: 120%; letter-spacing: 2px;margin-right: 1em;height: 32px;background-color: black;border-radius: 5px;padding:1px;margin-top: 5px">
-          <img src="resource/images/new/user.png" style="height:30px;">&nbsp; <?php echo $_SESSION['Username']; ?> &nbsp; </span>
-      </a>
-      <a href="#" data-toggle="modal" data-target="#RefillModal">
-        <span id="navCredit" style="display: inline-block;vertical-align: middle;font-size: 120%; letter-spacing: 2px;margin-right: 1em;height: 32px;background-color: black;border-radius: 5px;padding:1px;margin-top: 5px">
-          <img src="resource/images/new/credit.png" style="height:30px;">&nbsp; <?=number_format($udata['credit'])?> &nbsp; </span>
-      </a>
-      <a href="#" data-toggle="modal" data-target="#RefillModal" style="margin-right: 1em;">
-        <img src="resource/images/new/re_Credit.png" style="height:32px;margin-top: 5px">
-      </a>
+						<h2 class="numCredit"  id="navCredit" ></h2>
+					</div>
+					<div class="col-4">
+						<a href="#" class="btnAddCredit" data-toggle="modal" data-target="#staticBackdrop">
+							<img src="images/icon-wallet-btn.png" width="16" alt=""> เติมเครดิต
+						</a>
+					</div>
+				</div>
+				<span class="divider1"><img src="images/divider.png" width="250" alt=""></span>
+			</div>
+		</div>
+	</div>
 
-      <a href="#" data-toggle="modal" data-target="#OutModal" style="margin-right: 1em;">
-        <img src="resource/images/new/Icon_Logout.png" style="height:32px;margin-top: 5px">
-      </a>
-    </form>
-
-    <ul class="navbar-nav mr-auto sidenav" id="navAccordion">
-
-      <div class="d-lg-none">
-        <div class="text-right mt-2 mb-2">
-          <a href="#" data-toggle="modal" data-target="#UserModal">
-            <span style="display: inline-block;vertical-align: middle;font-size: 120%; letter-spacing: 2px;height: 32px;border-radius: 5px;padding:1px;margin-top: 5px">
-              <img src="resource/images/new/user.png" style="height:30px;">&nbsp; <?php echo $_SESSION['Username']; ?> &nbsp; </span>
-          </a>
-          <a href="#" data-toggle="modal" data-target="#RefillModal">
-            <span id="navCredit2" style="display: inline-block;vertical-align: middle;font-size: 120%; letter-spacing: 2px;height: 32px;border-radius: 5px;padding:1px;margin-top: 5px">
-              <img src="resource/images/new/credit.png" style="height:30px;">&nbsp; <?=number_format($udata['credit'])?> &nbsp; </span>
-          </a>
-          <a href="#" data-toggle="modal" data-target="#OutModal" style="margin-right: 1em;margin-top: 5px;">
-            <img src="resource/images/new/Icon_Logout.png" style="height:32px;margin-top: 5px">
-          </a>
-        </div>
-        <div class="text-center">
-          <a href="#" data-toggle="modal" data-target="#RefillModal">
-            <img src="resource/images/new/re_Credit.png" style="height:32px;">
-          </a>
-        </div>
-        <!-- <?php if ($config["enable"] != "flase" && $config["bank_ennable"] != "flase") { ?>
-		<div class="text-center">
-          <a href="#" data-toggle="modal" data-target="#SelectTopUPModal">
-            <img src="resource/images/topup_Credit.png" style="height:32px;">
-          </a>
-        </div>
-        <?php } ?> -->
-      </div>
-
-      <div class="text-center">
-        <img src="resource/images/new/formula_head.png" height="50">
-      </div>
+<br>
+<div class="col-12">
+  <h3 class="text-center">สูตรคาบาร่า</h3>
+  <br>
+    <ul class="list-inline trickList">
 
       <?php for ($i=0;$i<10;$i++) { ?>
-      <li class="nav-item">
-        <a class="nav-link" href="database/chgformula.php?type=<?php echo $i+1; ?>" <?php if ($_SESSION['FormulaType']==$i+1) {
-        echo 'style=\'background-image: url("resource/images/new/Button.png");
-                  background-repeat: no-repeat;
-                  background-size: 130px 35px;
-                  background-position: center; \' ';
-    } ?>>
-          <div class="row text-center text-white">
-            <div class="col" <?php if ($_SESSION['FormulaType']==$i+1) {
-        echo 'style="color: khaki"';
-    } ?>>
-              <span style="font-family: 'Helvet';font-size: 150%;letter-spacing: 1px;">
-                สูตรที่ <?php echo $i+1; ?> </span>
-            </div>
-          </div>
+        <?php if ($_SESSION['FormulaType']==$i+1): ?>
+          <li class="list-inline-item bgTrick activeTrick">
+        <?php else : ?>
+          <li class="list-inline-item bgTrick">
+        <?php endif; ?>
+
+
+        <a class="" href="database/chgformula.php?type=<?php echo $i+1; ?>" >
+          สูตรที่ <?php echo $i+1; ?>
+
         </a>
       </li>
       <?php } ?>
-      <br><br>
+
+
     </ul>
-  </div>
-</nav>
+</div>
