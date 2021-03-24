@@ -167,6 +167,9 @@
           if (strpos($_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'], "imba88") !== false) {
               $line_contact = "@imba88";
           }
+          if (strpos($_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'], "beinbet88") !== false) {
+              $line_contact = "@bt88";
+          }
         ?>
 
         <?php if ($_SESSION['Join']): ?>
