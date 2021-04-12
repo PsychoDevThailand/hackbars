@@ -187,21 +187,6 @@ $asset_path = "asset/".$_SESSION['FormulaType'];
           </div>
         <?php endif; ?>
 
-          <div class="col-12 col-sm-6 game_colum p-3">
-            <a <?php if ($_SESSION['Credit'] > 0): ?>
-			href="https://gurubac.com/rooms/1" target="_blank"
-			<?php else : ?>
-             href="#" onclick="Swal.fire({ type: 'error',title: 'คุณมี Credit ไม่พอใช้บริการนี้',text: 'กรุณาเติมเงินก่อนเข้าใช้งานต่อไปค่ะ'})"
-            <?php endif;  ?>>
-              <div class="game_div">
-                <img src="resource/images/cas/casino_pretty.jpg" style="width: 100%;">
-              </div>
-            </a>
-          </div>
-
-          <div class="col-12 col-sm-6 game_colum p-3">
-          </div>
-
         <!-- <div class="col-12 col-sm-6 game_colum">
           <a
             <?php if ($_SESSION['Credit'] > 0): ?>
