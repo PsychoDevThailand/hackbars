@@ -8,6 +8,7 @@
     'DOMAIN' => 'mm88atm',
     'SMS_USERNAME' => '0968745703',
     'SMS_PASSWORD' => '129591',
+    'API_DOMAIN' => '11hilo|singha88',
     'API_SE' => 'http://103.233.194.90/api_se/api_se.php',
     // 'API_SA' => 'http://103.233.194.90/api_sa/api/sa-gaming',
     // 'API_SA' => 'http://103.91.205.216/api/sa-gaming/baccarat?api_key=b0b701fff3d01c5b515f9293cb4ede4d',

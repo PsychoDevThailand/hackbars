@@ -19,16 +19,22 @@
       // CURLOPT_URL            => "https://x-licenses.com/api/sagame",
       CURLOPT_RETURNTRANSFER => true,
       CURLOPT_MAXREDIRS      => 10,
-      CURLOPT_TIMEOUT        => 30,
+      CURLOPT_TIMEOUT        => 5,
       CURLOPT_FOLLOWLOCATION => true,
       CURLOPT_SSL_VERIFYPEER => false,
       CURLOPT_HTTPHEADER => $headerArr
   ));
   $response = curl_exec($curl);
-  curl_close($curl);
-  $sa_data = json_decode($response);
-  if ($sa_data->{'status'} !== '200') {
+
+  if (curl_errno($curl)) {
       $_SESSION['API_SA'] = false;
+      curl_close($curl);
   } else {
-      $_SESSION['API_SA'] = true;
+      curl_close($curl);
+      $sa_data = json_decode($response);
+      if ($sa_data->{'status'} !== '200') {
+          $_SESSION['API_SA'] = false;
+      } else {
+          $_SESSION['API_SA'] = true;
+      }
   }
