@@ -170,6 +170,9 @@
           if (strpos($_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'], "beinbet88") !== false) {
               $line_contact = "@bt88";
           }
+          if (strpos($_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'], "toygame88") !== false) {
+              $line_contact = "@toygame88";
+          }
         ?>
 
         <?php if ($_SESSION['Join']): ?>
