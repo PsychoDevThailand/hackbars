@@ -173,6 +173,9 @@
           if (strpos($_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'], "toygame88") !== false) {
               $line_contact = "@toygame88";
           }
+          if (strpos($_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'], "playrich") !== false) {
+              $line_contact = "@playrich";
+          }
         ?>
 
         <?php if ($_SESSION['Join']): ?>
