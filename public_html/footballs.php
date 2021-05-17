@@ -43,7 +43,7 @@ $asset_path = "asset/".$_SESSION['FormulaType'];
 		<!-- <script src="js/jquery-3.5.1.min.js"></script> -->
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-    <script src="js/script_new.js"></script>
+    <script src="js/script_new1.js"></script>
     <script src="https://momentjs.com/downloads/moment.js"></script>
     <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
 

@@ -36,7 +36,7 @@ $(document).ready(function() {
 		{
 			label: `วันนี้`,
 			link: window.location.origin,
-			date: `${moment(new Date().setHours(date.getHours() - 8)).format('YYYY-MM-DD')}`
+			date: `${moment().format('YYYY-MM-DD')}`
 		},
 		{
 			label: `${tomorrow.getDate()} ${moment(tomorrow).format('MMM')}`,
@@ -54,7 +54,7 @@ $(document).ready(function() {
 
 	for (i = 0; i < dataAll.length; i++) {
 		dateTab += `
-		<li class="list-inline-item bgTrick ${dataAll[i].label == 'วันนี้' ? 'activeTrick' : ''} ">
+		<li class="list-inline-item bgTrick ${dataAll[i].label == 'วันนี้' ? 'activeTrick' : ''} " data-date="${dataAll[i].date}">
       <a href="#" id="btn${i}" data-date="${dataAll[i].date}">
         ${dataAll[i].label}
       </a>
@@ -72,13 +72,15 @@ $(document).ready(function() {
 		$('#btn2').click()
 	}, 300)
 	// console.log($('#btn3').click().click());
-
+	setTimeout(function() {
 
 	$("body").on("click", ".list-inline-item", function(event) {
 		console.log('eeeeee');
+		console.log(event.target);
 		$("#football").html(loading)
 		var $target = $(event.target)
 		// console.log($(event.target).addClass("activeTrick"));
+		console.log($target);
 		console.log($target.data('date'));
 		var event_date = $target.data('date');
 
@@ -270,7 +272,7 @@ $(document).ready(function() {
 
 	})
 
-
+}, 100)
 	var loading = `
     <p style="margin: 60px">
       <center style="font-size: 25px; color: #fff">
