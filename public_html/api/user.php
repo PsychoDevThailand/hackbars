@@ -1,14 +1,14 @@
 <?php
   require 'connection.php';
 
-  if (strpos(env('API_DOMAIN'), $_GET['domain']) === false) {
-      http_response_code(400);
-
-      echo json_encode(
-          array("message" => "Bad Domain")
-      );
-      exit();
-  }
+  // if (strpos(env('API_DOMAIN'), $_GET['domain']) === false) {
+  //     http_response_code(400);
+  //
+  //     echo json_encode(
+  //         array("message" => "Bad Domain")
+  //     );
+  //     exit();
+  // }
 
   // $phone = mysqli_real_escape_string($db, $_GET['phone']);
   $uname = mysqli_real_escape_string($db, $_GET['username']);
