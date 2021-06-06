@@ -19,7 +19,7 @@
       // CURLOPT_URL            => "https://x-licenses.com/api/sagame",
       CURLOPT_RETURNTRANSFER => true,
       CURLOPT_MAXREDIRS      => 10,
-      CURLOPT_TIMEOUT        => 30,
+      CURLOPT_TIMEOUT        => 5,
       CURLOPT_FOLLOWLOCATION => true,
       CURLOPT_SSL_VERIFYPEER => false,
       CURLOPT_HTTPHEADER => $headerArr
