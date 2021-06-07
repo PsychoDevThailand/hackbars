@@ -41,7 +41,7 @@ class sms{
 							}
 						}
 						if($count_pass > 0){
-							$msg_string = "สามารถส่งออกได้จำนวน $count_pass หมายเลข, ใช้เครดิตทั้งหมด $used_credit เครดิต";
+							$msg_string = "สามารถส่งออกได้จำนวน $count_pass หมายเลข, ใช้เครดิตสูตรทั้งหมด $used_credit เครดิตสูตร";
 						} 				
 						if($count_fail > 0){
 							$msg_string = "ไม่สามารถส่งออกได้จำนวน $count_fail หมายเลข";
@@ -67,7 +67,7 @@ class sms{
 								}
 							}
 						if($count_pass > 0){
-							$msg_string = "สามารถส่งออกได้จำนวน $count_pass หมายเลข, ใช้เครดิตทั้งหมด $used_credit เครดิต";
+							$msg_string = "สามารถส่งออกได้จำนวน $count_pass หมายเลข, ใช้เครดิตสูตรทั้งหมด $used_credit เครดิตสูตร";
 						} 				
 						if($count_fail > 0){
 							$msg_string = "ไม่สามารถส่งออกได้จำนวน $count_fail หมายเลข";
@@ -112,7 +112,7 @@ class sms{
 			
 			if($info['http_code'] == 200){
 				if(is_numeric($result)){
-					$msg_string = "จำนวนเครดิตคงเหลือ ".$result." เครดิต";
+					$msg_string = "จำนวนเครดิตสูตรคงเหลือ ".$result." เครดิตสูตร";
 				}else{
 					$msg_string = $result;
 				}
@@ -125,7 +125,7 @@ class sms{
 		}else if(function_exists('fsockopen')) {
 			$result = $this->check_credit_fsock($username,$password,$credit_type);
 			if(is_numeric($result)){
-				$msg_string = "จำนวนเครดิตคงเหลือ ".$result." เครดิต";
+				$msg_string = "จำนวนเครดิตสูตรคงเหลือ ".$result." เครดิตสูตร";
 			}else{
 				$msg_string = $result;
 			}

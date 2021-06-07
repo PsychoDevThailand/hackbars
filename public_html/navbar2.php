@@ -18,13 +18,13 @@
 						<img src="images/icon-wallet.png" alt="" width="43">
 					</div>
 					<div class="col-6">
-						<span>คุณมียอดเครดิตคงเหลือ</span>
+						<span>คุณมียอดเครดิตสูตรคงเหลือ</span>
 
 						<h2 class="numCredit"  id="navCredit" ></h2>
 					</div>
 					<div class="col-4">
 						<a href="#" class="btnAddCredit" data-toggle="modal" data-target="#staticBackdrop">
-							<img src="images/icon-wallet-btn.png" width="16" alt=""> เติมเครดิต
+							<img src="images/icon-wallet-btn.png" width="16" alt=""> เติมเครดิตสูตร
 						</a>
 					</div>
 				</div>

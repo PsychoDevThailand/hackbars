@@ -171,10 +171,10 @@
 
         <?php if ($_SESSION['Join']): ?>
           <div class="alert alert-light" role="alert">
-            <h4 class="alert-heading text-info text-info">วิธีรับเครดิตฟรี</h4>
+            <h4 class="alert-heading text-info text-info">วิธีรับเครดิตสูตรฟรี</h4>
             <hr>
-            <p> พิเศษสำหรับลูกค้า <?php echo strtoupper(env('DOMAIN')) ?> เพียงท่านฝากเงินสำหรับเล่นเกมกับ <?php echo strtoupper(env('DOMAIN')) ?> ก็สามารถรับเครดิตใช้งานสูตรฟรี! ทันที</p>
-            <p>*พิเศษสำหรับเติมครั้งแรกรับเครดิตสูตรบาคาร่า 2 เท่าของยอดที่เติมสำหรับเล่น* ไปเติมเงิน คลิ๊ก!
+            <p> พิเศษสำหรับลูกค้า <?php echo strtoupper(env('DOMAIN')) ?> เพียงท่านฝากเงินสำหรับเล่นเกมกับ <?php echo strtoupper(env('DOMAIN')) ?> ก็สามารถรับเครดิตสูตรใช้งานสูตรฟรี! ทันที</p>
+            <p>*พิเศษสำหรับเติมครั้งแรกรับเครดิตสูตรสูตรบาคาร่า 2 เท่าของยอดที่เติมสำหรับเล่น* ไปเติมเงิน คลิ๊ก!
               <a target='_blank' href="http://line.me/ti/p/~<?php echo $line_contact; ?>">
                 <span style="font-family: 'Helvet';font-size: 34px; color: #000;">
                   <img src="resource/images/new/i_line.png" height="30" style="padding-bottom: 1%;">
@@ -182,13 +182,13 @@
                 </span>
               </a>
             </p>
-            <p class='text-danger'><strong>*หมายเหตุ* เครดิตของสูตรบาคาร่าจะเข้าภายใน 5 นาทีหลังจากได้รับเครดิต <?php echo strtoupper(env('DOMAIN')) ?></strong></p>
+            <p class='text-danger'><strong>*หมายเหตุ* เครดิตสูตรของสูตรบาคาร่าจะเข้าภายใน 5 นาทีหลังจากได้รับเครดิตสูตร <?php echo strtoupper(env('DOMAIN')) ?></strong></p>
           </div>
         <?php else: ?>
           <div class="alert alert-light" role="alert">
-            <h4 class="alert-heading text-info">วิธีรับเครดิตฟรี</h4>
+            <h4 class="alert-heading text-info">วิธีรับเครดิตสูตรฟรี</h4>
             <hr>
-            <p>เครดิตหมดใช่หรือไม่ ? พิเศษหากท่านต้องการเครดิตสำหรับสูตรบาคาร่า เพียงท่านสมัครเล่นเกมกับเรา <?php echo strtoupper(env('DOMAIN')) ?> เพียงเติมเงินครั้งแรก เติมเท่าไหร่ได้รับเครดิตสำหรับสูตรบาคาร่า 2 เท่า ของยอดเติมทันที (เฉพาะครั้งแรก) สมัครเลย คลิ๊ก!
+            <p>เครดิตสูตรหมดใช่หรือไม่ ? พิเศษหากท่านต้องการเครดิตสูตรสำหรับสูตรบาคาร่า เพียงท่านสมัครเล่นเกมกับเรา <?php echo strtoupper(env('DOMAIN')) ?> เพียงเติมเงินครั้งแรก เติมเท่าไหร่ได้รับเครดิตสูตรสำหรับสูตรบาคาร่า 2 เท่า ของยอดเติมทันที (เฉพาะครั้งแรก) สมัครเลย คลิ๊ก!
               <a target='_blank' href="http://line.me/ti/p/~<?php echo $line_contact; ?>">
                 <span style="font-family: 'Helvet';font-size: 34px; color: #000;">
                   <img src="resource/images/new/i_line.png" height="30" style="padding-bottom: 1%;">
@@ -196,7 +196,7 @@
                 </span>
               </a>
             </p>
-            <p class='text-danger'><strong>*หมายเหตุ* เครดิตของสูตรบาคาร่าจะเข้าภายใน 5 นาทีหลังจากได้รับเครดิต <?php echo strtoupper(env('DOMAIN')) ?></strong></p>
+            <p class='text-danger'><strong>*หมายเหตุ* เครดิตสูตรของสูตรบาคาร่าจะเข้าภายใน 5 นาทีหลังจากได้รับเครดิตสูตร <?php echo strtoupper(env('DOMAIN')) ?></strong></p>
           </div>
         <?php endif ?>
       </div>
@@ -232,8 +232,8 @@
                 <span>เลขอ้างอิงวอเลท 14 หลัก :</span>
                 <input id="truewallet" style="text-align: center;"  maxlength="14" type="text" class="form-control" placeholder="เลขอ้างอิงวอเลท">
               </div>
-			  <!-- <h4 class="text-center m-3"><span style="color:#FFFFFF;font-weight: bold;background-color: #0048ff;border-radius: 6px;padding-left: 10px;padding-right: 10px;cursor: text;">เรทการเติมเงิน 1 บาท = <?php echo number_format($config["rate"]); ?> เครดิต</span></h4> -->
-         <h4 class="text-center m-3"><span style="color:#FFFFFF;font-weight: bold;border-radius: 6px;padding-left: 10px;padding-right: 10px;cursor: text;" class="badge badge-success">เรทการเติมเงิน 1 บาท = <?php echo number_format($config["rate"]); ?> เครดิต</span></h4>
+			  <!-- <h4 class="text-center m-3"><span style="color:#FFFFFF;font-weight: bold;background-color: #0048ff;border-radius: 6px;padding-left: 10px;padding-right: 10px;cursor: text;">เรทการเติมเงิน 1 บาท = <?php echo number_format($config["rate"]); ?> เครดิตสูตร</span></h4> -->
+         <h4 class="text-center m-3"><span style="color:#FFFFFF;font-weight: bold;border-radius: 6px;padding-left: 10px;padding-right: 10px;cursor: text;" class="badge badge-success">เรทการเติมเงิน 1 บาท = <?php echo number_format($config["rate"]); ?> เครดิตสูตร</span></h4>
             </div>
             <div class="row">
                 <div class="col">
