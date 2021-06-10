@@ -2,14 +2,14 @@
 
   require '../sms/send_sms.php';
 
-  if (strpos(env('API_DOMAIN'), $_POST['domain']) === false) {
-      http_response_code(400);
-
-      echo json_encode(
-          array("message" => "Bad Domain")
-      );
-      exit();
-  }
+  // if (strpos(env('API_DOMAIN'), $_POST['domain']) === false) {
+  //     http_response_code(400);
+  //
+  //     echo json_encode(
+  //         array("message" => "Bad Domain")
+  //     );
+  //     exit();
+  // }
 
   $phone = $_POST['phone'];
   $message = $_POST['message'];
